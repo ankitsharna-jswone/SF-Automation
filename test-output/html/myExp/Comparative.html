@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparative Line Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<canvas id="comparisonChart" width="400" height="200"></canvas>
+
+<script>
+    async function displayJSONData(urls) {
+        try {
+            const allData = [];
+
+            for (const url of urls) {
+                const response = await fetch(url);
+                const jsonData = await response.json();
+                allData.push({ data: jsonData, fileName: url });
+            }
+
+            createLineGraph(allData);
+        } catch (error) {
+            console.error('Error fetching JSON:', error);
+        }
+    }
+
+    function createLineGraph(allData) {
+        const labels = ['totalFeatures', 'totalScenarios', 'passedScenarios', 'totalSteps', 'passedSteps'];
+
+        const datasets = allData.map(({ data, fileName }) => ({
+            label: fileName,
+            data: [
+                data.totalFeatures,
+                data.totalScenarios,
+                data.passedScenarios,
+                data.totalSteps,
+                data.passedSteps
+            ],
+            fill: false,
+            borderColor: getRandomColor(),
+            tension: 0.1
+        }));
+
+        const ctx = document.getElementById('comparisonChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: datasets
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    displayJSONData(['data.json', 'ERP.json','Random.json']);
+</script>
+</body>
+</html>

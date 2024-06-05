@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario Durations Line Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<canvas id="lineChart" width="600" height="100"></canvas>
+
+<script>
+    // Your JSON data
+    const jsonData = {
+        "warningSteps": 0,
+        "totalFeatures": 1,
+        "failedFeatures": 0,
+        "passedScenarios": 10,
+        "totalSteps": 66,
+        "failedScenarios": 0,
+        "skippedSteps": 0,
+        "failedSteps": 0,
+        "totalScenarios": 10,
+        "infoSteps": 0,
+        "scenarioDurations": {
+            "User processes the opportunities and set the delivery process": 13362,
+            "Sales team confirms the customer accepted price": 31527,
+            "Setting up enviroment for the the project": 6479,
+            "User logs in to Salesforce": 7454,
+            "Sales team creates a cement opportunity on a site": 5786,
+            "User request PI to Seller team": 13986,
+            "User creates an order, captures the subtotal, and order number": 23833,
+            "Sales team Went to the User account and to the site": 6808,
+            "User updates the seller PI and sends it to the seller": 9341,
+            "Sales team select the seller and gave the cost price": 18792
+        },
+        "passedFeatures": 1,
+        "passedSteps": 66
+    };
+
+    // Extract data from JSON
+    const scenarioDurations = jsonData.scenarioDurations;
+    const labels = Object.keys(scenarioDurations);
+    const data = Object.values(scenarioDurations);
+
+    // Create the chart
+    const ctx = document.getElementById('lineChart').getContext('2d');
+    const lineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Duration (ms)',
+                data: data,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                fill: false,
+                lineTension: 0.1,
+                borderWidth: 2,
+                pointRadius: 4,
+                pointHoverRadius: 6,
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Scenario Durations'
+            },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        autoSkip: false,
+                        maxRotation: 90,
+                        minRotation: 45
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
+</body>
+</html>
