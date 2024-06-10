@@ -121,6 +121,16 @@ public class MultiProcessOpportunitypage {
             xpathELems("//input[@name ='Source_Seller_Quote__c']").get(index).sendKeys(price);
         }
 
+        public void selectColour(String colour,int index){
+            waitLocatedXpaths("//button[@name='Paint_Colour__c']");
+            xpathELems("//button[@name='Paint_Colour__c']").get(index).click();
+
+            clickingTool(xpathELems("//lightning-base-combobox-item[@data-value='"+ colour +"']").get(index));
+
+
+
+        }
+
         public void saveOpportunity(){
             //save
             waitLocatedXpath("//button[text()='Save' and @title]");

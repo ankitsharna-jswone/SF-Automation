@@ -50,7 +50,12 @@ public class HomePage {
         SearchResult.click();
     }
 
-    public void openAccount(String text){
+    public void openAccount(String text) {
+        WebElement account =  xpathELem("(//a[text()='"+text +"' and @data-refid='recordId' ])");
+        clickingTool(account);
+    }
+
+    public void openAccountinSales(String text){
         //ADANI GREEN ENERGY TWENTY FOUR B LIMITED
         WebElement account =  xpathELem("(//a[text()='"+text +"' and @data-refid='recordId' ])[2]");
         clickingTool(account);

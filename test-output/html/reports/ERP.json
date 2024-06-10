@@ -1,25 +1,22 @@
 {
   "warningSteps": 0,
   "totalFeatures": 1,
-  "failedFeatures": 1,
-  "passedScenarios": 8,
-  "totalSteps": 52,
-  "failedScenarios": 1,
-  "skippedSteps": 6,
-  "failedSteps": 1,
-  "totalScenarios": 9,
+  "failedFeatures": 0,
+  "passedScenarios": 6,
+  "totalSteps": 33,
+  "failedScenarios": 0,
+  "skippedSteps": 0,
+  "failedSteps": 0,
+  "totalScenarios": 6,
   "infoSteps": 0,
   "scenarioDurations": {
-    "User navigates to a specific account from the homepage": 5972,
-    "Sales logs out": 1977,
-    "Sales user initiates the Opportunity": 8982,
-    "Category team logs inside of the system": 5336,
-    "Setting up enviroment for the the project": 2549,
-    "User logs in to Salesforce": 8265,
-    "User sends the file to pricing to the category team": 6785,
-    "Category user updates the Price and seller for the Opportunity": 1083,
-    "User processes an opportunity to the sales team and fills required documents": 10556
+    "User navigates to a specific account from the homepage": 3701,
+    "User processes the opportunities and set the delivery process": 9627,
+    "User logs in to Salesforce": 7861,
+    "Sales team will select the seller and fill the cost and required fields": 14610,
+    "Setting up environment for the project": 2135,
+    "User creates Multiple opportunity with a specific product and quantity": 14820
   },
-  "passedFeatures": 0,
-  "passedSteps": 45
+  "passedFeatures": 1,
+  "passedSteps": 33
 }

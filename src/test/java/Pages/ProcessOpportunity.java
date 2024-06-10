@@ -34,6 +34,17 @@ public class ProcessOpportunity {
         xpathELem("//input[@name ='Primary Revised Quantity']").sendKeys(quantity);
     }
 
+
+    public void chooseColour(String colour) {
+        waitLocatedXpath("//button[@aria-label='Paint Colour']");
+        clickingTool(xpathELem("//button[@aria-label='Paint Colour']"));
+
+        waitLocatedXpath("//lightning-base-combobox-item[@data-value='Grey']");
+
+        clickingTool(xpathELem("//lightning-base-combobox-item[@data-value='" + colour +"']"));
+
+    }
+
     public void setThickness(String thickness){
         waitLocatedXpath("//input[@name ='Thickness (mm)']");
         xpathELem("//input[@name ='Thickness (mm)']").sendKeys(thickness);

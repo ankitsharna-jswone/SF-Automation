@@ -22,7 +22,6 @@ public class MultiProductSelectionSteps {
     public void addMultipleProduct(DataTable products) throws InterruptedException {
         List<Map<String, String>> productsData = products.asMaps(String.class, String.class);
 
-
         for(int i=0;i<productsData.size();i++){
             processOpportunity.addButton();
         }
@@ -96,6 +95,14 @@ public class MultiProductSelectionSteps {
                 multipleSKUcreationPage.setThickness(Thickness);
                 multipleSKUcreationPage.selectWidhts(Width,ind);
                 multipleSKUcreationPage.setLengths(Length,len);
+                ind++;
+            }
+            else if(name.contains("JSW Industrial") || name.contains("ColourDur")){
+                String Quantity = Values.get("Quantity");
+                String UOM     = Values.get("UOM");
+                multipleSKUcreationPage.searchProducts(name,0);
+                multipleSKUcreationPage.selectProduct(name);
+                multipleSKUcreationPage.setQuantity(Quantity,ind);
                 ind++;
             }
         }

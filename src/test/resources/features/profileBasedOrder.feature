@@ -1,4 +1,5 @@
 @profile
+#  // blocked due to layout changes at sales profile.
 Feature: Profile based order creation
   Scenario: Setting up enviroment for the the project
     Given Set the file and driver and configuration
@@ -10,7 +11,7 @@ Feature: Profile based order creation
     And the user clicks on the login button
     Examples:
       | Username            | Password | Link                                                          |
-      |salestestuser@jsw.in.replica| Spring@25 |https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
+      |salestestuser@jsw.in.replica| @Sales123 |https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
 
   Scenario Outline: User navigates to a specific account from the homepage
     When the user searches for the item "<Account>"
@@ -22,7 +23,7 @@ Feature: Profile based order creation
 
   Scenario Outline: Sales user initiates the Opportunity
     Given User is on the Account page
-    And User click on the dropdown and click on the quick opportunity button
+    When the user creates a quick opportunity
     When User choose the manufacturing type of Opportunity
     And the user adds a new opportunity
     And the user searches for the product "<Product>"

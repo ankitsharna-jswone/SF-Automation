@@ -31,6 +31,11 @@ public class HomePageNavigationSteps {
 
     }
 
+    @When("the user opens the account for sales {string}")
+    public void userOpenSalesAccount(String account){
+        homePage.openAccountinSales(account);
+    }
+
     @When("the user opens the account {string}")
     public void userOpensAccount(String accountName) {
         // Implementation to open the specified account

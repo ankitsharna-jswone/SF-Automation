@@ -56,6 +56,25 @@ public class MultiSKUprocessingSteps {
             }
         }
 
+        @And("Sales team selected the colour")
+        public void select_the_colour(DataTable dataTable){
+            List<Map<String,String>> SellerData = dataTable.asMaps(String.class,String.class);
+            List<String> names = multiProcessOpportunitypage.getProductsNames();
+
+            for(int i=0;i<names.size();i++) {
+                String name = names.get(i);
+                for (int j = 0; j < names.size(); j++) {
+                    Map<String, String> seller = SellerData.get(j);
+                    if (name.contains(seller.get("Product"))) {
+//                   System.out.println(seller.get("Seller") + " seller of the product is at index j " + j + " : product  is" + seller.get("Product") + " index of i is" + i) ;
+                        multiProcessOpportunitypage.selectColour(seller.get("colour"), i);
+                        break;
+                    }
+                }
+            }
+
+        }
+
         @And("Fills the {string} box size for steel")
         public void setBoxSize(String size){
             StainlessSteelPage stainlessSteelPage = new StainlessSteelPage(getDriver());

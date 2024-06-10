@@ -50,6 +50,12 @@ public class ProcessOpportunityDefination {
         processOpportunity.categoryPrice(price);
     }
 
+    @When("the user chose the paint colour {string}")
+    public void choose_the_paint_colour(String colour){
+        processOpportunity.chooseColour(colour);
+
+    }
+
     @When("the user searches for the source seller {string}")
     public void the_user_searches_for_the_source_seller(String seller) {
         processOpportunity.searchSouceSeller(seller);
