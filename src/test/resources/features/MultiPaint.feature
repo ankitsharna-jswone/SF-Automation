@@ -31,7 +31,10 @@ Feature: Multi paint testing
     And Add multiple products in SKU according to given Data
       |Product                   |Quantity| UOM     | Thickness | Width | Length |Diameter|
       |JSW Industrial ROZP Alkyd Primer - Matt Finish [DFT: 25 - 50] (Single component) | 10     |Primary  |        |   |        |        |
-      | JSW Industrial Synthetic Alkyd Enamel - Glossy Finish [DFT: 20 - 25] (Single component) | 500 | Primary |  |  || |
+      | JSW Industrial Synthetic Alkyd Enamel - Glossy Finish [DFT: 20 - 25] (Single component) | 50 | Primary |  |  || |
+      | ColourDur P200 Epoxy Primer - Matt Finish [DFT: 35 - 50] (Two component)  | 30 | Primary |  |  || |
+      | ColourDur P201 Epoxy ZP Primer cum MIO - Satin Finish [DFT: 75 - 200] (Two component)    | 40 | Primary |  |  || |
+
     Then the user saves the opportunity
 
 
@@ -51,16 +54,22 @@ Feature: Multi paint testing
     Given Sales team gives the seller for each product
       |Product                    | Seller |
       |JSW Industrial ROZP Alkyd Primer - Matt Finish [DFT: 25 - 50] (Single component) | Vee |
-      |JSW Industrial Synthetic Alkyd Enamel - Glossy Finish [DFT: 20 - 25] (Single component) | Test Steel Authority 2 |
+      |JSW Industrial Synthetic Alkyd Enamel - Glossy Finish [DFT: 20 - 25] (Single component) | Meta steels  |
+      | ColourDur P200 Epoxy Primer - Matt Finish [DFT: 35 - 50] (Two component)  | Exathought Seller |
+      | ColourDur P201 Epoxy ZP Primer cum MIO - Satin Finish [DFT: 75 - 200] (Two component)    | Aakash Seller India  |
 
     And  Sales team give the cost price to the category
       |Product                    | cost |
       |JSW Industrial ROZP Alkyd Primer - Matt Finish [DFT: 25 - 50] (Single component) | 120 |
       |JSW Industrial Synthetic Alkyd Enamel - Glossy Finish [DFT: 20 - 25] (Single component) | 110 |
+      | ColourDur P200 Epoxy Primer - Matt Finish [DFT: 35 - 50] (Two component)  | 120 |
+      | ColourDur P201 Epoxy ZP Primer cum MIO - Satin Finish [DFT: 75 - 200] (Two component)    | 100  |
     And Sales team selected the colour
       |Product                    | colour |
       |JSW Industrial ROZP Alkyd Primer - Matt Finish [DFT: 25 - 50] (Single component) | Red Oxide |
       |JSW Industrial Synthetic Alkyd Enamel - Glossy Finish [DFT: 20 - 25] (Single component) | Brown |
+      | ColourDur P200 Epoxy Primer - Matt Finish [DFT: 35 - 50] (Two component)  | Black |
+      | ColourDur P201 Epoxy ZP Primer cum MIO - Satin Finish [DFT: 75 - 200] (Two component)    | Grey |
 
     When the user saves the opportunity
     Then Sales team clicks on the price awaiting section
@@ -79,11 +88,15 @@ Feature: Multi paint testing
       |Product                    | CategoryPrice |
       |JSW Industrial ROZP Alkyd Primer - Matt Finish [DFT: 25 - 50] (Single component) | 130 |
       |JSW Industrial Synthetic Alkyd Enamel - Glossy Finish [DFT: 20 - 25] (Single component) | 130 |
+      | ColourDur P200 Epoxy Primer - Matt Finish [DFT: 35 - 50] (Two component)  | 140 |
+      | ColourDur P201 Epoxy ZP Primer cum MIO - Satin Finish [DFT: 75 - 200] (Two component)    | 140  |
 
     And Gave Customer Accepted pricing for each product
       |Product                    | CustomerPrice |
       |JSW Industrial ROZP Alkyd Primer - Matt Finish [DFT: 25 - 50] (Single component) | 130 |
       |JSW Industrial Synthetic Alkyd Enamel - Glossy Finish [DFT: 20 - 25] (Single component) | 130 |
+      | ColourDur P200 Epoxy Primer - Matt Finish [DFT: 35 - 50] (Two component)  | 150 |
+      | ColourDur P201 Epoxy ZP Primer cum MIO - Satin Finish [DFT: 75 - 200] (Two component)    | 150  |
     When the user saves the opportunity
 
   Scenario Outline: User requests PI to the category team

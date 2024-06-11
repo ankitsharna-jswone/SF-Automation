@@ -9,12 +9,16 @@ import io.cucumber.java.it.Ma;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import static Utils.BrowsserSetup.getDriver;
 
 public class MultiSKUprocessingSteps {
+
+     HashMap<String,Integer> MultiSeller = new HashMap<>();
       MultiProcessOpportunitypage multiProcessOpportunitypage = new MultiProcessOpportunitypage(getDriver());
 
 
@@ -25,11 +29,22 @@ public class MultiSKUprocessingSteps {
 
          for(int i=0;i<names.size();i++){
            String name = names.get(i);
+
            for(int j =0 ;j<names.size();j++){
                Map<String,String> seller = SellerData.get(j);
                if(name.contains(seller.get("Product"))){
-//                   System.out.println(seller.get("Seller") + " seller of the product is at index j " + j + " : product  is" + seller.get("Product") + " index of i is" + i) ;
-                   multiProcessOpportunitypage.selectSourceSellers(seller.get("Seller"),i);
+                   String account = seller.get("Seller");
+                   int val =0;
+                   if(MultiSeller.containsKey(account)){
+                       val  = MultiSeller.get(account);
+                       val++;
+                       MultiSeller.put(account,val);
+                   }
+                   else {
+                       MultiSeller.put(account,0);
+                   }
+
+                   multiProcessOpportunitypage.selectSourceSellers(account,i,MultiSeller.get(account));
                    break;
                }
            }

@@ -93,15 +93,16 @@ public class MultiProcessOpportunitypage {
             xpathELems("//input[@name ='Category_Price__c']").get(index).sendKeys(price);
         }
 
-        public void selectSourceSellers(String seller,int index){
+        public void selectSourceSellers(String seller,int index,int selindex) throws InterruptedException {
             //Seller( JODL )
             waitLocatedXpaths("//label[@class='slds-form-element__label' and text()= 'Source Seller Name']/following-sibling::div//input");
             xpathELems("//label[@class='slds-form-element__label' and text()= 'Source Seller Name']/following-sibling::div//input").get(index).sendKeys( seller); //JSW
 
-            waitLocatedXpaths("//lightning-base-combobox-formatted-text[@title ='" + seller +"']");
-
             List<WebElement> sellers = xpathELems("//lightning-base-combobox-formatted-text[@title ='" + seller +"']");
-            clickingTool(xpathELems("//lightning-base-combobox-formatted-text[@title ='" + seller +"']").get(sellers.size()-1));
+            System.out.println(sellers.size() + " seller size is this ");
+            System.out.println(selindex + " seller index is this");
+            clickingTool(xpathELems("//lightning-base-combobox-formatted-text[@title ='" + seller +"']").get(selindex));
+            Thread.sleep(2000);
 
         }
 
@@ -123,7 +124,8 @@ public class MultiProcessOpportunitypage {
 
         public void selectColour(String colour,int index){
             waitLocatedXpaths("//button[@name='Paint_Colour__c']");
-            xpathELems("//button[@name='Paint_Colour__c']").get(index).click();
+            clickingTool(xpathELems("//button[@name='Paint_Colour__c']").get(index));
+
 
             clickingTool(xpathELems("//lightning-base-combobox-item[@data-value='"+ colour +"']").get(index));
 
