@@ -57,7 +57,7 @@ public class testScript {
         driver.manage().window().maximize();
         AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,10);
         PageFactory.initElements(factory,this);
-        driver.get("https://www.flipkart.com/mobile-phones-store?otracker=nmenu_sub_Electronics_0_Mobiles");
+        driver.get("https://jswoneplatforms--prdreplica.sandbox.lightning.force.com/lightning/r/Account/0019D00000RfTxDQAV/view");
 
 //        driver.get("https://jswoneplatforms--prdreplica.sandbox.lightning.force.com/lightning/r/Order/801Hz000001ttDtIAI/view");
 
@@ -78,15 +78,7 @@ public class testScript {
 
     @Test(priority = 1)
     public void login() {
-        Actions actions = new Actions(driver);
-        actions.moveToElement(xpathELem("//span[text()='Electronics']")).build().perform();
-        List<WebElement> mobiles = xpathELems("//div[@class='wZsanD']");
-        WebElement mobile = mobiles.get(0);
-        List<WebElement> elements =  mobile.findElements(By.xpath( "//a[@class='jBYtJt']"));
-        for(WebElement element : elements){
-            String name = element.getText();
-            System.out.println("Name of mobile phone " + name);
-        }
+
 
     }
 
