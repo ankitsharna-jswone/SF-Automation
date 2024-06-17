@@ -23,7 +23,7 @@ Feature: Create Order in SF using this Script
     And the user opens the account "<Account>"
     Examples:
       | Account  |
-      | Test Account B |
+      | RELIANCE JIO INFOCOMM LIMITED |
 
 
   Scenario Outline: User creates an opportunity with a specific product and quantity

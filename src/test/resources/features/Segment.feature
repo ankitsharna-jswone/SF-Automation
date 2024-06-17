@@ -25,5 +25,29 @@ Feature: Create Order in SF using this Script
       | Account  |
       | Test Account B |
 
-  Scenario: User went to the testing
-    Given run this function
+  Scenario: User navigates to Segment and Subsegment for testing
+    Given User scrolls down to the Edit segment button
+    And User clicks on Edit segment button
+    When User validated the fields newly added to the category
+     | Category |
+     |   Buildings - Residential |
+     | Buildings - Commercial    |
+     | Buildings - Industrial    |
+     | Buildings - Components & extensions |
+     | Pipes & Tubes                       |
+     | Buildings - HVAC                    |
+     |  Retail                             |
+     | Infra - Public                      |
+     | Infra - Transport                   |
+     |Infra - Energy                       |
+     | Infra - Water                       |
+     |Automotive                           |
+     |  Industrial and Machinery           |
+     |Consumer Goods and Appliances        |
+     |Packaging                            |
+     |Healthcare and Medical Equipment     |
+     |Defense and Military                 |
+     |Agriculture                          |
+     |Telecommunications                   |
+     |Pressure Vessels and Tanks           |
+     |Processors       |

@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
@@ -15,6 +16,26 @@ public class AccountPage {
         this.driver = driver;
     }
 
+
+    public void detailsOfPage(){
+        waitLocatedXpath("//a[text()='Details']");
+        clickingTool(xpathELem("//a[text()='Details']"));
+    }
+
+    public void editButton(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,550)", "");
+        waitLocatedXpath("//button[@title='Edit Segment']");
+        Actions action = new Actions(driver);
+        action.moveToElement(xpathELem("//button[@title='Edit Segment']")).build().perform();
+        action.scrollToElement(xpathELem("//button[@title='Edit Segment']")).build().perform();
+        clickingTool(xpathELem("//button[@title='Edit Segment']"));
+    }
+
+    public void segmentButton(){
+        waitLocatedXpath("//button[@aria-label='Segment']");
+        clickingTool(xpathELem("//button[@aria-label='Segment']"));
+    }
 
 
 

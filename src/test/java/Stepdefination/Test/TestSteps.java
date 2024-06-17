@@ -14,6 +14,7 @@ import org.testng.Assert;
 import javax.swing.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static Utils.BrowsserSetup.getDriver;
@@ -24,13 +25,38 @@ public class TestSteps {
     Functionalities functionalities = new Functionalities(getDriver());
     WebDriver driver = getDriver();
     List<WebElement> subSegment  = new ArrayList<>();
+    List<String> categories = Arrays.asList(
+            "--None--",
+            "Buildings - Residential",
+            "Buildings - Commercial",
+            "Buildings - Industrial",
+            "Buildings - Components & extensions",
+            "Pipes & Tubes",
+            "Buildings - HVAC",
+            "Retail",
+            "Infra - Public",
+            "Infra - Transport",
+            "Infra - Energy",
+            "Infra - Water",
+            "Automotive",
+            "Industrial and Machinery",
+            "Consumer Goods and Appliances",
+            "Packaging",
+            "Healthcare and Medical Equipment",
+            "Defense and Military",
+            "Agriculture",
+            "Telecommunications",
+            "Pressure Vessels and Tanks",
+            "Processors"
+    );
+    List<String> fetchedSegment = new ArrayList<>();
 
 
 
     @Given("run this function")
     public void testClass(){
-        waitLocatedXpath("//a[text()='Details']");
-        clickingTool(xpathELem("//a[text()='Details']"));
+//        waitLocatedXpath("//a[text()='Details']");
+//        clickingTool(xpathELem("//a[text()='Details']"));
 
 
         waitLocatedXpath("//button[@title='Edit Segment']");
@@ -44,12 +70,14 @@ public class TestSteps {
 
 //        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left' and @aria-label='Segment']")));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@aria-label='Segment']")));
-
         List<WebElement> SegmentList = xpathELems("//div[@aria-label='Segment']//span[@class='slds-truncate']");
 
         for(WebElement webElement : SegmentList){
             System.out.println(webElement.getText() + " : name of segment elements");
+            fetchedSegment.add(webElement.getText());
         }
+
+        assertList(fetchedSegment,categories);
 
         for(int i =1 ;i<SegmentList.size();i++){
             clickingTool(xpathELem("//button[@aria-label='Segment']"));
@@ -69,12 +97,8 @@ public class TestSteps {
 
     }
 
-    public void assertList(String name,List<String> Feteched){
-        List<String> AgriList = new ArrayList<>();
-
-        if(name.contains("Agri")){
-            Assert.assertEquals(AgriList,Feteched);
-        }
+    public void assertList(List<String>categories,List<String> Feteched){
+       Assert.assertEquals(categories,Feteched);
 
     }
 

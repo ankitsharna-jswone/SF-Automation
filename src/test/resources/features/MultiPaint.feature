@@ -56,7 +56,7 @@ Feature: Multi paint testing
       |JSW Industrial ROZP Alkyd Primer - Matt Finish [DFT: 25 - 50] (Single component) | Vee |
       |JSW Industrial Synthetic Alkyd Enamel - Glossy Finish [DFT: 20 - 25] (Single component) | Meta steels  |
       | ColourDur P200 Epoxy Primer - Matt Finish [DFT: 35 - 50] (Two component)  | Exathought Seller |
-      | ColourDur P201 Epoxy ZP Primer cum MIO - Satin Finish [DFT: 75 - 200] (Two component)    | Aakash Seller India  |
+      | ColourDur P201 Epoxy ZP Primer cum MIO - Satin Finish [DFT: 75 - 200] (Two component)    | Auto_User_SsQg (JODL)  |
 
     And  Sales team give the cost price to the category
       |Product                    | cost |
