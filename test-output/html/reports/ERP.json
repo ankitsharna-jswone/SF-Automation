@@ -1,20 +1,20 @@
 {
   "warningSteps": 0,
   "totalFeatures": 1,
-  "failedFeatures": 1,
-  "passedScenarios": 3,
-  "totalSteps": 14,
-  "failedScenarios": 1,
+  "failedFeatures": 0,
+  "passedScenarios": 4,
+  "totalSteps": 18,
+  "failedScenarios": 0,
   "skippedSteps": 0,
-  "failedSteps": 1,
+  "failedSteps": 0,
   "totalScenarios": 4,
   "infoSteps": 0,
   "scenarioDurations": {
-    "User navigates to a specific account from the homepage": 3286,
-    "User went to the testing": 111449,
-    "Setting up enviroment for the the project": 5828,
-    "User logs in to Salesforce": 9126
+    "User navigates to a specific account from the homepage": 3608,
+    "User navigates to Segment and Subsegment for testing": 84571,
+    "Setting up enviroment for the the project": 1985,
+    "User logs in to Salesforce": 7193
   },
-  "passedFeatures": 0,
-  "passedSteps": 13
+  "passedFeatures": 1,
+  "passedSteps": 18
 }

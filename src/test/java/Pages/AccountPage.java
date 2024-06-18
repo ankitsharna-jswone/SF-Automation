@@ -23,18 +23,23 @@ public class AccountPage {
     }
 
     public void editButton(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,550)", "");
-        waitLocatedXpath("//button[@title='Edit Segment']");
-        Actions action = new Actions(driver);
-        action.moveToElement(xpathELem("//button[@title='Edit Segment']")).build().perform();
-        action.scrollToElement(xpathELem("//button[@title='Edit Segment']")).build().perform();
-        clickingTool(xpathELem("//button[@title='Edit Segment']"));
+
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath ("//button[@class ='test-id__inline-edit-trigger slds-shrink-none inline-edit-trigger slds-button slds-button_icon' and @title='Edit Segment']")));
+
+        Actions action = new Actions(getDriver());
+        action.moveToElement(xpathELem("//button[@class ='test-id__inline-edit-trigger slds-shrink-none inline-edit-trigger slds-button slds-button_icon' and @title='Edit Segment']")).build().perform();
+        action.scrollToElement(xpathELem("//button[@class ='test-id__inline-edit-trigger slds-shrink-none inline-edit-trigger slds-button slds-button_icon' and @title='Edit Segment']")).build().perform();
+        clickingTool(xpathELem("//button[@class ='test-id__inline-edit-trigger slds-shrink-none inline-edit-trigger slds-button slds-button_icon' and @title='Edit Segment']"));
     }
 
     public void segmentButton(){
         waitLocatedXpath("//button[@aria-label='Segment']");
         clickingTool(xpathELem("//button[@aria-label='Segment']"));
+    }
+
+    public String segmentButtonTitle(){
+        return    xpathELem("//button[@aria-label='Segment']").getAttribute("data-value");
     }
 
 
