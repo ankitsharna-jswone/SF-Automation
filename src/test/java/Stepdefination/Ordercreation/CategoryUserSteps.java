@@ -14,14 +14,21 @@ public class CategoryUserSteps {
 
     @Given("Category team Searches the opportunity")
     public void searchTheOpportunity(){
-        String opp =  opportunityPage.getOpportunityName();
+        String opp = String.valueOf(opportunityPage.getOpportunityName());
+        System.out.println(opp + " Opportunity name");
+        homePage.searchItem(opp);
+    }
+
+    @Given("Sales team Searches the opportunity")
+    public void searchTheOpportunitySales(){
+        String opp = String.valueOf(opportunityPage.getOpportunityName());
         System.out.println(opp + " Opportunity name");
         homePage.searchItem(opp);
     }
 
     @Given("User opens the Opportunity page")
     public void openTheOpportunity(){
-        String opp = opportunityPage.getOpportunityName();
+        String opp = String.valueOf(opportunityPage.getOpportunityName());
         homePage.openOpportunity(opp);
     }
 }

@@ -2,19 +2,26 @@
   "warningSteps": 0,
   "totalFeatures": 1,
   "failedFeatures": 0,
-  "passedScenarios": 4,
-  "totalSteps": 18,
+  "passedScenarios": 11,
+  "totalSteps": 61,
   "failedScenarios": 0,
   "skippedSteps": 0,
   "failedSteps": 0,
-  "totalScenarios": 4,
+  "totalScenarios": 11,
   "infoSteps": 0,
   "scenarioDurations": {
-    "User navigates to a specific account from the homepage": 3608,
-    "User navigates to Segment and Subsegment for testing": 84571,
-    "Setting up enviroment for the the project": 1985,
-    "User logs in to Salesforce": 7193
+    "User navigates to a specific account from the homepage": 1982,
+    "Sales logs out": 3834,
+    "Sales team Handover the Opportunity to the respective Category folk": 2358,
+    "Sales user initiates the Opportunity": 10612,
+    "Category team logs inside of the system": 5216,
+    "Setting up enviroment for the the project": 2113,
+    "Category team logs out": 3554,
+    "User logs in to Salesforce": 7371,
+    "Sales team logs inside of the system": 3938,
+    "Category user updates the Price and seller for the Opportunity": 9930,
+    "User processes an opportunity to the sales team and fills required documents": 13883
   },
   "passedFeatures": 1,
-  "passedSteps": 18
+  "passedSteps": 61
 }

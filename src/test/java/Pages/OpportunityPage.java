@@ -1,10 +1,7 @@
 package Pages;
 
-import lombok.Getter;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static Utils.Functionalities.*;
@@ -18,13 +15,15 @@ public class OpportunityPage {
     }
 
 
-    String OpportunityNumber = "";
+    static StringBuilder OpportunityNumber = new StringBuilder("");
 
     public void setOpportunityNumber() {
-        this.OpportunityNumber = xpathELem("//lightning-formatted-text[contains(text(), 'OP') and @slot='primaryField']").getText();
+        System.out.println(xpathELem("//lightning-formatted-text[contains(text(), 'OP') and @slot='primaryField']").getText());
+
+        OpportunityNumber = new StringBuilder(xpathELem("//lightning-formatted-text[contains(text(), 'OP') and @slot='primaryField']").getText());
     }
 
-    public String getOpportunityName() {
+    public StringBuilder getOpportunityName() {
         return OpportunityNumber;
     }
 
@@ -46,6 +45,29 @@ public class OpportunityPage {
         waitLocatedXpath("//button[./span[text()='Edit TDC uploaded']]");
 
         clickingTool(xpathELem("//button[./span[text()='Edit TDC uploaded']]"));
+    }
+
+    public void handoverToCategoryButton(){
+        waitLocatedXpath("//button[text()='Handover to Category']");
+        clickingTool(xpathELem("//button[text()='Handover to Category']"));
+    }
+
+    public void searchCategory(String category){
+        waitLocatedXpath("//input[@placeholder='Search People...']");
+        xpathELem("//input[@placeholder='Search People...']").sendKeys(category);
+
+        waitLocatedXpath("//lightning-base-combobox-formatted-text[@title='"+category +"']");
+        clickingTool(xpathELem("//lightning-base-combobox-formatted-text[@title='"+category +"']"));
+    }
+
+    public void selectCategoryUser(String category){
+        waitLocatedXpath("//lightning-base-combobox-formatted-text[@title='"+category +"']");
+        clickingTool(xpathELem("//lightning-base-combobox-formatted-text[@title='"+category +"']"));
+    }
+
+    public void nextButton(){
+        waitLocatedXpath("//button[text()='Next']");
+        clickingTool(xpathELem("//button[text()='Next']"));
     }
 
 

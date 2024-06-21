@@ -12,7 +12,7 @@ Feature: Create Order in SF using this Script
     And the user clicks on the login button
     Examples:
       | Username              | Password  | Link                                                           |
-      | v_ankit.sharma@jsw.in | @Ankit123 | https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
+      | saikiran.melam@jsw.in.prod | Chinni@88 | https://jswoneplatforms.lightning.force.com/lightning/page/home |
 
 
   Scenario Outline: User navigates to a specific account from the homepage
@@ -23,7 +23,7 @@ Feature: Create Order in SF using this Script
     And the user opens the account "<Account>"
     Examples:
       | Account        |
-      | Test Account B |
+      | TEST ROLLS-ROYCE INDIA PRIVATE LIMITED |
 
   Scenario: User navigates to Segment and Subsegment for testing
     Given User scrolls down to the Edit segment button

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Build 1</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 18, 2024 19:04:14</span></a>
+<a href="#"><span class="badge badge-primary">Jun 21, 2024 15:57:39</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 18, 2024 19:04:14</h3>
+<h3>Jun 21, 2024 15:57:39</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 18, 2024 19:05:52</h3>
+<h3>Jun 21, 2024 15:58:45</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -123,7 +123,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>4</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>11</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -143,7 +143,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>14</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>50</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Create Order in SF using this Script":97.498
+"Profile based order creation":65.002
 };
 </script>
 <div class="row">
@@ -172,8 +172,8 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@seg</td>
-<td>4</td>
+<td>@prof</td>
+<td>11</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -215,13 +215,13 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 4,
+passChild: 11,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 14,
+passGrandChild: 50,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
@@ -246,7 +246,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@seg</a>
+<a class="dropdown-item" href="#">@prof</a>
 </ul>
 </li>
 </ul>
@@ -257,9 +257,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Create Order in SF using this Script</p>
+            <p class="name">Profile based order creation</p>
             <p class="text-sm">
-              <span>19:04:15 PM</span> / <span>31:37:498</span>
+              <span>15:57:40 PM</span> / <span>31:05:002</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -267,10 +267,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Create Order in SF using this Script</h5>
-<span class='badge badge-success'>06.18.2024 19:04:15</span>
-<span class='badge badge-danger'>06.18.2024 19:05:52</span>
-<span class='badge badge-default'>31:37:498</span>
+<h5 class="test-status text-pass">Profile based order creation</h5>
+<span class='badge badge-success'>06.21.2024 15:57:40</span>
+<span class='badge badge-danger'>06.21.2024 15:58:45</span>
+<span class='badge badge-default'>31:05:002</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -313,12 +313,12 @@ eventsCount: 5,
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>When the user enters the username "v_ankit.sharma@jsw.in"</span>
+                    <span>When the user enters the username "salestestuser@jsw.in.replica"</span>
       <div>
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>And the user enters the password "@Ankit123"</span>
+                    <span>And the user enters the password "@Sales123"</span>
       <div>
       </div>
                   </div>
@@ -346,11 +346,6 @@ eventsCount: 5,
               </div>
               <div class="card-body mt-3 collapse">
                   <div class="step pass-bg">
-                    <span>Given the user opens the search tab</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
                     <span>When the user searches for the item "Test Account B"</span>
       <div>
       </div>
@@ -372,41 +367,341 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>User navigates to Segment and Subsegment for testing</div>
+        <div class="node" id="18"><span class="badge log pass-bg mr-2">Pass</span>Sales user initiates the Opportunity</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>Sales user initiates the Opportunity</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on the Account page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a quick opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User choose the manufacturing type of Opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user adds a new opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user searches for the product "MS HR Coil 2062:2011 E250A"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user selects the product "MS HR Coil 2062:2011 E250A"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user sets the quantity to "5"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user sets the thickness to "1000"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user selects the width as "1500"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user saves the opportunity</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="31"><span class="badge log pass-bg mr-2">Pass</span>User processes an opportunity to the sales team and fills required documents</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="32"><span class="badge log pass-bg mr-2">Pass</span>User processes an opportunity to the sales team and fills required documents</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is on the opportunity processing page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks on the process opportunity button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user selects to edit the opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user edits the delivery type to "Self pickup"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user edits the delivery time to "2" days</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user edits the special message to "Urgent delivery needed"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user saves the opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user saves the opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User saves the Opportunity name</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="43"><span class="badge log pass-bg mr-2">Pass</span>Sales team Handover the Opportunity to the respective Category folk</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="44"><span class="badge log pass-bg mr-2">Pass</span>Sales team Handover the Opportunity to the respective Category folk</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on Opportunity page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User clicks on the Handover Opportunity to category team</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User Searches the "Category Test user" user for that opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User clicked on next button</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="50"><span class="badge log pass-bg mr-2">Pass</span>Sales logs out</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="Stepdefination.SegmentSubSegment.SegmentSteps.editButtonClicking()">
-                <span>Given User scrolls down to the Edit segment button</span>
+              <div class="step pass-bg" title="Stepdefination.Sales.AccountPageSteps.UserAccountIconButtonClick()">
+                <span>Given user clicks on account button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="Stepdefination.SegmentSubSegment.SegmentSteps.userClickedOnSegmentButton()">
-                <span>And User clicks on Edit segment button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Stepdefination.SegmentSubSegment.SegmentSteps.checkTheSegmentList(io.cucumber.datatable.DataTable)">
-                <span>When User validated the fields newly added to the category</span>
-      <div><table class='markup-table table '><tr><td>Category</td></tr><tr><td>--None--</td></tr><tr><td>Buildings - Residential</td></tr><tr><td>Buildings - Commercial</td></tr><tr><td>Buildings - Industrial</td></tr><tr><td>Buildings - Components & extensions</td></tr><tr><td>Pipes & Tubes</td></tr><tr><td>Buildings - HVAC</td></tr><tr><td>Retail</td></tr><tr><td>Infra - Public</td></tr><tr><td>Infra - Transport</td></tr><tr><td>Infra - Energy</td></tr><tr><td>Infra - Water</td></tr><tr><td>Automotive</td></tr><tr><td>Industrial and Machinery</td></tr><tr><td>Consumer Goods and Appliances</td></tr><tr><td>Packaging</td></tr><tr><td>Healthcare and Medical Equipment</td></tr><tr><td>Defense and Military</td></tr><tr><td>Agriculture</td></tr><tr><td>Telecommunications</td></tr><tr><td>Pressure Vessels and Tanks</td></tr><tr><td>Processors</td></tr></table>
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Stepdefination.SegmentSubSegment.SegmentSteps.userSetsTheValueForEachSubCategory(io.cucumber.datatable.DataTable)">
-                <span>When User sets the value for the subCategory for each Category</span>
-      <div><table class='markup-table table '><tr><td>Buildings - Residential</td><td>Buildings - Commercial</td><td>Buildings - Industrial</td><td>Buildings - Components & extensions</td><td>Pipes & Tubes</td><td>Buildings - HVAC</td><td>Retail</td><td>Infra - Public</td><td>Infra - Transport</td><td>Infra - Energy</td><td>Infra - Water</td><td>Automotive</td><td>Industrial and Machinery</td><td>Consumer Goods and Appliances</td><td>Packaging</td><td>Healthcare and Medical Equipment</td><td>Defense and Military</td><td>Agriculture</td><td>Telecommunications</td><td>Pressure Vessels and Tanks</td><td>Processors</td></tr><tr><td>Luxury</td><td>Offices</td><td>Warehouse (PEB)</td><td>Racks, storage, parking, lifts</td><td>PVC</td><td>Ventilation</td><td>Buildings</td><td>Education</td><td>Bridges & support frames</td><td>Oil and Gas</td><td>Water supply</td><td>Auto components - body panels</td><td>Heavy Machinery</td><td>Appliances - AC</td><td>Food and Beverage - Cans & containers</td><td>Medical Devices</td><td>Vehicles</td><td>Infrastructure</td><td>Towers</td><td>LPG - Tanks & cylinders</td><td>RMC</td></tr><tr><td>Affordable</td><td>Retail Centres</td><td>Warehouse (Civil)</td><td>Clean room panels, doors</td><td>Precision Tubes</td><td>Ducts</td><td>Building components & extensions</td><td>Healthcare</td><td>Tunnels & support frames</td><td>Power Plants</td><td>Sewage and Waste Management</td><td>Auto components - chassis, frames, press parts & structural components</td><td>Manufacturing Equipment - Welding wire converters</td><td>Appliances - Washing machines</td><td>Food and Beverage and others - Caps & others</td><td>--None--</td><td>Weapons</td><td>Equipment</td><td>Infrastructure</td><td>LPG - distribution</td><td>Blocks and bricks</td></tr><tr><td>Economy</td><td>Hospitality</td><td>Power Plant Development</td><td>Others</td><td>Structural Tubes</td><td>Radiators</td><td>Automotive</td><td>Social welfare</td><td>Roads and Highways - Guard rails & crash barriers</td><td>Renewable Energy - Solar</td><td>Treatment plants</td><td>Auto components - engine components</td><td>Manufacturer - TMT / Re - Rollers / Bright Bars</td><td>Appliances - Refrigeration</td><td>Industrial Packaging - Drums & barrels</td><td></td><td>Infrastructure</td><td>--None--</td><td>--None--</td><td>LPG - Valve & safety devices</td><td>Hume pipes</td></tr><tr><td>--None--</td><td>Financial</td><td>Manufacturing Facilities (PEB)</td><td>--None--</td><td>Conveyance Tubes</td><td>Cooling</td><td>Infra energy</td><td>Sports Facilities</td><td>Road furniture</td><td>Renewable Energy - Others</td><td>Storm water</td><td>Auto components - transmission</td><td>Manufacturing Equipment - Others</td><td>Appliances - Dish Antenna</td><td>Industrial Packaging - Oil, industrial chemicals, food pulps</td><td></td><td>--None--</td><td></td><td></td><td>Boiler and pressure equipments</td><td>Poles</td></tr><tr><td></td><td>Entertainment</td><td>Manufacturing Facilities (Civil)</td><td></td><td>--None--</td><td>Others</td><td>Industrial and Machinery</td><td>Tourism</td><td>Roads and Highways - civil work</td><td></td><td>Irrigation</td><td>Auto components - Others</td><td>Mining Equipment & Yellow Goods</td><td>Appliances - Fans, axial fans, geysers</td><td>Industrial Packaging - Others</td><td></td><td></td><td></td><td></td><td>--None--</td><td>Pavers</td></tr><tr><td></td><td>Restaurants</td><td>Storage facilities</td><td></td><td></td><td>--None--</td><td>Consumer Goods and Appliances</td><td>Telecommunications - Tower</td><td>Railway Infrastructure</td><td>--None--</td><td>--None--</td><td>Aerospace</td><td>Hardware Accessories - Fasteners</td><td>Appliances - Switches & panels</td><td>--None--</td><td></td><td></td><td></td><td></td><td></td><td>Boards and sheets</td></tr><tr><td></td><td>Data Centers</td><td>Industrial Parks</td><td></td><td></td><td></td><td>Packaging</td><td>Telecommunications - Infra</td><td>Railway rolling stock</td><td></td><td></td><td>--None--</td><td>Hardware Accessories - Others</td><td>Appliances - others</td><td></td><td></td><td></td><td></td><td></td><td></td><td>--None--</td></tr><tr><td></td><td>--None--</td><td>--None--</td><td></td><td></td><td></td><td>Telecommunications</td><td>--None--</td><td>Shipbuilding</td><td></td><td></td><td></td><td>--None--</td><td>Casing and frames for electronic goods</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>Pressure Vessels and Tanks</td><td></td><td>Airports</td><td></td><td></td><td></td><td></td><td>Furniture</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>Retailers</td><td></td><td>Metro</td><td></td><td></td><td></td><td></td><td>--None--</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>--None--</td><td></td><td>Bus terminal</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>Agriculture</td><td></td><td>EV infra</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Ports</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>--None--</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="Stepdefination.SegmentSubSegment.SegmentSteps.checTheSubSegmentForEachCtegory()">
-                <span>Then User fetchs the date from the segment and assert with the respective array</span>
+              <div class="step pass-bg" title="Stepdefination.Sales.AccountPageSteps.UserClicksOnLogoutButton()">
+                <span>And User clicks on log out button</span>
       <div>
       </div>
               </div>
           </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="54"><span class="badge log pass-bg mr-2">Pass</span>Category team logs inside of the system</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="55"><span class="badge log pass-bg mr-2">Pass</span>Category team logs inside of the system</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When the user enters the username "category123@gmail.com"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user enters the password "Category@123"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user clicks on the login button</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="60"><span class="badge log pass-bg mr-2">Pass</span>Category user updates the Price and seller for the Opportunity</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="61"><span class="badge log pass-bg mr-2">Pass</span>Category user updates the Price and seller for the Opportunity</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Category team Searches the opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User opens the Opportunity page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks on the process opportunity button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user searches for the source seller "Vee"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user selects the source seller "Vee"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user selects the category price as "160"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user edits the cost price to "150"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user saves the opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user saves the opportunity</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="72"><span class="badge log pass-bg mr-2">Pass</span>Category team logs out</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Stepdefination.Sales.AccountPageSteps.UserAccountIconButtonClick()">
+                <span>Given user clicks on account button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Sales.AccountPageSteps.UserClicksOnLogoutButton()">
+                <span>And User clicks on log out button</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="76"><span class="badge log pass-bg mr-2">Pass</span>Sales team logs inside of the system</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="77"><span class="badge log pass-bg mr-2">Pass</span>Sales team logs inside of the system</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When the user enters the username "salestestuser@jsw.in.replica"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user enters the password "@Sales123"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user clicks on the login button</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
         </div>
   </div>
 </div>
@@ -432,15 +727,15 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>4</span>
+<span class='badge log pass-bg'>11</span>
 </span>
-<p class="name">@seg</p>
-<p class="duration text-sm">4 tests</p>
+<p class="name">@prof</p>
+<p class="duration text-sm">11 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@seg</h4>
-<span status="pass" class='badge log pass-bg'>4 passed</span>
+<h4>@prof</h4>
+<span status="pass" class='badge log pass-bg'>11 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -453,41 +748,111 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>19:04:15 PM</td>
+<td>15:57:40 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='2'>Setting up enviroment for the the project</a>
 <div class="">
-<span class="badge badge-default">Create Order in SF using this Script.Setting up enviroment for the the project</span>
+<span class="badge badge-default">Profile based order creation.Setting up enviroment for the the project</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>19:04:17 PM</td>
+<td>15:57:42 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='6'>User logs in to Salesforce</a>
 <div class="">
-<span class="badge badge-default">Create Order in SF using this Script.User logs in to Salesforce</span>
+<span class="badge badge-default">Profile based order creation.User logs in to Salesforce</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>19:04:24 PM</td>
+<td>15:57:49 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='13'>User navigates to a specific account from the homepage</a>
 <div class="">
-<span class="badge badge-default">Create Order in SF using this Script.User navigates to a specific account from the homepage</span>
+<span class="badge badge-default">Profile based order creation.User navigates to a specific account from the homepage</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>19:04:27 PM</td>
+<td>15:57:52 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='19'>User navigates to Segment and Subsegment for testing</a>
+<a href="#" class="linked" test-id='1' id='19'>Sales user initiates the Opportunity</a>
 <div class="">
-<span class="badge badge-default">Create Order in SF using this Script.User navigates to Segment and Subsegment for testing</span>
+<span class="badge badge-default">Profile based order creation.Sales user initiates the Opportunity</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:58:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='32'>User processes an opportunity to the sales team and fills required documents</a>
+<div class="">
+<span class="badge badge-default">Profile based order creation.User processes an opportunity to the sales team and fills required documents</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:58:16 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='44'>Sales team Handover the Opportunity to the respective Category folk</a>
+<div class="">
+<span class="badge badge-default">Profile based order creation.Sales team Handover the Opportunity to the respective Category folk</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:58:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='50'>Sales logs out</a>
+<div class="">
+<span class="badge badge-default">Profile based order creation.Sales logs out</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:58:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='55'>Category team logs inside of the system</a>
+<div class="">
+<span class="badge badge-default">Profile based order creation.Category team logs inside of the system</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:58:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='61'>Category user updates the Price and seller for the Opportunity</a>
+<div class="">
+<span class="badge badge-default">Profile based order creation.Category user updates the Price and seller for the Opportunity</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:58:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='72'>Category team logs out</a>
+<div class="">
+<span class="badge badge-default">Profile based order creation.Category team logs out</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:58:41 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='77'>Sales team logs inside of the system</a>
+<div class="">
+<span class="badge badge-default">Profile based order creation.Sales team logs inside of the system</span>
 </div>
 </td>
 </tr>

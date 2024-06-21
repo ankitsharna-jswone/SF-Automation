@@ -24,9 +24,10 @@ public class HomePage {
         wait.until(ExpectedConditions.visibilityOf(xpathELem("//mark[@class='data-match' and contains(text(),"+ name +")]"))).click();
     }
 
-    public void LoggedUserIconButton(){
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='uiImage'and ./img[@title='User']]"))).click();
-        xpathELem("//span[@class='uiImage'and ./img[@title='User']]").click();
+    public void LoggedUserIconButton() throws InterruptedException {
+        Thread.sleep(2000);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='uiImage' and @data-aura-class='uiImage' and ./img[@title='User']]")));
+        clickingTool(xpathELem("//span[@class='uiImage' and @data-aura-class='uiImage' and ./img[@title='User']]"));
     }
 
     public void LogOutButton(){

@@ -4,6 +4,7 @@ import Pages.AccountPage;
 import Pages.HomePage;
 import Pages.OpportunityPage;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import static Utils.BrowsserSetup.getDriver;
@@ -31,7 +32,7 @@ public class AccountPageSteps {
     }
 
     @Given("user clicks on account button")
-    public void UserAccountIconButtonClick(){
+    public void UserAccountIconButtonClick() throws InterruptedException {
         homePage.LoggedUserIconButton();
     }
 
@@ -44,6 +45,34 @@ public class AccountPageSteps {
     public void UserSaveTheOpportunityName(){
         opportunityPage.setOpportunityNumber();
     }
+
+    @Given("User is on Opportunity page")
+    public void userHomePage(){
+        System.out.println("User at homepage");
+    }
+
+    @When("User clicks on the Handover Opportunity to category team")
+    public void userClicksOnHandoverCategoryTeamButton(){
+        opportunityPage.handoverToCategoryButton();
+    }
+
+    @Then("User Searches the {string} user for that opportunity")
+    public void userSearchedtheCategoryFolk(String category){
+        opportunityPage.searchCategory(category);
+    }
+
+    @Then("User selected the  {string} folk")
+    public void userSelectsTheCategoryFolk(String category){
+        opportunityPage.selectCategoryUser(category);
+    }
+
+    @Then("User clicked on next button")
+    public void userClicksOnNextButton(){
+        opportunityPage.nextButton();
+    }
+
+
+
 
 
 }

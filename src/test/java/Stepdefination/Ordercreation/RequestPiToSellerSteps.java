@@ -24,7 +24,7 @@ public class RequestPiToSellerSteps {
 
     }
 
-    @Then("the user requests PI to the seller")
+    @When("the user requests PI to the seller")
     public void userRequestedSellerToPI() throws InterruptedException {
         Thread.sleep(1000);
         processOpportunity.requestPItoSeller();
