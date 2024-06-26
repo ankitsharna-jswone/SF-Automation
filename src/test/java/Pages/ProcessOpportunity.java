@@ -149,12 +149,13 @@ public class ProcessOpportunity {
 
     public void saveOpportunity() throws InterruptedException {
         //save
+        Thread.sleep(1000);
         waitLocatedXpath("//button[text()='Save' and @title]");
         Actions actions = new Actions(driver);
         WebElement save = xpathELem("//button[text()='Save' and @title]");
         actions.scrollToElement(save);
         clickingTool(save);
-        Thread.sleep(1000);
+
     }
 
 

@@ -14,7 +14,7 @@ public class RequestPiToSellerSteps {
 
     @Given("User processed opportunity to send PI to seller")
     public void userProcessedOpportunity(){
-        processOpportunity.processOpportunitybutton();
+        processOpportunity.requestPItoSeller();
     }
 
 

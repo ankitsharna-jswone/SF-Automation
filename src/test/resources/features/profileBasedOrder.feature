@@ -1,5 +1,5 @@
 @prof
-#  // blocked due to layout changes at sales profile.
+
 Feature: Profile based order creation
   Scenario: Setting up enviroment for the the project
     Given Set the file and driver and configuration
@@ -87,6 +87,7 @@ Feature: Profile based order creation
     And the user selects the category price as "<Price>"
     And the user edits the cost price to "<Cost>"
     And the user saves the opportunity
+#    And the user verifies the customer-accepted price
     And the user saves the opportunity
   Examples:
     | Cost  | Seller     | Price |
@@ -109,25 +110,40 @@ Feature: Profile based order creation
 
 
 
-    Scenario : Sales user Request PI to Category
-#      Given Sales team Searches the opportunity
-#      Given User opens the Opportunity page
-      Given User processed opportunity to send PI to seller
+    Scenario Outline: Sales user Request PI to Category
+      Given Sales team Searches the opportunity
+      Given User opens the Opportunity page
+      Given the user clicks on the process opportunity button for PI to category team
       When the user saves the opportunity
-      When the user requests PI to the seller
-      And user saved the opportunity
-      Then The stage of opportunity will be printed
-#
-#
-#  Scenario: Sales team logs out
-#    Given user clicks on account button
-#    And User clicks on log out button
-#
-#  Scenario Outline: Category team log in again inside of the system
-#
-#    When the user enters the username "<Username>"
-#    And the user enters the password "<Password>"
-#    And the user clicks on the login button
-#    Examples:
-#      | Username | Password |
-#      |category123@gmail.com|Category@123|
+      Given the user requests PI to the category team
+      And the user selected the "<Category>"
+      When the user saves the category user
+      And the user saves the opportunity for sales
+    Examples:
+    | Category|
+    |category user test|
+
+  Scenario: Sales team logs out
+    Given user clicks on account button
+    And User clicks on log out button
+
+  Scenario Outline: Category team log in again inside of the system
+    When the user enters the username "<Username>"
+    And the user enters the password "<Password>"
+    And the user clicks on the login button
+    Examples:
+      | Username | Password |
+      |category123@gmail.com|Category@123|
+
+
+  Scenario: User request PI to Seller team
+    Given Category team Searches the opportunity
+    And User opens the Opportunity page
+    When the user clicks on the process opportunity button
+    Given User processed opportunity to send PI to seller
+    And the user saves the final order
+    Then the user requests PI to the seller
+    And the user saves the final order
+
+
+

@@ -23,7 +23,7 @@ public class ProcessOpportunityDefination {
         System.out.println("Opportunity processin page");
     }
     @When("the user clicks on the process opportunity button")
-    public void the_user_clicks_on_the_process_opportunity_button() {
+    public void the_user_clicks_on_the_process_opportunity_button() throws InterruptedException {
         processOpportunity.processOpportunitybutton();
     }
     @When("the user selects to edit the opportunity")

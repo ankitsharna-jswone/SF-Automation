@@ -38,7 +38,7 @@ Feature: Create Order in SF using this Script
     And the user saves the opportunity
     Examples:
       | Product      | Quantity | Thickness | Width |
-      | MS HR Coil 2062:2011 E250A  | 5   | 1000 | 1500 |
+      | JSW Platina Electrolytic Tinplate Coil IS 1993:2018 T51  | 5   | 1000 | 1500 |
 
 
   Scenario Outline: User processes an opportunity to the sales team and fills required documents
