@@ -58,6 +58,11 @@ public class SegmentSteps {
         accountPage.detailsOfPage();
     }
 
+    @Given("User refreshed the page")
+    public void userRefreshThePage(){
+        accountPage.PageRefresh();
+    }
+
     @Given("User scrolls down to the Edit segment button")
     public void editButtonClicking(){
         accountPage.editButton();
@@ -232,6 +237,11 @@ public class SegmentSteps {
         }
 
 
+    }
+
+    @Then("User saves the edit page")
+    public void userSaveTheEditPage() throws InterruptedException {
+        accountPage.saveEdit();
     }
 
 

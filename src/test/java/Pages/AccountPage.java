@@ -22,6 +22,15 @@ public class AccountPage {
         clickingTool(xpathELem("//a[text()='Details']"));
     }
 
+    public void PageRefresh(){
+        driver.navigate().refresh();
+    }
+
+    public void saveEdit() throws InterruptedException {
+        Thread.sleep(3000);
+        clickingTool(xpathELem("//button[text()='Save' and @name ='SaveEdit']"));
+    }
+
     public void editButton(){
 
 

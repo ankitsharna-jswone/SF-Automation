@@ -1,26 +1,20 @@
 {
   "warningSteps": 0,
   "totalFeatures": 1,
-  "failedFeatures": 1,
-  "passedScenarios": 8,
-  "totalSteps": 70,
-  "failedScenarios": 2,
-  "skippedSteps": 11,
-  "failedSteps": 2,
-  "totalScenarios": 10,
+  "failedFeatures": 0,
+  "passedScenarios": 4,
+  "totalSteps": 21,
+  "failedScenarios": 0,
+  "skippedSteps": 0,
+  "failedSteps": 0,
+  "totalScenarios": 4,
   "infoSteps": 0,
   "scenarioDurations": {
-    "User navigates to a specific account from the homepage": 3680,
-    "User creates an opportunity with a specific product and quantity": 10933,
-    "Setting up enviroment for the the project": 4181,
-    "User logs in to Salesforce": 7453,
-    "User requests PI to the category team": 41335,
-    "User sends the file to pricing to the category team": 11563,
-    "User request PI to Seller team": 45685,
-    "User creates an order, captures the subtotal, and order number": 22482,
-    "User updates the seller PI and sends it to the seller": 36101,
-    "User processes an opportunity to the sales team and fills required documents": 25862
+    "User navigates to a specific account from the homepage": 4799,
+    "User navigates to Segment and Subsegment for testing": 47635,
+    "Setting up enviroment for the the project": 1903,
+    "User logs in to Salesforce": 6350
   },
-  "passedFeatures": 0,
-  "passedSteps": 57
+  "passedFeatures": 1,
+  "passedSteps": 21
 }
