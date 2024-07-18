@@ -133,5 +133,32 @@ public class OpportunityPage {
         xpathELem("//input[@name ='Advance__c']").sendKeys(string);
     }
 
+    public void selectCreditButton(){
+        waitLocatedXpath("//button[@name='Opportunity.Select_credit']");
+        clickingTool(xpathELem("//button[@name='Opportunity.Select_credit']"));
+    }
+
+    public void userSelectCreditProgramButton(){
+        waitLocatedXpath("//button[@name='Credit_Program_Type__c']");
+        clickingTool(xpathELem("//button[@name='Credit_Program_Type__c']"));
+    }
+
+    public void userSelectCreditProgramType(String credt){
+        waitLocatedXpath("//span[contains(@title,'"+credt+"')]");
+        clickingTool(xpathELem("//span[contains(@title,'"+credt+"')]"));
+    }
+
+    public void userFillsCreditDays(String days){
+
+        xpathELem("//input[@name='Credit_Days__c']").clear();
+        xpathELem("//input[@name='Credit_Days__c']").sendKeys(days);
+    }
+
+    public void userSavesCreditProgram(){
+//        waitLocatedXpath("//button[text()='Save'and @style]");
+        clickingTool(xpathELem("(//button[text()='Save'])[2]"));
+    }
+
+
 
 }

@@ -1,5 +1,5 @@
-@create
-Feature: Create Order in SF using this Script
+@credit
+Feature: Create Order in SF using this Script for credit user
 
   Scenario: Setting up enviroment for the the project
     Given Set the file and driver and configuration
@@ -11,8 +11,8 @@ Feature: Create Order in SF using this Script
     And the user enters the password "<Password>"
     And the user clicks on the login button
     Examples:
-      | Username            | Password | Link                                                          |
-      |v_ankit.sharma@jsw.in| @Ankit123|https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
+      | Username              | Password  | Link                                                           |
+      | v_ankit.sharma@jsw.in | @Ankit123 | https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
 
 
   Scenario Outline: User navigates to a specific account from the homepage
@@ -22,8 +22,8 @@ Feature: Create Order in SF using this Script
     And the user clicks on the search result for "<Account>" accounts
     And the user opens the account "<Account>"
     Examples:
-      | Account  |
-      | Test Account B |
+      | Account            |
+      | RAHUL KIRANA STORE |
 
 
   Scenario Outline: User creates an opportunity with a specific product and quantity
@@ -37,8 +37,8 @@ Feature: Create Order in SF using this Script
     And the user selects the width as "<Width>"
     And the user saves the opportunity
     Examples:
-      | Product      | Quantity | Thickness | Width |
-      |  MS HR Coil 2062:2011 E250A | 5   | 1000 | 1500 |
+      | Product                    | Quantity | Thickness | Width |
+      | MS HR Coil 2062:2011 E250A | 5        | 1000      | 1500  |
 
 
   Scenario Outline: User processes an opportunity to the sales team and fills required documents
@@ -46,62 +46,72 @@ Feature: Create Order in SF using this Script
     When the user clicks on the process opportunity button
     And the user selects to edit the opportunity
     And the user edits the delivery type to "<Delivery Type>"
+    And the user selectes the credit required as YES
+    And User selects the credit "<Program>" for the user
+    And Then User filled the advance % "<Advance>"
     And the user edits the delivery time to "<Days>" days
     And the user edits the special message to "<Special Message>"
+    And the user saves the opportunity
+    Examples:
+      | Delivery Type | Days | Special Message        | Program         | Advance |
+      | Self pickup   | 2    | Urgent delivery needed | BNPL-New Credit | 30      |
+
+
+  Scenario Outline: User sends the file to pricing to the category team
+    When the user selects the category price as "<CPrice>"
+    And the user edits the cost price to "<Price>"
     And the user searches for the source seller "<Seller>"
     And the user selects the source seller "<Seller>"
-    And the user edits the cost price to "10"
     And the user saves the opportunity
-
-    Examples:
-      | Delivery Type | Days | Special Message        | Price  | Seller     |
-      |     Self pickup    | 2    | Urgent delivery needed | 150   | Vee  |
-
-
-  Scenario: User sends the file to pricing to the category team
     When Sales team clicks on the price awaiting section
     And the user performs the category user test
     And the user saves the category
-    And the user saves the opportunity
-
-
-
-  Scenario Outline: User updates the customer-accepted price after receiving pricing from the category
-    Given the user clicks on the process opportunity button for pricing
-    When the user selects the category price as "<CPrice>"
-    When user sets the customer-accepted price to "<Price>"
-    And the user saves the opportunity for pricing
-#    And the user verifies the customer-accepted price
-#    And the user saves the opportunity
-    Examples:
-     |CPrice| Price |
-     |  11  |   12   |
-
-
-
-
-  Scenario Outline: User requests PI to the category team
-    Given the user clicks on the process opportunity button for PI to category team
-    And the user saves the opportunity first
     And the user verifies the customer-accepted price
-    And the user requests PI to the category team
-    And the user selected the "<Category>"
-    And the user saves the category user
-    And the user saves the opportunity for sales
-    Then Check stage of the opportunity is "<Stage>"
-    Then User Went to SKU requirement page
-    Then User selected the SKU number "0"
-    Then Click on the Opportunity Page
-
+    And the user saves the opportunity
     Examples:
-      | Stage            | Category |
-      | Awaiting PI | category user test|
+      | CPrice | Price | Seller |
+      | 11     | 10    | Vee    |
+
+
+  Scenario Outline: User Selects the credit on the Opportunity page
+    When User click on Select Credit button
+    And user chose the credit program on the Opportunity "<Credit>"
+    And User selects the credit Days on the Opportutnity "<Days>"
+    And User saves the Credit Program on the Opportunity
+    Examples:
+      | Credit          | Days |
+      | BNPL-New Credit | 10   |
+
+  Scenario Outline: User selects the credit program on the Credit program on Opportunity page
+    When the user clicks on the process opportunity button
+    And the user selects to edit the opportunity
+    And User selects the credit "<Program>" for the user
+    And user sets the customer-accepted price to "<Price>"
+    And the user saves the opportunity
+    Examples:
+      | Program         | Price |
+      | BNPL-New Credit | 13    |
+
+  Scenario Outline: User request PI to Category team
+    When the user clicks on the process opportunity button
+    And the user selects to edit the opportunity
+    And User selects the credit "<Program>" for the user
+    When the user requests PI to the category team
+    When the user performs the category user test
+    And the user saves the category user
+    And the user saves the final order
+    Examples:
+      | Program         |
+      | BNPL-New Credit |
+
 
   Scenario: User request PI to Seller team
     Given User processed opportunity to send PI to seller
-    And the user saves the final order
+    When the user saves the opportunity
     Then the user requests PI to the seller
-    And the user saves the final order
+    And user saved the opportunity
+    Then The stage of opportunity will be printed
+
 
   Scenario Outline: User updates the seller PI and sends it to the seller
     Given the user navigates to the file page

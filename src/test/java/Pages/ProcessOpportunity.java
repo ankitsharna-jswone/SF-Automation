@@ -45,6 +45,29 @@ public class ProcessOpportunity {
 
     }
 
+
+    public void creditRequired(){
+        waitLocatedXpath("//button[@aria-label='Credit requirement']");
+        clickingTool(xpathELem("//button[@aria-label='Credit requirement']"));
+    }
+
+    public void creditRequiredYes(){
+        waitLocatedXpath("//lightning-base-combobox-item[@data-value='Required']");
+        clickingTool(xpathELem("//lightning-base-combobox-item[@data-value='Required']"));
+    }
+
+    public void creditProgramType(){
+        waitLocatedXpath("//button[@aria-label='Credit Program Type']");
+        clickingTool(xpathELem("//button[@aria-label='Credit Program Type']"));
+    }
+
+
+
+    public void selectCreditProgram(String credit){
+        waitLocatedXpath("//span[contains(@title, '"+credit+"')]");
+        clickingTool(xpathELem("//span[contains(@title, '"+credit+ "')]"));
+    }
+
     public void setThickness(String thickness){
         waitLocatedXpath("//input[@name ='Thickness (mm)']");
         xpathELem("//input[@name ='Thickness (mm)']").sendKeys(thickness);

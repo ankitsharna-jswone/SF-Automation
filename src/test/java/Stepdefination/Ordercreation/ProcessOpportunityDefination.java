@@ -34,8 +34,21 @@ public class ProcessOpportunityDefination {
     @When("the user edits the delivery type to {string}")
     public void the_user_edits_the_delivery_type_to(String deliveryType) {
         processOpportunity.editDelivery(deliveryType);
+    }
+
+    @When("the user selectes the credit required as YES")
+    public void user_selects_credit_required_yes(){
+        processOpportunity.creditRequired();
+        processOpportunity.creditRequiredYes();
 
     }
+
+    @When("User selects the credit {string} for the user")
+    public void user_choose_credit_program(String string){
+        processOpportunity.creditProgramType();
+        processOpportunity.selectCreditProgram(string);
+    }
+
     @When("the user edits the delivery time to {string} days")
     public void the_user_edits_the_delivery_time_to_days(String days) {
         processOpportunity.editDeliveryTime(days);

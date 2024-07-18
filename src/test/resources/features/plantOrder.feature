@@ -57,21 +57,23 @@ Feature: Create Plant Supply Order in SF using this Script
 
     Examples:
       | Delivery Type | Days | Special Message        | SourceSeller     | Seller | Cost |
-      |     Self pickup    | 2    | Urgent delivery needed    | Test Steel Authority 2 | Test Steel Authority 2 | 100 |
+      |     Self pickup    | 2    | Urgent delivery needed    | JSW Steel Dolvi | JSW Steel Dolvi | 100 |
 
   Scenario: User sends the file to pricing to the category team
     When Sales team clicks on the price awaiting section
     And the user performs the category user test
     And the user saves the category
-    And the user verifies the customer-accepted price
+
     And the user saves the opportunity
     Then Print the stage of the Opportunity
 
 
   Scenario Outline: User updates the customer-accepted price after receiving pricing from the category
     Given the user clicks on the process opportunity button for pricing
-#    When the user selects the category price as "<CPrice>"
-#    When user sets the customer-accepted price to "<Price>"
+    When the user selects the category price as "<CPrice>"
+    When user sets the customer-accepted price to "<Price>"
+    And the user saves the opportunity for pricing
+    And the user verifies the customer-accepted price
     And the user saves the opportunity for pricing
     Then the check stage of the opportunity is "<Stage>"
     Then Print the stage of the Opportunity
@@ -80,6 +82,7 @@ Feature: Create Plant Supply Order in SF using this Script
       | 120   | Awaiting Customer Approval    | 110 |
 
 
+    
   Scenario: User accepted all SKU's
     When user accepted All SKUs
     And user click on proceed button
