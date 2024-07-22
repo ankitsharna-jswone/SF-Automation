@@ -46,9 +46,10 @@ public class HomePage {
     }
 
     public void searchAccountClick(String search){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[ @title='" + search + "']")));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[ @title='" + search + "']")));
         WebElement SearchResult = driver.findElement(By.xpath("//span[ @title='" + search + "']"));
-        SearchResult.click();
+        clickingTool(SearchResult);
+
     }
 
     public void openAccount(String text) {

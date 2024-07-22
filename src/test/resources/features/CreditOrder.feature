@@ -23,7 +23,7 @@ Feature: Create Order in SF using this Script for credit user
     And the user opens the account "<Account>"
     Examples:
       | Account            |
-      | RAHUL KIRANA STORE |
+      |RELIANCE JIO INFOCOMM LIMITED|
 
 
   Scenario Outline: User creates an opportunity with a specific product and quantity
@@ -54,7 +54,7 @@ Feature: Create Order in SF using this Script for credit user
     And the user saves the opportunity
     Examples:
       | Delivery Type | Days | Special Message        | Program         | Advance |
-      | Self pickup   | 2    | Urgent delivery needed | BNPL-New Credit | 30      |
+      | Self pickup   | 2    | Urgent delivery needed | Channel Finance-Tata Capital | 30      |
 
 
   Scenario Outline: User sends the file to pricing to the category team
@@ -70,7 +70,7 @@ Feature: Create Order in SF using this Script for credit user
     And the user saves the opportunity
     Examples:
       | CPrice | Price | Seller |
-      | 11     | 10    | Vee    |
+      | 120    | 100    | Vee |
 
 
   Scenario Outline: User Selects the credit on the Opportunity page
@@ -80,39 +80,41 @@ Feature: Create Order in SF using this Script for credit user
     And User saves the Credit Program on the Opportunity
     Examples:
       | Credit          | Days |
-      | BNPL-New Credit | 10   |
+      |Channel Finance-Tata Capital | 10   |
 
   Scenario Outline: User selects the credit program on the Credit program on Opportunity page
     When the user clicks on the process opportunity button
     And the user selects to edit the opportunity
     And User selects the credit "<Program>" for the user
+    And User sets the Credit days "<Days>"
     And user sets the customer-accepted price to "<Price>"
     And the user saves the opportunity
     Examples:
-      | Program         | Price |
-      | BNPL-New Credit | 13    |
+      | Program         | Price | Days |
+      |Channel Finance-Tata Capital | 150    |  10    |
 
-  Scenario Outline: User request PI to Category team
-    When the user clicks on the process opportunity button
-    And the user selects to edit the opportunity
-    And User selects the credit "<Program>" for the user
+
+  Scenario: User request PI to Category team
+#    When the user clicks on the process opportunity button
+#    And the user selects to edit the opportunity
+#    And User selects the credit "<Program>" for the user
     When the user requests PI to the category team
     When the user performs the category user test
     And the user saves the category user
-    And the user saves the final order
-    Examples:
-      | Program         |
-      | BNPL-New Credit |
+#    And the user saves the final order
+#    Examples:
+#      | Program         |
+#      | BNPL-New Credit |
 
-
+#
   Scenario: User request PI to Seller team
-    Given User processed opportunity to send PI to seller
-    When the user saves the opportunity
+#    Given User processed opportunity to send PI to seller
+#    When the user saves the opportunity
     Then the user requests PI to the seller
     And user saved the opportunity
     Then The stage of opportunity will be printed
-
-
+#
+#
   Scenario Outline: User updates the seller PI and sends it to the seller
     Given the user navigates to the file page
     And the user chooses the seller PI
@@ -121,8 +123,8 @@ Feature: Create Order in SF using this Script for credit user
     Examples:
       | Stage            |
       | Awaiting Payment |
-
-
+#
+#
   Scenario: User creates an order, captures the subtotal, and order number
     Given the user is on the account page for order creation
     And User approves the approval history

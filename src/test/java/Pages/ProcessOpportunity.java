@@ -45,6 +45,11 @@ public class ProcessOpportunity {
 
     }
 
+    public void creditDays(String days){
+        xpathELem("//input[@name='Credit_Days__c']").clear();
+        xpathELem("//input[@name='Credit_Days__c']").sendKeys(days);
+    }
+
 
     public void creditRequired(){
         waitLocatedXpath("//button[@aria-label='Credit requirement']");

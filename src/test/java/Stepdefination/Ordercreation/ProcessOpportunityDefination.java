@@ -49,6 +49,11 @@ public class ProcessOpportunityDefination {
         processOpportunity.selectCreditProgram(string);
     }
 
+    @When("User sets the Credit days {string}")
+    public void select_credit_days(String days){
+        processOpportunity.creditDays(days);
+    }
+
     @When("the user edits the delivery time to {string} days")
     public void the_user_edits_the_delivery_time_to_days(String days) {
         processOpportunity.editDeliveryTime(days);
