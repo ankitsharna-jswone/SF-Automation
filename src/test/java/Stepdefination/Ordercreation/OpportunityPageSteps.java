@@ -13,6 +13,11 @@ public class OpportunityPageSteps {
         opportunityPage.selectCreditButton();
     }
 
+    @When("User marked Credit requirement as Required")
+    public void user_mark_credit_required_true(){
+        opportunityPage.creditRequiredTrue();
+    }
+
     @When("user chose the credit program on the Opportunity {string}")
     public void userChoseCreditProgrma(String string){
         opportunityPage.userSelectCreditProgramButton();
@@ -22,6 +27,11 @@ public class OpportunityPageSteps {
     @When("User selects the credit Days on the Opportutnity {string}")
     public void userFilledCreditDays(String days){
         opportunityPage.userFillsCreditDays(days);
+    }
+
+    @When("User fills the advance percentage {string}")
+    public void userFillsAdvancePercentage(String advance){
+        opportunityPage.userSelectsAdvacncePercentage(advance);
     }
 
     @When("User saves the Credit Program on the Opportunity")

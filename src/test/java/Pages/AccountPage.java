@@ -54,7 +54,7 @@ public class AccountPage {
 
 
     public void quickOpportunity() {
-        String quickOpportunity = "//button[@name = 'Account.Quick_Opportunity_demo']";
+        String quickOpportunity = "//button[text()= 'Quick Opportunity']";
         waitLocatedXpath(quickOpportunity);
         xpathELem(quickOpportunity).click();
     }

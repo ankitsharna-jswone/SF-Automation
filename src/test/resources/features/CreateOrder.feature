@@ -14,7 +14,7 @@ Feature: Create Order in SF using this Script
       | Username            | Password | Link                                                          |
       |v_ankit.sharma@jsw.in| @Ankit123|https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
 
-
+ @smoke
   Scenario Outline: User navigates to a specific account from the homepage
 
     Given the user opens the search tab
@@ -25,7 +25,7 @@ Feature: Create Order in SF using this Script
       | Account  |
       | Test Account B |
 
-
+ @smoke
   Scenario Outline: User creates an opportunity with a specific product and quantity
     Given the user is on the account page
     When the user creates a quick opportunity

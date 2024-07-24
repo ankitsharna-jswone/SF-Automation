@@ -138,6 +138,14 @@ public class OpportunityPage {
         clickingTool(xpathELem("//button[@name='Opportunity.Select_credit']"));
     }
 
+    public void creditRequiredTrue(){
+        waitLocatedXpath("//button[@name='Credit_requirement__c']");
+        clickingTool(xpathELem("//button[@name='Credit_requirement__c']"));
+        waitLocatedXpath("//span[text()='Required']");
+        clickingTool(xpathELem("//span[text()='Required']"));
+    }
+
+
     public void userSelectCreditProgramButton(){
         waitLocatedXpath("//button[@name='Credit_Program_Type__c']");
         clickingTool(xpathELem("//button[@name='Credit_Program_Type__c']"));
@@ -152,6 +160,11 @@ public class OpportunityPage {
 
         xpathELem("//input[@name='Credit_Days__c']").clear();
         xpathELem("//input[@name='Credit_Days__c']").sendKeys(days);
+    }
+
+    public void userSelectsAdvacncePercentage(String advance){
+        xpathELem("//input[@name='Advance__c']").clear();
+        xpathELem("//input[@name='Advance__c']").sendKeys(advance);
     }
 
     public void userSavesCreditProgram(){

@@ -93,7 +93,7 @@ Feature: Create Order in SF using this Script for credit user
       | Program         | Price | Days |
       |Channel Finance-Tata Capital | 150    |  10    |
 
-
+  @CategoryPI
   Scenario: User request PI to Category team
 #    When the user clicks on the process opportunity button
 #    And the user selects to edit the opportunity

@@ -1,5 +1,6 @@
 @const
 Feature: Check Flow of order creation of order for Multiple prodcut SKU
+
   Scenario Outline: Setting up enviroment for the the project
     Given Set the file and driver and configuration
     Given the user navigates to the Salesforce login page "<Link>"
@@ -8,7 +9,6 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     | https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
 
   Scenario Outline: User logs in to Salesforce
-
     When the user enters the username "<Username>"
     And the user enters the password "<Password>"
     And the user clicks on the login button
@@ -26,6 +26,7 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     Examples:
      | Account             | Site |
      | CHAKRESH INDUSTRIES | Global city |
+
 
   Scenario Outline: Sales team creates a cement opportunity on a site
     Given they creates an opportunity
@@ -63,7 +64,7 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     And The stage of opportunity will be printed
     Examples:
        | Price  | Seller     | CPrice |
-       | 100   | HEENA STEEL LLP | 150   |
+       | 100   | Vee | 150   |
 
 
 
