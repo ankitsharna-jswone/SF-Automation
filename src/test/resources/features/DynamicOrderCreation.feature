@@ -2,7 +2,7 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
 
 
   #Config done for browser
-  @ConstCreditOrder @ConstructMultiSKU
+  @ConstCreditOrder @ZohoCreditOrder
   Scenario Outline: Setting up enviroment for the the project
     Given Set the file and driver and configuration
     Given the user navigates to the Salesforce login page "<Link>"
@@ -12,7 +12,7 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
 
 
   #Credentials
-  @ConstCreditOrder @ConstructMultiSKU
+  @ConstCreditOrder @ZohoCreditOrder
   Scenario Outline: User logs in to Salesforce
     When the user enters the username "<Username>"
     And the user enters the password "<Password>"
@@ -24,7 +24,7 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
 
 
   #Account level : Construct , ZOHO , Credit, Normal
-  @ConstCreditOrder @ConstructMultiSKU
+  @ConstCreditOrder
   Scenario Outline: Sales team Went to the User account and to the site
     Given the user is on the home page
     When they search for account "<Account>"
@@ -46,7 +46,7 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
       | Account        |
       | Test Account B |
 
-
+   @ZohoCreditOrder
   Scenario Outline: User navigates to a specific account from the homepage
 
     Given the user opens the search tab
@@ -92,7 +92,7 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
       | Brand | Type   | Quantity |
       | JSW   | OPC-53 | 100      |
 
-
+  @ZohoCreditOrder
   Scenario Outline: User creates an opportunity with a specific product and quantity
     Given the user is on the account page
     When the user creates a quick opportunity
@@ -126,9 +126,22 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
       | Delivery Type | Days | Special Message        | Program          | Advance |
       | Self pickup   | 2    | Urgent delivery needed | BNPL-IFC-JSWSCPL | 30      |
 
+  @ZohoCreditOrder
+  Scenario Outline: User processes an opportunity to the sales team and fills required documents
+    Given the user is on the opportunity processing page
+    When the user clicks on the process opportunity button
+    And the user selects to edit the opportunity
+    And the user edits the delivery type to "<Delivery Type>"
+    And the user selectes the credit required as YES
+    And User selects the credit "<Program>" for the user
+    And Then User filled the advance % "<Advance>"
+    And the user edits the delivery time to "<Days>" days
+    And the user edits the special message to "<Special Message>"
+    Examples:
+      | Delivery Type | Days | Special Message        | Program          | Advance |
+      | Self pickup   | 2 | Urgent delivery needed | Channel finance-TATA | 30      |
 
 
-  @ConstructMultiSKU
   Scenario Outline: User processes the opportunities and set the delivery process
     Given the user is on the opportunity processing page
     When the user clicks on the process opportunity button
@@ -140,7 +153,9 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
       | Delivery Type | Days | Special Message        |
       | Self pickup   | 2    | Urgent delivery needed |
 
-  @ConstCreditOrder
+
+#SKU eiditing
+  @ConstCreditOrder @ZohoCreditOrder
   Scenario Outline: User sends the file to pricing to the category team
     When the user selects the category price as "<CPrice>"
     And the user edits the cost price to "<Price>"
@@ -182,7 +197,6 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
       | Awaiting Pricing |
 
 
-  @ConstructMultiSKU
   Scenario: Category will take this order and put the pricing from thier side for each product
     Given User at the Opportunity page and clicks on the process opportunity
     And Gave Category pricing for each product
@@ -218,8 +232,25 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
       | Price | Program          | Days |
       | 140   | BNPL-IFC-JSWSCPL | 10   |
 
+  @ZohoCreditOrder
+  Scenario Outline: Sales team confirms the customer accepted price
+    When the user clicks on the process opportunity button
+    And the user selects to edit the opportunity
+    And User selects the credit "<Program>" for the user
+    And User sets the Credit days "<Days>"
+    When user sets the customer-accepted price to "<Price>"
+    And the user saves the opportunity
+    When the user requests PI to the category team
+    When the user performs the category user test
+    And the user saves the category user
+    Then the user requests PI to the seller
+    And user saved the opportunity
+    Then The stage of opportunity will be printed
+    Examples:
+      | Price | Program          | Days |
+      | 140   | Channel finance-TATA | 0   |
 
-  @ConstructMultiSKU
+
   Scenario: Sales team confirms the customer accepted price
     When the user clicks on the process opportunity button
     And the user saves the opportunity
@@ -243,8 +274,19 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
       | Credit           | Days | Advance |
       | BNPL-IFC-JSWSCPL | 10   | 40      |
 
+  @ZohoCreditOrder
+  Scenario Outline: User Selects the credit on the Opportunity page
+    When User click on Select Credit button
+    And User marked Credit requirement as Required
+    And user chose the credit program on the Opportunity "<Credit>"
+    And User selects the credit Days on the Opportutnity "<Days>"
+    And User fills the advance percentage "<Advance>"
+    And User saves the Credit Program on the Opportunity
+    Examples:
+      | Credit           | Days | Advance |
+      | Channel finance-TATA | 0   | 40      |
 
-  @ConstCreditOrder @ConstructMultiSKU
+  @ConstCreditOrder @ZohoCreditOrder
   Scenario Outline: User updates the seller PI and sends it to the seller
     Given the user navigates to the file page
     And the user chooses the seller PI
@@ -254,7 +296,7 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
       | Stage            |
       | Awaiting Payment |
 
-  @ConstCreditOrder @ConstructMultiSKU
+  @ConstCreditOrder @ZohoCreditOrder
   Scenario: User creates an order, captures the subtotal, and order number
     Given the user is on the account page for order creation
     When the user clicks on the create order button

@@ -169,7 +169,7 @@ public class OpportunityPage {
 
     public void userSavesCreditProgram(){
 //        waitLocatedXpath("//button[text()='Save'and @style]");
-        clickingTool(xpathELem("(//button[text()='Save'])[2]"));
+        clickingTool(xpathELem("(//button[text()='Save'])"));
     }
 
 

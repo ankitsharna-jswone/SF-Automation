@@ -54,7 +54,7 @@ Feature: Create Order in SF using this Script for credit user
     And the user saves the opportunity
     Examples:
       | Delivery Type | Days | Special Message        | Program         | Advance |
-      | Self pickup   | 2    | Urgent delivery needed | Channel Finance-Tata Capital | 30      |
+      | Self pickup   | 2    | Urgent delivery needed | BNPL-IFC-JSWSL | 30      |
 
 
   Scenario Outline: User sends the file to pricing to the category team
@@ -70,17 +70,17 @@ Feature: Create Order in SF using this Script for credit user
     And the user saves the opportunity
     Examples:
       | CPrice | Price | Seller |
-      | 120    | 100    | Vee |
+      | 120    | 100    | Test Steel Authority 2 |
 
 
-  Scenario Outline: User Selects the credit on the Opportunity page
-    When User click on Select Credit button
-    And user chose the credit program on the Opportunity "<Credit>"
-    And User selects the credit Days on the Opportutnity "<Days>"
-    And User saves the Credit Program on the Opportunity
-    Examples:
-      | Credit          | Days |
-      |Channel Finance-Tata Capital | 10   |
+#  Scenario Outline: User Selects the credit on the Opportunity page
+#    When User click on Select Credit button
+#    And user chose the credit program on the Opportunity "<Credit>"
+#    And User selects the credit Days on the Opportutnity "<Days>"
+#    And User saves the Credit Program on the Opportunity
+#    Examples:
+#      | Credit          | Days |
+#      |Channel Finance-Tata Capital | 00   |
 
   Scenario Outline: User selects the credit program on the Credit program on Opportunity page
     When the user clicks on the process opportunity button
@@ -91,7 +91,7 @@ Feature: Create Order in SF using this Script for credit user
     And the user saves the opportunity
     Examples:
       | Program         | Price | Days |
-      |Channel Finance-Tata Capital | 150    |  10    |
+      |BNPL-IFC-JSWSL | 150    |  00    |
 
   @CategoryPI
   Scenario: User request PI to Category team
@@ -134,3 +134,6 @@ Feature: Create Order in SF using this Script for credit user
     And the user clicks on the button to create an order for coils
     And the user captures the order number
     Then the user prints the order number
+
+
+    #https://jswoneplatforms--prdreplica.sandbox.lightning.force.com/lightning/r/Opportunity/006Hz00000Ujxj7IAB/view

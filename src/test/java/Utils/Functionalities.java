@@ -77,7 +77,13 @@ public class Functionalities {
                         element.click();
                         elementClickable = true;
                     } catch (InterruptedException sleepException) {
-                        System.out.println("Thread sleep interrupted: " + sleepException.getMessage());
+                        try {
+                            driver.findElement(By.xpath("(" + element +")[2]")).click();
+                        }
+                        catch (Exception exception){
+                            System.out.println(exception.getMessage()+ " After all Error handling i got this exception");
+                        }
+
                     }
                 }
             }
