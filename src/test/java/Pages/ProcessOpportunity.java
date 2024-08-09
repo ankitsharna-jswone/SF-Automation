@@ -69,8 +69,11 @@ public class ProcessOpportunity {
 
 
     public void selectCreditProgram(String credit){
-        waitLocatedXpath("//span[contains(@title, '"+credit+"')]");
-        clickingTool(xpathELem("//span[contains(@title, '"+credit+ "')]"));
+//        clickingTool(xpathELem("//span[contains(text(), '"+credit+ "')]"));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@aria-label='Credit Program Type']")));
+        wait.until(ExpectedConditions.presenceOfElementLocated( By.xpath("//div[@aria-label='Credit Program Type']//lightning-base-combobox-item//span[contains(text(), '" + credit + "')]")));
+        clickingTool(xpathELem("//div[@aria-label='Credit Program Type']//lightning-base-combobox-item//span[contains(text(), '" + credit + "')]"));
+
     }
 
     public void setThickness(String thickness){
@@ -87,13 +90,13 @@ public class ProcessOpportunity {
         int width = Integer.parseInt(wid);
 
         if(width == 1250){
-           clickingTool(xpathELem("//span[text() ='1250']"));
+           JavaElemClick(xpathELem("//span[text() ='1250']"));
         }
         else if (width == 1500){
-           clickingTool(xpathELem("//span[text() ='1500']"));
+           JavaElemClick(xpathELem("//span[text() ='1500']"));
         }
         else{
-           clickingTool(xpathELem("//span[text() ='Non-Standard']"));
+           JavaElemClick(xpathELem("//span[text() ='Non-Standard']"));
         }
 
 
@@ -177,11 +180,11 @@ public class ProcessOpportunity {
 
     public void saveOpportunity() throws InterruptedException {
         //save
-        Thread.sleep(1000);
+
         waitLocatedXpath("//button[text()='Save' and @title]");
         Actions actions = new Actions(driver);
         WebElement save = xpathELem("//button[text()='Save' and @title]");
-        actions.scrollToElement(save);
+        actions.scrollToElement(save).build().perform();
         clickingTool(save);
 
     }
@@ -245,12 +248,12 @@ public class ProcessOpportunity {
     }
 
     public void verifyPriceCustomer() throws InterruptedException {
-        waitLocatedXpath("//button[text()='Verify Prices']");
+
 //        wait.until(ExpectedConditions.stalenessOf(xpathELem("//button[text()='Verify Prices']")));
-//        WebElement verifyPrice = xpathELem("//button[text()='Verify Prices']");
-        Thread.sleep(2000);
-        clickingTool(xpathELem("//button[text()='Verify Prices']"));
-        Thread.sleep(2000);
+//        WebElement verifyPrice = xpathELem("//button[text()='Verify Prices']");1
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='customButtonPosition']//button[text()='Verify Prices']")));
+        clickingTool(xpathELem("//div[@class='customButtonPosition']//button[text()='Verify Prices']"));
+
 //        waitLocatedXpath("//button[text()='Move to awaiting documents']");
 
     }

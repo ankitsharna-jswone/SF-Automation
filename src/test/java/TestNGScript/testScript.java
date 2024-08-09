@@ -15,6 +15,7 @@ import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -53,13 +54,11 @@ public class testScript {
 //        options.setCapability("goog:loggingPrefs", "{browser: ALL}");
 
         driver = new ChromeDriver(options);
-        setConsoleReader(driver);
+//        setConsoleReader(driver);
         driver.manage().window().maximize();
         AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,10);
         PageFactory.initElements(factory,this);
-        driver.get("https://jswoneplatforms--prdreplica.sandbox.lightning.force.com/lightning/r/Account/0019D00000RfTxDQAV/view");
-
-//        driver.get("https://jswoneplatforms--prdreplica.sandbox.lightning.force.com/lightning/r/Order/801Hz000001ttDtIAI/view");
+        driver.get("https://creator.zoho.in/userhome/zohoadmin_jsw/admindashboard#/billing");
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         actions = new Actions(driver);
@@ -76,15 +75,28 @@ public class testScript {
 
 
 
-    @Test(priority = 1)
+//    @Test(priority = 1)
     public void login() {
+        String username = "v_ankit.sharma@jsw.in";
+        String password = "@Ankit123";
+        log.usernameSF(username);
+        log.passwordSF(password);
+        log.loginSF();
 
 
     }
 
-    @Test(priority = 2)
+//    @Test(priority = 2)
     public void setp(){
+        processOpportunity.processOpportunitybutton();
+        processOpportunity.editOpportunity();
+        processOpportunity.creditRequired();
+        processOpportunity.creditRequiredYes();
+        processOpportunity.creditProgramType();
+        String string = "Channel finance-Jsw One";
+        waitLocatedXpath("//div[@aria-label='Credit Program Type']");
 
+        processOpportunity.selectCreditProgram(string);
 
 
 //        System.out.println("gap message =============================");

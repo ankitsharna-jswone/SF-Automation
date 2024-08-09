@@ -23,7 +23,7 @@ Feature: Create Order in SF using this Script
     And the user opens the account "<Account>"
     Examples:
       | Account  |
-      | Test Account B |
+      | KANJUR BEER & WINES |
 
  @smoke
   Scenario Outline: User creates an opportunity with a specific product and quantity
@@ -38,7 +38,7 @@ Feature: Create Order in SF using this Script
     And the user saves the opportunity
     Examples:
       | Product      | Quantity | Thickness | Width |
-      |  MS HR Coil 2062:2011 E250A | 5   | 1000 | 1500 |
+      |  MS HR Coil 2062:2011 E250A | 10   | 1000 | 1500 |
 
 
   Scenario Outline: User processes an opportunity to the sales team and fills required documents
@@ -49,13 +49,14 @@ Feature: Create Order in SF using this Script
     And the user edits the delivery time to "<Days>" days
     And the user edits the special message to "<Special Message>"
     And the user searches for the source seller "<Seller>"
+    And Then User filled the advance % "<Advance>"
     And the user selects the source seller "<Seller>"
-    And the user edits the cost price to "10"
+    And the user edits the cost price to "100"
     And the user saves the opportunity
 
     Examples:
-      | Delivery Type | Days | Special Message        | Price  | Seller     |
-      |     Self pickup    | 2    | Urgent delivery needed | 150   | Vee  |
+      | Delivery Type | Days | Special Message        | Advance  | Seller     |
+      |     Self pickup    | 2    | Urgent delivery needed | 5   | Vee  |
 
 
   Scenario: User sends the file to pricing to the category team
@@ -75,7 +76,7 @@ Feature: Create Order in SF using this Script
 #    And the user saves the opportunity
     Examples:
      |CPrice| Price |
-     |  11  |   12   |
+     |  100  |   100   |
 
 
 

@@ -38,6 +38,7 @@ public class HomePage {
 
 
     public void searchItem(String search){
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']")));
         WebElement SearchBox = driver.findElement(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']"));
         clickingTool(SearchBox);
         WebElement SearchTab = driver.findElement(By.xpath("//input[@class='slds-input' and @part='input' and @placeholder='Search...']"));
