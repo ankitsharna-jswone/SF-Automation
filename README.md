@@ -50,12 +50,12 @@ Whether you are automating workflows or conducting regression testing for Salesf
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/salesforce-automation-framework.git
+   gh repo clone ankitsharna-jswone/SF-Automation
    ```
    
 2. **Navigate to the project directory**:
    ```bash
-   cd salesforce-automation-framework
+   cd SF_Op53_43
    ```
    
 3. **Install dependencies**:
@@ -112,7 +112,7 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 
 Happy Testing! 🎉
 
-For more details, contact [Your Name](mailto:your-email@example.com) or visit the [project documentation](https://github.com/your-username/salesforce-automation-framework/wiki).
+For more details, contact Ankit Sharma(mailto:your-email@example.com) or visit the [project documentation](https://github.com/your-username/salesforce-automation-framework/wiki).
 
 --- 
 
