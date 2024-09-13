@@ -55,7 +55,7 @@ Feature: Zoho regression on Boarding for testing
     And the user edits the special message to "<Special Message>"
     Examples:
       | Delivery Type | Days | Special Message        | Program         | Advance | Address | Credit Days |
-      | Self pickup   | 2    | Urgent delivery needed | BNPL-Seller-Back |   30  |NEAR BAJAJ AGENCY|  5    |
+      | Self pickup   | 2    | Urgent delivery needed | BNPL-Ankit-Credit|   30  |NEAR BAJAJ AGENCY|  5    |
 
   Scenario Outline: User sends the file to pricing to the category team
     When the user selects the category price as "<CPrice>"
