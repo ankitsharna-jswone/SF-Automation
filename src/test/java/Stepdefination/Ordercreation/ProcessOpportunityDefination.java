@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en_old.Ac;
+import org.apache.commons.math3.analysis.function.Add;
 import org.openqa.selenium.WebDriver;
 
 import static Utils.BrowsserSetup.getDriver;
@@ -36,6 +37,11 @@ public class ProcessOpportunityDefination {
         processOpportunity.editDelivery(deliveryType);
     }
 
+    @When("the user selected the Delivery address {string}")
+    public void the_user_chose_address(String Address){
+        processOpportunity.editDeliveryAdress(Address);
+    }
+
     @When("the user selectes the credit required as YES")
     public void user_selects_credit_required_yes(){
         processOpportunity.creditRequired();
@@ -47,6 +53,13 @@ public class ProcessOpportunityDefination {
     public void user_choose_credit_program(String string){
         processOpportunity.creditProgramType();
         processOpportunity.selectCreditProgram(string);
+    }
+
+    ////input[@name='Credit_Days__c']
+
+    @When("the user Selects the {string} for the program")
+    public void user_selects_credit_days(String creditdays){
+        processOpportunity.creditDays(creditdays);
     }
 
     @When("User sets the Credit days {string}")

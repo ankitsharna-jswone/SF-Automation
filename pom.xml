@@ -20,7 +20,17 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
+                    <parallel>classes</parallel>
+                    <threadCount>4</threadCount>
+                    <perCoreThreadCount>true</perCoreThreadCount>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
+                    <includes>
+                        <include>**/Runner.java</include>
+                    </includes>
                     <testFailureIgnore>true</testFailureIgnore>
+                    <systemPropertyVariables>
+                        <cucumber.junit-platform.naming-strategy>long</cucumber.junit-platform.naming-strategy>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
             <plugin>
@@ -50,6 +60,33 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                        <configuration>
+                            <parallel>methods</parallel>
+                            <threadCount>4</threadCount>
+                            <perCoreThreadCount>true</perCoreThreadCount>
+                            <useUnlimitedThreads>true</useUnlimitedThreads>
+                            <includes>
+                                <include>**/Runner.java</include>
+                            </includes>
+                            <testFailureIgnore>true</testFailureIgnore>
+                            <systemPropertyVariables>
+                                <cucumber.junit-platform.naming-strategy>long</cucumber.junit-platform.naming-strategy>
+                            </systemPropertyVariables>
+                        </configuration>
+
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
@@ -69,23 +106,25 @@
         </dependency>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.9.3</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.junit/junit5-engine -->
+        <dependency>
+            <groupId>org.junit</groupId>
+            <artifactId>junit5-engine</artifactId>
+            <version>5.0.0-ALPHA</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.18.1</version>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>com.aventstack</groupId>-->
-        <!--            <artifactId>extentreports</artifactId>-->
-        <!--            <version>4.1.5</version>-->
-        <!--            <scope>test</scope>-->
-        <!--        </dependency>-->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -120,13 +159,6 @@
             <artifactId>extentreports</artifactId>
             <version>5.1.0</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
-
 
         <dependency>
             <groupId>org.testng</groupId>

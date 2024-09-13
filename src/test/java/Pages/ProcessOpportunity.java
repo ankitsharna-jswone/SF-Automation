@@ -130,12 +130,17 @@ public class ProcessOpportunity {
         xpathELem("//lightning-base-combobox-item[@data-value='" + type + "']").click(); // Self pickup
     }
 
-    public void editDeliveryAdress(String adress){
-        waitLocatedXpath("//label[@class='slds-form-element__label' and text()= 'Delivery Address']/following-sibling::div//input");
-        xpathELem("//label[@class='slds-form-element__label' and text()= 'Delivery Address']/following-sibling::div//input").sendKeys(adress);
 
-        waitLocatedXpath("//span[@class='slds-listbox__option-meta slds-listbox__option-meta_entity' and .//span[text()='" + adress +"']]");
-        xpathELem("//span[@class='slds-listbox__option-meta slds-listbox__option-meta_entity' and .//span[text()='" + adress + "']]").click();
+    public void editDeliveryAdress(String address){
+
+        String add = address.toUpperCase();
+
+        xpathELem("//input[@placeholder='Search Addresses...']").sendKeys(add);
+//        xpathELem("//label[@class='slds-form-element__label' and text()= 'Delivery Address']/following-sibling::div//input").sendKeys(address);
+
+//        waitLocatedXpath("//span[@class='slds-listbox__option-meta slds-listbox__option-meta_entity' and .//span[text()='" + address +"']]");
+
+        clickingTool(xpathELem("//lightning-base-combobox-formatted-text[contains(@title,'" + add +"')]"));
     }
 
 
@@ -253,6 +258,7 @@ public class ProcessOpportunity {
 //        WebElement verifyPrice = xpathELem("//button[text()='Verify Prices']");1
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='customButtonPosition']//button[text()='Verify Prices']")));
         clickingTool(xpathELem("//div[@class='customButtonPosition']//button[text()='Verify Prices']"));
+        Thread.sleep(1000);
 
 //        waitLocatedXpath("//button[text()='Move to awaiting documents']");
 
