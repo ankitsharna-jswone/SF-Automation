@@ -98,6 +98,12 @@ public class ProcessOpportunityDefination {
         processOpportunity.selectSourceSeller(seller);
     }
 
+    @When("the user Selects the source seller type {string}")
+    public void the_user_selects_the_source_seller_type(String sellertype){
+        processOpportunity.userClicksOnSourceSellerButton();
+        processOpportunity.userSelectSourceSellerType(sellertype);
+    }
+
 
 
     @When("the user searches for the seller {string}")

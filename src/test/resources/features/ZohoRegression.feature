@@ -1,4 +1,4 @@
-@ZOHOcredit
+@ZOHOcredit @regression
 Feature: Zoho regression on Boarding for testing
 
   Scenario Outline: Setting up enviroment for the the project
@@ -62,6 +62,7 @@ Feature: Zoho regression on Boarding for testing
     And the user edits the cost price to "<Price>"
     And the user searches for the source seller "<Seller>"
     And the user selects the source seller "<Seller>"
+    And the user Selects the source seller type "<SourceSeller>"
     And the user saves the opportunity
     When Sales team clicks on the price awaiting section
     And the user performs the category user test
@@ -69,8 +70,8 @@ Feature: Zoho regression on Boarding for testing
     And the user verifies the customer-accepted price
     And the user saves the opportunity
     Examples:
-      | CPrice | Price | Seller |
-      | 120    | 100    | Vee |
+      | CPrice | Price | Seller | SourceSeller|
+      | 120    | 100    | Vee |    JOPL        |
 
   Scenario Outline: User selects the credit program on the Credit program on Opportunity page
     When the user clicks on the process opportunity button
@@ -83,6 +84,7 @@ Feature: Zoho regression on Boarding for testing
 
 
   Scenario: User request PI to Category team
+    When the user verifies the customer-accepted price
     When the user requests PI to the category team
     When the user performs the category user test
     And the user saves the category user
@@ -91,6 +93,15 @@ Feature: Zoho regression on Boarding for testing
     Then the user requests PI to the seller
     And user saved the opportunity
     Then The stage of opportunity will be printed
+
+  Scenario Outline: User updates the seller PI and sends it to the seller
+    Given the user navigates to the file page
+    And the user chooses the seller PI
+    And the user sets the seller PI
+    Then the stage of the opportunity is now "<Stage>"
+    Examples:
+      | Stage            |
+      | Awaiting Payment |
 
   Scenario: User creates an order, captures the subtotal, and order number
     Given the user is on the account page for order creation

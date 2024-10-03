@@ -219,6 +219,14 @@ public class ProcessOpportunity {
         xpathELem("//label[text()='Seller Name']/following-sibling::div//input").sendKeys(seller);
     }
 
+    public void userClicksOnSourceSellerButton(){
+        clickingTool(xpathELem("//button[@name='Source_Seller_Type__c']"));
+    }
+    public void userSelectSourceSellerType(String SellerType){
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@aria-label='Source Seller Type']")));
+        clickingTool(xpathELem("//span [ @lwc-7co8ha3nedg and ./span[@class='slds-truncate' and  @title='" + SellerType +"']  ]"));
+    }
+
     public void selectSourceSeller(String seller){
         waitLocatedXpath("//lightning-base-combobox-formatted-text[@title = '" + seller +"']");
         xpathELem("//lightning-base-combobox-formatted-text[@title = '" + seller +"']").click();

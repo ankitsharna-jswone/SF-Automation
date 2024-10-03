@@ -1,4 +1,4 @@
-@create
+@create @regression
 Feature: Create Order in SF using this Script
 
   Scenario Outline: Setting up enviroment for the the project
@@ -48,17 +48,19 @@ Feature: Create Order in SF using this Script
     When the user clicks on the process opportunity button
     And the user selects to edit the opportunity
     And the user edits the delivery type to "<Delivery Type>"
+    And the user selected the Delivery address "<Address>"
     And the user edits the delivery time to "<Days>" days
     And the user edits the special message to "<Special Message>"
     And the user searches for the source seller "<Seller>"
+    And the user Selects the source seller type "<SourceSeller>"
     And Then User filled the advance % "<Advance>"
     And the user selects the source seller "<Seller>"
     And the user edits the cost price to "100"
     And the user saves the opportunity
 
     Examples:
-      | Delivery Type | Days | Special Message        | Advance  | Seller     |
-      |     Self pickup    | 2    | Urgent delivery needed | 5   | Vee  |
+      | Delivery Type | Days | Special Message        | Advance  | Seller     | SourceSeller | Address |
+      |     Self pickup    | 2    | Urgent delivery needed | 5   | Vee  | JOPL               | A-109543 |
 
 
   Scenario: User sends the file to pricing to the category team

@@ -54,6 +54,7 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
   Scenario Outline: Sales team select the seller and gave the cost price
     When the user searches for the source seller "<Seller>"
     And  the user selects the source seller "<Seller>"
+    And the user Selects the source seller type "<SourceSeller>"
     And the user edits the cost price to "<Price>"
     When the user selects the category price as "<CPrice>"
     And the user saves the opportunity
@@ -63,8 +64,8 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     And the user saves the opportunity
     And The stage of opportunity will be printed
     Examples:
-       | Price  | Seller     | CPrice |
-       | 100   | Vee | 150   |
+       | Price  | Seller     | CPrice | SourceSeller|
+       | 100    | Vee        |150   | JOPL          |
 
 
 

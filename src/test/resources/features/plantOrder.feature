@@ -1,4 +1,4 @@
-@plant
+@plant @regression
 Feature: Create Plant Supply Order in SF using this Script
 
   Scenario: Setting up enviroment for the the project
@@ -46,18 +46,18 @@ Feature: Create Plant Supply Order in SF using this Script
     When the user clicks on the process opportunity button
     And the user selects to edit the opportunity
     And the user edits the delivery type to "<Delivery Type>"
+    And the user selected the Delivery address "<Address>"
     And the user edits the delivery time to "<Days>" days
     And the user edits the special message to "<Special Message>"
-    And the user searches for the source seller "<SourceSeller>"
-    And the user selects the source seller "<SourceSeller>"
-    And the user searches for the seller "<Seller>"
-    And the user selects plant the seller "<Seller>"
+    And the user searches for the source seller "<Seller"
+    And the user selects the source seller "<Seller>"
+    And the user Selects the source seller type "<SourceSeller>"
     And the user edits the cost price to "<Cost>"
     And the user saves the opportunity
 
     Examples:
-      | Delivery Type | Days | Special Message        | SourceSeller     | Seller | Cost |
-      |     Self pickup    | 2    | Urgent delivery needed    | JSW Steel Dolvi | JSW Steel Dolvi | 100 |
+      | Delivery Type | Days | Special Message        | SourceSeller     | Seller | Cost | Address |
+      |     Self pickup    | 2    | Urgent delivery needed    | JOPL | tuka | 100 | A-108866       |
 
   Scenario: User sends the file to pricing to the category team
     When Sales team clicks on the price awaiting section
