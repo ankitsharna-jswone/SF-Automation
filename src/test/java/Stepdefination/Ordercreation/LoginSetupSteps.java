@@ -115,11 +115,6 @@ public class LoginSetupSteps {
         orderPage = new OrderPage(driver);
 
 
-
-        //reports
-
-
-
     }
 
     @Given("user is at the login page and user logged in to the webiste {string}")

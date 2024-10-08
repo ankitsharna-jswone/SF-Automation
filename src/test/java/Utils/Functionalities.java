@@ -55,8 +55,7 @@ public class Functionalities {
     public static void clickingTool(WebElement element) {
         boolean elementClickable = false;
         try {
-            WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(element));
-            clickableElement.click();
+            element.click();
             elementClickable = true;
         } catch (Exception e) {
             System.out.println("Normal click failed");

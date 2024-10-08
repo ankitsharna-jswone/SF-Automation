@@ -162,9 +162,9 @@ public String stageOfOpportunity() throws InterruptedException {
     String stageText = null;
     try {
         getDriver().navigate().refresh();
-//        waitLocatedXpath("//dt[.//span[text()='Stage']]/following-sibling::dd//span[@class='test-id__field-value slds-form-element__static slds-grow word-break-ie11']//slot//lightning-formatted-text");
+
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("")));
-        WebElement stageLabel = driver.findElement(By.xpath("//dt[.//span[text()='Stage']]/following-sibling::dd//span[@class='test-id__field-value slds-form-element__static slds-grow word-break-ie11']//slot//lightning-formatted-text"));
+        WebElement stageLabel = getDriver().findElement(By.xpath("//dt[.//span[text()='Stage']]/following-sibling::dd//span[@class='test-id__field-value slds-form-element__static slds-grow word-break-ie11']//slot//lightning-formatted-text"));
         stageText = stageLabel.getText();
     } catch (UnhandledAlertException e) {
         handleAlert(getDriver());

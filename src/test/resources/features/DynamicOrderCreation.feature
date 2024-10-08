@@ -1,6 +1,5 @@
 Feature: Check Flow of order creation of order for Multiple prodcut SKU
 
-
   #Config done for browser
   @ConstCreditOrder @ZohoCreditOrder
   Scenario Outline: Setting up enviroment for the the project

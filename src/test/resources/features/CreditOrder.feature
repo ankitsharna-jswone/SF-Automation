@@ -1,4 +1,4 @@
-@ZOHO
+@ZOHO @regression
 Feature: Create Order in SF using this Script for credit user
 
   Scenario: Setting up enviroment for the the project

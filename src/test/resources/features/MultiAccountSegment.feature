@@ -1,4 +1,4 @@
-@multiSeg
+@multiSeg @regression
 Feature: Create Order in SF using this Script
 
   Scenario: Setting up enviroment for the the project

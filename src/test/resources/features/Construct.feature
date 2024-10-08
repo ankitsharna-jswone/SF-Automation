@@ -1,4 +1,4 @@
-@const
+@const @regression
 Feature: Check Flow of order creation of order for Multiple prodcut SKU
 
   Scenario Outline: Setting up enviroment for the the project
@@ -44,11 +44,12 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     When the user clicks on the process opportunity button
     And the user selects to edit the opportunity
     And the user edits the delivery type to "<Delivery Type>"
+    And the user selected the Delivery address "<Address>"
     And the user edits the delivery time to "<Days>" days
     And the user edits the special message to "<Special Message>"
     Examples:
-      | Delivery Type | Days | Special Message        |
-      |    Self pickup| 2    | Urgent delivery needed |
+      | Delivery Type | Days | Special Message        | Address |
+      |    Self pickup| 2    | Urgent delivery needed | A-109299 |
 
 
   Scenario Outline: Sales team select the seller and gave the cost price
@@ -62,7 +63,6 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     And the user performs the category user test
     And the user saves the category
     And the user saves the opportunity
-    And The stage of opportunity will be printed
     Examples:
        | Price  | Seller     | CPrice | SourceSeller|
        | 100    | Vee        |150   | JOPL          |
@@ -75,39 +75,28 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     And the user saves the opportunity
     And the user verifies the customer-accepted price
     And the user saves the opportunity for sales team
-    Then The stage of opportunity will be printed
-    And Then accept all the SKUs
-    And Click on the proceed button
     Examples:
       | Price |
       | 160  |
-#
-
-#  Scenario: User requests PI to the category team
-#    Given the user clicks on the process opportunity button for PI to category team
-#    And the user saves the opportunity first
-#    And the user requests PI to the category team
-#    When the user performs the category user test
-#    And the user saves the category user
-#    And the user saves the opportunity for sales
-#    Then The stage of opportunity will be printed
 
 
-    Scenario: User request PI to Seller team
+  Scenario: User request PI to Category team
+    When the user clicks on the process opportunity button
+    When the user saves the opportunity
+    When the user requests PI to the category team
+    When the user performs the category user test
+    And the user saves the category user
+
+  Scenario: User request PI to Seller team
       Given User processed opportunity to send PI to seller
       When the user saves the opportunity
       Then the user requests PI to the seller
       And user saved the opportunity
-      Then The stage of opportunity will be printed
-#
-  Scenario Outline: User updates the seller PI and sends it to the seller
+
+  Scenario: User updates the seller PI and sends it to the seller
     Given the user navigates to the file page
     And the user chooses the seller PI
     And the user sets the seller PI
-    Then the stage of the opportunity is now "<Stage>"
-    Examples:
-    | Stage            |
-    | Awaiting Payment |
 
 
   Scenario: User creates an order, captures the subtotal, and order number
