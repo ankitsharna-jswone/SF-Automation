@@ -20,9 +20,9 @@ public class SalesToCategoryPricingSteps {
     public void the_user_clicks_on_the_price_awaiting_section() {
         awaitingPage.clickPriceAwaiting();
     }
-    @When("the user performs the category user test")
-    public void the_user_performs_the_category_user_test() {
-        awaitingPage.categoryUserTest();
+    @When("the user performs the category user test with Category team {string}")
+    public void the_user_performs_the_category_user_test(String category) {
+        awaitingPage.categoryUserTest(category);
 
     }
     @When("the user saves the category")

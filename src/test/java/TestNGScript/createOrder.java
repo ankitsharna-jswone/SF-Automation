@@ -118,7 +118,7 @@ public class createOrder {
     @Test(priority = 5)
     public void pricingAwaiting() throws InterruptedException {
         awaitingPage.clickPriceAwaiting();
-        awaitingPage.categoryUserTest();
+        awaitingPage.categoryUserTest("Category Test User");
         awaitingPage.saveCategory();
         processOpportunity.saveOpportunity();
         System.out.println("Stage is : " + accountPage.stageOfOpportunity()) ;

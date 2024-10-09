@@ -171,7 +171,7 @@ public class LoginSetupSteps {
     @And("User send the file to pricing to the Category team")
     public void userSendTheFileToPricingToTheCategoryTeam() throws InterruptedException {
         awaitingPage.clickPriceAwaiting();
-        awaitingPage.categoryUserTest();
+        awaitingPage.categoryUserTest("category");
         awaitingPage.saveCategory();
         processOpportunity.saveOpportunity();
         System.out.println("Stage is : " + accountPage.stageOfOpportunity());
@@ -195,7 +195,7 @@ public class LoginSetupSteps {
         processOpportunity.processOpportunitybutton();
         processOpportunity.saveOpportunity();
         processOpportunity.requestPItocategory();
-        processOpportunity.categoryUserTest();
+        processOpportunity.categoryUserTest("Category");
         processOpportunity.saveCategory();
         processOpportunity.saveOpportunity();
         System.out.println("Stage is : " + accountPage.stageOfOpportunity());

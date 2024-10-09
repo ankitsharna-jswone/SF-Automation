@@ -21,6 +21,21 @@ public class createOpportunitySteps {
 
         }
 
+        @And("they select the TMT option")
+        public void selectTMToption(){
+            site.TmTButton();
+        }
+
+        @And("they select the subgrate type of TMT {string}")
+        public void selectSubgrate(String subgrade){
+            site.TmtSubgrade(subgrade);
+        }
+
+        @And("User selects the {string} of TMT and with the {string}" )
+        public void userSelectsTheWidthforDiameter(String width, String quantity){
+            site.TMTWidthSelect(width,quantity);
+        }
+
         @And("they choose the cement brand {string}")
         public void chooseCementBrand(String brandName) {
             site.cementBrandSelect(brandName);
@@ -31,6 +46,11 @@ public class createOpportunitySteps {
         public void specifyCementTypeAndQuantity(String cementType, String quantity) {
             site.cementTypeAndQuantity(cementType, quantity);
 
+        }
+
+        @And("they save the Opportunity")
+        public void saveTheOpportuntity(){
+            site.saveCementOpportunity();
         }
 
         @And("they save the cement opportunity")

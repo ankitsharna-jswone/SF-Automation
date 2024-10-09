@@ -21,14 +21,14 @@ public class PricingAwaitingPage {
 
     }
 
-    public void categoryUserTest(){
+    public void categoryUserTest(String categoryuser){
         waitLocatedXpath("//input[@placeholder='Search People...']");
 
         clickingTool(xpathELem("//input[@placeholder='Search People...']"));
-        xpathELem("//input[@placeholder='Search People...']").sendKeys("Category Test user");
+        xpathELem("//input[@placeholder='Search People...']").sendKeys(categoryuser);
 
-        waitLocatedXpath("//lightning-base-combobox-formatted-text[@title = 'Category Test user']");
-        WebElement category = xpathELem("//lightning-base-combobox-formatted-text[@title = 'Category Test user']");
+        waitLocatedXpath("//lightning-base-combobox-formatted-text[@title = '"+ categoryuser +"'");
+        WebElement category = xpathELem("//lightning-base-combobox-formatted-text[@title = '" + categoryuser  + "']");
         clickingTool(category);
     }
 

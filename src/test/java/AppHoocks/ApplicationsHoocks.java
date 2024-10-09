@@ -16,8 +16,7 @@ import java.io.IOException;
 import static Utils.BrowsserSetup.getDriver;
 
 
-//import static Utils.BrowsserSetup.getDriver;
-//import static Utils.BrowsserSetup.setDriver;
+
 
 
 public class ApplicationsHoocks {

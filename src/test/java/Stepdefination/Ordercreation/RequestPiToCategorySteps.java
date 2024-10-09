@@ -25,9 +25,9 @@ public class RequestPiToCategorySteps {
         processOpportunity.requestPItocategory();
 
     }
-    @Given("the user selected the {string}")
+    @Given("the user selected the category user {string}")
     public void the_user_selected_the(String string) {
-        processOpportunity.categoryUserTest();
+        processOpportunity.categoryUserTest(string);
 
     }
     @When("the user saves the category user")

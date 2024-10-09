@@ -1,4 +1,4 @@
-@create @regression
+g@create @regression
 Feature: Create Order in SF using this Script
 
   Scenario Outline: Setting up enviroment for the the project
@@ -6,7 +6,7 @@ Feature: Create Order in SF using this Script
     Given the user navigates to the Salesforce login page "<Link>"
     Examples:
       | Link                                                          |
-      | https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
+      |https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 
   Scenario Outline: User logs in to Salesforce
     When the user enters the username "<Username>"
@@ -14,7 +14,7 @@ Feature: Create Order in SF using this Script
     And the user clicks on the login button
     Examples:
       | Username            | Password |
-      |v_ankit.sharma@jsw.in| @Ankit123|
+      |ankit.sharma@jsw.in.uat | @Ankit123|
 
  @smoke
   Scenario Outline: User navigates to a specific account from the homepage
@@ -25,7 +25,7 @@ Feature: Create Order in SF using this Script
     And the user opens the account "<Account>"
     Examples:
       | Account  |
-      | KANJUR BEER & WINES |
+      | NETFLIX ENTERTAINMENT |
 
  @smoke
   Scenario Outline: User creates an opportunity with a specific product and quantity
@@ -60,7 +60,7 @@ Feature: Create Order in SF using this Script
 
     Examples:
       | Delivery Type | Days | Special Message        | Advance  | Seller     | SourceSeller | Address |
-      |     Self pickup    | 2    | Urgent delivery needed | 5   | Vee  | JOPL               | A-109543 |
+      |     Self pickup    | 2    | Urgent delivery needed | 5   | Vee  | JOPL               | A-104357 |
 
 
   Scenario: User sends the file to pricing to the category team
@@ -100,7 +100,7 @@ Feature: Create Order in SF using this Script
 
     Examples:
       | Stage            | Category |
-      | Awaiting PI | category user test|
+      | Awaiting PI | Mfg Category|
 
   Scenario: User request PI to Seller team
     Given User processed opportunity to send PI to seller

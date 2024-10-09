@@ -278,17 +278,17 @@ public class ProcessOpportunity {
         clickingTool(RequestPI);
     }
 
-    public void categoryUserTest(){
+    public void categoryUserTest( String categoryUser){
         waitLocatedXpath("//input[@placeholder='Search People...']");
 
         clickingTool(xpathELem("//input[@placeholder='Search People...']"));
-        xpathELem("//input[@placeholder='Search People...']").sendKeys("Category Test user");
+        xpathELem("//input[@placeholder='Search People...']").sendKeys(categoryUser);
 
 
         clickingTool(xpathELem("//input[@placeholder='Search People...']"));
 
-        waitLocatedXpath("//lightning-base-combobox-formatted-text[@title = 'Category Test user']");
-        WebElement category = xpathELem("//lightning-base-combobox-formatted-text[@title = 'Category Test user']");
+        waitLocatedXpath("//lightning-base-combobox-formatted-text[@title = '" + categoryUser +"']");
+        WebElement category = xpathELem("//lightning-base-combobox-formatted-text[@title = '" + categoryUser  +"']");
         clickingTool(category);
     }
 

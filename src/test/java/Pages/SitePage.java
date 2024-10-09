@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static Utils.Functionalities.*;
 
@@ -15,15 +16,34 @@ public class SitePage {
     }
 
     public void quickOpportunity(){
-        String quickOpportunity = "//button[@name = 'MSME_Construct_Site__c.Quick_Opportunity_aura']";
+        String quickOpportunity = "//button[@name = 'MSME_Construct_Site__c.Quick_Opportunity_Aura']";
         waitLocatedXpath(quickOpportunity);
-        xpathELem(quickOpportunity).click();
+        clickingTool(xpathELem("//button[@name = 'MSME_Construct_Site__c.Quick_Opportunity_Aura']"));
+
     }
 
     public void cementButton(){
         //cement
         waitLocatedXpath("//a[text()='Cement']");
         xpathELem("//a[text()='Cement']").click();
+    }
+
+    public void TmTButton(){
+        //TMT
+        waitLocatedXpath("//a[text()='TMT']");
+        xpathELem("//a[text()='TMT']").click();
+    }
+
+    public void TmtSubgrade(String subgrade){
+        waitLocatedXpath("//button[@name='Subgrade Type']");
+        clickingTool(xpathELem("//button[@name='Subgrade Type']"));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@aria-label='Subgrade Type']")));
+        clickingTool(xpathELem("//lightning-base-combobox-item[@data-value='"+ subgrade + "']"));
+    }
+
+    public void TMTWidthSelect(String widht, String quantity){
+        waitLocatedXpath("//label[text()='12']/following-sibling::div/input");
+        xpathELem("//label[text()='"+ widht + "']/following-sibling::div/input").sendKeys(quantity);
     }
 
     public void cementBrandSelect(String brand){

@@ -224,7 +224,7 @@ public class SF_Script {
     public void pricingAwaiting() throws InterruptedException {
 
         priceawaiting.clickPriceAwaiting();
-        priceawaiting.categoryUserTest();
+        priceawaiting.categoryUserTest("Category Test User");
         priceawaiting.saveCategory();
 
 
