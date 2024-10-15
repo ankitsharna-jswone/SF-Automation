@@ -60,12 +60,12 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
       |JSL Stainless Steel CRAP JT 2B PVC Finish Sheets| 2000 |
     When the user saves the opportunity
     Then Sales team clicks on the price awaiting section
-    And the user performs the category user test
+    And the user selected the category user "<Category>"
     And the user saves the category
     Then the stage of the opportunity is now "<Stage>"
     Examples:
-      | Stage            |
-      | Awaiting Pricing |
+      | Stage            | Category |
+      | Awaiting Pricing | Category Test user |
 
 
 
@@ -88,13 +88,13 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
 
   Scenario Outline: User requests PI to the category team
     Given the user requests PI to the category team
-    And the user selected the "<Category>"
+    And the user selected the category user "<Category>"
     And the user saves the category user
     And the user saves the opportunity for sales
     Then Check stage of the opportunity is "<Stage>"
     Examples:
       | Stage            | Category |
-      | Awaiting PI | category user test|
+      | Awaiting PI | Category Test user |
 
   Scenario: Check Stage of SKU
     Then User Went to SKU requirement page

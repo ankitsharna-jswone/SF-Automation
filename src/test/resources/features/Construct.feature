@@ -1,4 +1,4 @@
-@const @regression
+@const
 Feature: Check Flow of order creation of order for Multiple prodcut SKU
 
   Scenario Outline: Setting up enviroment for the the project
@@ -60,12 +60,12 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     When the user selects the category price as "<CPrice>"
     And the user saves the opportunity
     And the opportunity is processed to the Category team for pricing
-    And the user performs the category user test
+    And the user selected the category user "<Category>"
     And the user saves the category
     And the user saves the opportunity
     Examples:
-       | Price  | Seller     | CPrice | SourceSeller|
-       | 100    | Vee        |150   | JOPL          |
+       | Price  | Seller     | CPrice | SourceSeller| Category |
+       | 100    | Vee        |150   | Marketplace          | Category Test user |
 
 
 
@@ -80,12 +80,15 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
       | 160  |
 
 
-  Scenario: User request PI to Category team
+  Scenario Outline: User request PI to Category team
     When the user clicks on the process opportunity button
     When the user saves the opportunity
     When the user requests PI to the category team
-    When the user performs the category user test
+    And the user selected the category user "<Category>"
     And the user saves the category user
+    Examples:
+      | Category |
+      | Category Test user |
 
   Scenario: User request PI to Seller team
       Given User processed opportunity to send PI to seller

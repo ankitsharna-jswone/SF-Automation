@@ -14,7 +14,7 @@ Feature: Create Order for Construct account on UAT
     And the user clicks on the login button
     Examples:
       | Username            | Password |
-      | ankit.sharma@jsw.in.uat| @Ankit123|
+      |ankit.sharma@jsw.in.uat | @Ankit123|
 
 
   Scenario Outline: Sales team Went to the User account and to the site
@@ -27,28 +27,28 @@ Feature: Create Order for Construct account on UAT
       | Account             | Site |
       | TURBO ENERGY PRIVATE LIMITED | Gujarat International |
 
-#  @tmt
-#  Scenario Outline: Sales team creates a cement opportunity on a site
-#    Given they creates an opportunity
-#    And they select the TMT option
-#    And they select the subgrate type of TMT "<Subgrage>"
-#    And User selects the "<Width>" of TMT and with the "<Quantity>"
-#    And they save the cement opportunity
-#    Examples:
-#      | Quantity | Subgrage| Quantity| Width |
-#      |  100  | FE_500D| 10          | 12    |
-
-
-    @cement
+  @tmt
   Scenario Outline: Sales team creates a cement opportunity on a site
     Given they creates an opportunity
-    And they select the cement option
-    And they choose the cement brand "<Brand>"
-    When they specify the cement type as "<Type>" with quantity "<Quantity>"
+    And they select the TMT option
+    And they select the subgrate type of TMT "<Subgrage>"
+    And User selects the "<Width>" of TMT and with the "<Quantity>"
     And they save the cement opportunity
     Examples:
-      | Brand | Type | Quantity |
-      |  JSW  |  OPC-53 |  100  |
+      | Quantity | Subgrage| Quantity| Width |
+      |  100  | FE_500D| 10          | 12    |
+
+
+#    @cement
+#  Scenario Outline: Sales team creates a cement opportunity on a site
+#    Given they creates an opportunity
+#    And they select the cement option
+#    And they choose the cement brand "<Brand>"
+#    When they specify the cement type as "<Type>" with quantity "<Quantity>"
+#    And they save the cement opportunity
+#    Examples:
+#      | Brand | Type | Quantity |
+#      |  JSW  |  OPC-53 |  100  |
 
 
   Scenario Outline: User processes the opportunities and set the delivery process
@@ -77,7 +77,7 @@ Feature: Create Order for Construct account on UAT
     And the user saves the opportunity
     Examples:
       | Price  | Seller     | CPrice | SourceSeller| Category |
-      | 100    | Vee        |150   | JOPL          | Mfg Category |
+      | 100    | Vee        |150   | Marketplace | Mfg Category |
 
 
 

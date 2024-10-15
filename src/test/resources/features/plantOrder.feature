@@ -57,13 +57,16 @@ Feature: Create Plant Supply Order in SF using this Script
 
     Examples:
       | Delivery Type | Days | Special Message        | SourceSeller | Seller | Cost | Address  |
-      | Self pickup   | 2    | Urgent delivery needed | JOPL         | tuka   | 100  |A-110198|
+      | Self pickup   | 2    | Urgent delivery needed | Marketplace         | tuka   | 100  |A-110198|
 
-  Scenario: User sends the file to pricing to the category team
+  Scenario Outline: User sends the file to pricing to the category team
     When Sales team clicks on the price awaiting section
-    And the user performs the category user test
+    And the user selected the category user "<Category>"
     And the user saves the category
     And the user saves the opportunity
+    Examples:
+      | Category |
+     |Category Test user|
 
 
   Scenario Outline: User updates the customer-accepted price after receiving pricing from the category

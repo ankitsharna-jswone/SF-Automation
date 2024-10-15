@@ -65,13 +65,13 @@ Feature: Zoho regression on Boarding for testing
     And the user Selects the source seller type "<SourceSeller>"
     And the user saves the opportunity
     When Sales team clicks on the price awaiting section
-    And the user performs the category user test
+    And the user selected the category user "<Category>"
     And the user saves the category
     And the user verifies the customer-accepted price
     And the user saves the opportunity
     Examples:
-      | CPrice | Price | Seller | SourceSeller|
-      | 120    | 100    | Vee |    JOPL        |
+      | CPrice | Price | Seller | SourceSeller| Category |
+      | 120    | 100    | Vee |    Marketplace        | Category Test user |
 
   Scenario Outline: User selects the credit program on the Credit program on Opportunity page
     When the user clicks on the process opportunity button
@@ -83,11 +83,15 @@ Feature: Zoho regression on Boarding for testing
       | 150    |
 
 
-  Scenario: User request PI to Category team
+  Scenario Outline: User request PI to Category team
     When the user verifies the customer-accepted price
     When the user requests PI to the category team
-    When the user performs the category user test
+    And the user selected the category user "<Category>"
     And the user saves the category user
+    Examples:
+    | Category |
+    | Category Test user |
+
 
   Scenario: User request PI to Seller team
     Then the user requests PI to the seller

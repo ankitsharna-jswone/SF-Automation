@@ -64,13 +64,13 @@ Feature: Create Order in SF using this Script for credit user
     And the user selects the source seller "<Seller>"
     And the user saves the opportunity
     When Sales team clicks on the price awaiting section
-    And the user performs the category user test
+    And the user selected the category user "<Category>"
     And the user saves the category
     And the user verifies the customer-accepted price
     And the user saves the opportunity
     Examples:
-      | CPrice | Price | Seller |
-      | 120    | 100    | Test Steel Authority 2 |
+      | CPrice | Price | Seller | Category |
+      | 120    | 100    | Test Steel Authority 2 | Category Test user |
 
 
 #  Scenario Outline: User Selects the credit on the Opportunity page
@@ -91,13 +91,17 @@ Feature: Create Order in SF using this Script for credit user
     | Price |
      | 150    |
 
-  Scenario: User request PI to Category team
+  Scenario Outline: User request PI to Category team
 #    When the user clicks on the process opportunity button
 #    And the user selects to edit the opportunity
 #    And User selects the credit "<Program>" for the user
     When the user requests PI to the category team
-    When the user performs the category user test
+    And the user selected the category user "<Category>"
     And the user saves the category user
+    Examples:
+  |Category |
+ | Category Test user |
+
 #    And the user saves the final order
 #    Examples:
 #      | Program         |

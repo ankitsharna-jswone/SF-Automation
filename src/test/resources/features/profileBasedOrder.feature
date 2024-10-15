@@ -1,4 +1,4 @@
-@prof @regression
+@prof
 
 Feature: Profile based order creation
   Scenario: Setting up enviroment for the the project

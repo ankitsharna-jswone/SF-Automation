@@ -27,7 +27,7 @@ public class PricingAwaitingPage {
         clickingTool(xpathELem("//input[@placeholder='Search People...']"));
         xpathELem("//input[@placeholder='Search People...']").sendKeys(categoryuser);
 
-        waitLocatedXpath("//lightning-base-combobox-formatted-text[@title = '"+ categoryuser +"'");
+        waitLocatedXpath("//lightning-base-combobox-formatted-text[@title = '"+ categoryuser +"']");
         WebElement category = xpathELem("//lightning-base-combobox-formatted-text[@title = '" + categoryuser  + "']");
         clickingTool(category);
     }

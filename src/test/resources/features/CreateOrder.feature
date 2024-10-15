@@ -1,4 +1,4 @@
-g@create @regression
+@create @regression
 Feature: Create Order in SF using this Script
 
   Scenario Outline: Setting up enviroment for the the project
@@ -25,7 +25,7 @@ Feature: Create Order in SF using this Script
     And the user opens the account "<Account>"
     Examples:
       | Account  |
-      | NETFLIX ENTERTAINMENT |
+      | OBEROI REALTY LTD |
 
  @smoke
   Scenario Outline: User creates an opportunity with a specific product and quantity
@@ -60,15 +60,17 @@ Feature: Create Order in SF using this Script
 
     Examples:
       | Delivery Type | Days | Special Message        | Advance  | Seller     | SourceSeller | Address |
-      |     Self pickup    | 2    | Urgent delivery needed | 5   | Vee  | JOPL               | A-104357 |
+      |     Self pickup    | 2    | Urgent delivery needed | 5   | Vee  | Marketplace | A-104357 |
 
 
-  Scenario: User sends the file to pricing to the category team
+  Scenario Outline: User sends the file to pricing to the category team
     When Sales team clicks on the price awaiting section
-    And the user performs the category user test
+    And the user selected the category user "<Category>"
     And the user saves the category
     And the user saves the opportunity
-
+    Examples:
+         | Category |
+         | Mfg Category|
 
 
   Scenario Outline: User updates the customer-accepted price after receiving pricing from the category
@@ -90,7 +92,7 @@ Feature: Create Order in SF using this Script
     And the user saves the opportunity first
     And the user verifies the customer-accepted price
     And the user requests PI to the category team
-    And the user selected the "<Category>"
+    And the user selected the category user "<Category>"
     And the user saves the category user
     And the user saves the opportunity for sales
     Then Check stage of the opportunity is "<Stage>"

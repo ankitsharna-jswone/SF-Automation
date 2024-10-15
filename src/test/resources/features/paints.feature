@@ -56,15 +56,18 @@ Feature: Create Order in SF using this Script
 
     Examples:
       | Delivery Type | Days | Special Message        |Colour | Seller     |CPrice| Price |
-
       |     Self pickup    | 2    | Urgent delivery needed | Grey   | Auto_User_SsQg (JODL)  |   110  |   120   |
 
 
-  Scenario: User sends the file to pricing to the category team
+  Scenario Outline: User sends the file to pricing to the category team
     When Sales team clicks on the price awaiting section
-    And the user performs the category user test
+    And the user selected the category user "<Category>"
     And the user saves the category
     And the user saves the opportunity
+    Examples:
+      | Category |
+      |Category Test user|
+
 
 
 
@@ -74,18 +77,16 @@ Feature: Create Order in SF using this Script
     Given the user saves the opportunity first
     And the user verifies the customer-accepted price
     And the user requests PI to the category team
-    And the user selected the "<Category>"
+    And the user selected the category user "<Category>"
     And the user saves the category user
     And the user saves the opportunity for sales
     Then Check stage of the opportunity is "<Stage>"
     Then User Went to SKU requirement page
     Then User selected the SKU number "0"
     Then Click on the Opportunity Page
-
     Examples:
-      | Stage            | Category ||Price|
-
-      | Awaiting PI | category user test|| 120  |
+      | Stage            | Category |Price|
+      | Awaiting PI      |Category Test user| 120  |
 
   Scenario: User request PI to Seller team
     Given User processed opportunity to send PI to seller
