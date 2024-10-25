@@ -247,6 +247,16 @@ public boolean checkFIle(String file, List<WebElement> list) {
     return false;
 }
 
+    public void ApprovedCreditProgramButton(){
+
+            waitLocatedXpath("(//button[text()='More' and @title='More Tabs'])[2]");
+            clickingTool(xpathELem("(//button[text()='More' and @title='More Tabs'])[2]"));
+            waitLocatedXpath("//a[ .//text()='Approved Credit Programs']");
+            clickingTool(xpathELem("//a[ .//text()='Approved Credit Programs']"));
+
+
+    }
+
 
 }
 

@@ -41,6 +41,7 @@ public class testScript {
     PricingAwaitingPage awaitingPage;
 
     OpportunityPage opportunityPage;
+    ApprovedCreditPrograms approvedCreditPrograms;
     @BeforeTest
     public void setup(){
 
@@ -58,7 +59,7 @@ public class testScript {
         driver.manage().window().maximize();
         AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,10);
         PageFactory.initElements(factory,this);
-        driver.get("https://creator.zoho.in/userhome/zohoadmin_jsw/admindashboard#/billing");
+        driver.get("https://jswoneplatforms--prdreplica.sandbox.lightning.force.com/lightning/r/Account/001Hz00000ni1zqIAA/view");
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         actions = new Actions(driver);
@@ -70,12 +71,13 @@ public class testScript {
         processOpportunity = new ProcessOpportunity(driver);
         awaitingPage = new PricingAwaitingPage(driver);
         opportunityPage = new OpportunityPage(driver);
+        approvedCreditPrograms = new ApprovedCreditPrograms();
 
     }
 
 
 
-//    @Test(priority = 1)
+    @Test(priority = 1)
     public void login() {
         String username = "v_ankit.sharma@jsw.in";
         String password = "@Ankit123";
@@ -86,17 +88,36 @@ public class testScript {
 
     }
 
-//    @Test(priority = 2)
+    @Test(priority = 2)
     public void setp(){
-        processOpportunity.processOpportunitybutton();
-        processOpportunity.editOpportunity();
-        processOpportunity.creditRequired();
-        processOpportunity.creditRequiredYes();
-        processOpportunity.creditProgramType();
-        String string = "Channel finance-Jsw One";
-        waitLocatedXpath("//div[@aria-label='Credit Program Type']");
 
-        processOpportunity.selectCreditProgram(string);
+            accountPage.ApprovedCreditProgramButton();
+            String credit = "BNPL - Seller-Back";
+            System.out.println(" Aviable amount : " +approvedCreditPrograms.AvailableAmount(credit));
+        System.out.println(" Blocked amount : " +approvedCreditPrograms.BlockedAmount(credit));
+        System.out.println(" Credit amount : " +approvedCreditPrograms.CreditDueDays(credit));
+        System.out.println(" Sanctioned amount : " +approvedCreditPrograms.SanctionedAmount(credit));
+        System.out.println(" Usable amount : " +approvedCreditPrograms.UsableAmount(credit));
+        System.out.println(" Utilised amount : " +approvedCreditPrograms.UtilisedAmount(credit));
+        System.out.println(" CreditLimitBlock amount : " +approvedCreditPrograms.CreditLimitBlock(credit));
+        System.out.println(" CreditExpiry amount : " +approvedCreditPrograms.CreditExpiryDate(credit));
+        System.out.println(" Peanl amount : " +approvedCreditPrograms.PenalRate(credit));
+        System.out.println(" Due Days amount : " +approvedCreditPrograms.CreditDueDays(credit));
+
+
+
+
+
+
+//        processOpportunity.processOpportunitybutton();
+//        processOpportunity.editOpportunity();
+//        processOpportunity.creditRequired();
+//        processOpportunity.creditRequiredYes();
+//        processOpportunity.creditProgramType();
+//        String string = "Channel finance-Jsw One";
+//        waitLocatedXpath("//div[@aria-label='Credit Program Type']");
+//
+//        processOpportunity.selectCreditProgram(string);
 
 
 //        System.out.println("gap message =============================");
