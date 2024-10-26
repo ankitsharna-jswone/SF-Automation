@@ -104,8 +104,7 @@ public class testScript {
         System.out.println(" Peanl amount : " +approvedCreditPrograms.PenalRate(credit));
         System.out.println(" Due Days amount : " +approvedCreditPrograms.CreditDueDays(credit));
 
-
-
+        approvedCreditPrograms.CreditDetialsJSON(credit);
 
 
 
