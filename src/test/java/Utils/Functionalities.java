@@ -20,7 +20,7 @@ public class Functionalities {
     public static WebDriverWait wait;
 
     public Functionalities(WebDriver driver) {
-        this.driver = driver;
+        Functionalities.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
 

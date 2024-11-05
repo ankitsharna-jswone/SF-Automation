@@ -28,6 +28,11 @@ public class MultiProductSelectionSteps {
         int ind =0;
         int len =0;
         int dia =0;
+        int sheet =1;
+        int coil = 1;
+        int steel =1;
+        int pipe = 1;
+        int colourdur =1;
 
         for(int i =0;i<productsData.size();i++){
             System.out.println(i);
@@ -42,10 +47,11 @@ public class MultiProductSelectionSteps {
                 String Width = Values.get("Width");
                 String Length = Values.get("Length");
                 multipleSKUcreationPage.searchProducts(name,0);
-                multipleSKUcreationPage.selectProduct(name);
+                multipleSKUcreationPage.selectProduct(name,coil);
                 multipleSKUcreationPage.setQuantity(Quantity,ind);
                 multipleSKUcreationPage.setThickness(Thickness);
                 multipleSKUcreationPage.selectWidhts("1250",ind);
+                coil++;
                 ind++;
                 System.out.println("For Coil data is " + Quantity + " - " + UOM + " - " + Thickness + " - " + Width + " - " + Length +  " ; ");
             } else if (name.contains("Sheet")) {
@@ -56,12 +62,13 @@ public class MultiProductSelectionSteps {
                 String Length = Values.get("Length");
 
                 multipleSKUcreationPage.searchProducts(name,0);
-                multipleSKUcreationPage.selectProduct(name);
+                multipleSKUcreationPage.selectProduct(name,sheet);
                 multipleSKUcreationPage.setQuantity(Quantity,ind);
                 multipleSKUcreationPage.setThickness(Thickness);
                 multipleSKUcreationPage.selectWidhts(Width,ind);
                 multipleSKUcreationPage.setLengths(Length,len);
                 len++;
+                sheet++;
                 ind++;
 
                 System.out.println("For Coil data is " + Quantity + " - " + UOM + " - " + Thickness + " - " + Width + " - " + Length +  " ; ");
@@ -74,7 +81,7 @@ public class MultiProductSelectionSteps {
                 String Length = Values.get("Length");
 
                 multipleSKUcreationPage.searchProducts(name,0);
-                multipleSKUcreationPage.selectProduct(name);
+                multipleSKUcreationPage.selectProduct(name,pipe);
                 multipleSKUcreationPage.setQuantity(Quantity,ind);
                 multipleSKUcreationPage.setThickness(Thickness);
                 multipleSKUcreationPage.setLengths(Length,len);
@@ -90,7 +97,7 @@ public class MultiProductSelectionSteps {
 //                String Diameter = Values.get("Diameter");
 
                 multipleSKUcreationPage.searchProducts(name,0);
-                multipleSKUcreationPage.selectProduct(name);
+                multipleSKUcreationPage.selectProduct(name,steel);
                 multipleSKUcreationPage.setQuantity(Quantity,ind);
                 multipleSKUcreationPage.setThickness(Thickness);
                 multipleSKUcreationPage.selectWidhts(Width,ind);
@@ -101,7 +108,7 @@ public class MultiProductSelectionSteps {
                 String Quantity = Values.get("Quantity");
                 String UOM     = Values.get("UOM");
                 multipleSKUcreationPage.searchProducts(name,0);
-                multipleSKUcreationPage.selectProduct(name);
+                multipleSKUcreationPage.selectProduct(name,colourdur);
                 multipleSKUcreationPage.setQuantity(Quantity,ind);
                 ind++;
             }

@@ -26,9 +26,10 @@ public class MultipleSKUcreationPage {
         xpathELem("//input[@placeholder ='Search Products...']").sendKeys(text);
     }
 
-    public void selectProduct(String text){
-        waitLocatedXpath("//lightning-base-combobox-formatted-text[@title='"+text+"']");
-        xpathELem("//lightning-base-combobox-formatted-text[@title='"+text+"']").click();
+    public void selectProduct(String text,int index){
+        waitLocatedXpath("(//lightning-base-combobox-formatted-text[@title='"+text+"'])[" + index + "]");
+        clickingTool(xpathELem("(//lightning-base-combobox-formatted-text[@title='"+text+"'])[" + index + "]"));
+
     }
 
     public void setQuantity(String quantity,int index){

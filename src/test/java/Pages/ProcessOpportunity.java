@@ -127,7 +127,13 @@ public class ProcessOpportunity {
         //Delivery Instructions
         xpathELem("//button[@aria-label ='Delivery Instructions']").click();
         waitLocatedXpath("//lightning-base-combobox-item[@data-value='Self pickup']");
-        xpathELem("//lightning-base-combobox-item[@data-value='" + type + "']").click(); // Self pickup
+        if(type.equals("JOTS")){
+            xpathELem("//lightning-base-combobox-item[@data-value='3PL']").click();
+        }
+        else{
+            xpathELem("//lightning-base-combobox-item[@data-value='" + type + "']").click();
+        }
+
     }
 
 

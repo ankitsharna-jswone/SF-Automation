@@ -27,8 +27,9 @@ public class ApprovedCreditInfo {
                 .header("Origin", "https://qa-oms.msme.jswone.in")
                 .header("Referer", "https://qa-oms.msme.jswone.in/order-list/JOO-S4782PFB?tab=shipments")
                 .header("Content-Type", "application/json")
+                .queryParam("pan","BNEPR4751B")
                 .when()
-                .get("/joms/api/credit/internal/v1/getCreditInfoByPan?pan=BNEPR4751B")
+                .get("/joms/api/credit/internal/v1/getCreditInfoByPan")
                 .then()
                 .statusCode(200)
                 .extract().response();
