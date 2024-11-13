@@ -27,9 +27,9 @@ Feature: Profile based order creation
     And Add multiple products in SKU according to given Data
       | Product                     | Quantity | UOM     | Thickness | Width | Length | Diameter |
       | MS HR Coil 2062:2011 E250A  | 10       | Primary | 2.5       | 1250  |        |          |
-      | MS HR Sheet 2062:2011 E250A | 15       | Primary | 2.5       | 1250  | 3000   |          |
+      | MS HR Sheet 2062:2011 E250A | 15       | Primary | 2.5       | 1250  | 1500   |          |
       | MS HR Coil 2062:2011 E250A  | 10       | Primary | 2.5       | 1500  |        |          |
-      | MS HR Sheet 2062:2011 E250A | 15       | Primary | 2.5       | 1500  | 3000   |          |
+      | MS HR Sheet 2062:2011 E250A | 15       | Primary | 2.5       | 1500  | 1500   |          |
     Then the user saves the opportunity
 
 

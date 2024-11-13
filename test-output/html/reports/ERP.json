@@ -1,22 +1,23 @@
 {
   "warningSteps": 0,
   "totalFeatures": 1,
-  "failedFeatures": 0,
+  "failedFeatures": 1,
   "passedScenarios": 6,
-  "totalSteps": 31,
-  "failedScenarios": 0,
-  "skippedSteps": 0,
-  "failedSteps": 0,
-  "totalScenarios": 6,
+  "totalSteps": 34,
+  "failedScenarios": 1,
+  "skippedSteps": 1,
+  "failedSteps": 1,
+  "totalScenarios": 7,
   "infoSteps": 0,
   "scenarioDurations": {
-    "User navigates to a specific account from the homepage": 2452,
-    "User Handover the Opportunity to the Category Team": 8525,
-    "Setting up enviroment for the the project": 2590,
-    "User logs in to Salesforce": 9382,
-    "User creates Multiple opportunity with a specific product and quantity": 22351,
-    "User processes an opportunity to the sales team and fills required documents": 12117
+    "User navigates to a specific account from the homepage": 20520,
+    "Sales user logs out": 42839,
+    "User Handover the Opportunity to the Category Team": 8101,
+    "Setting up enviroment for the the project": 2737,
+    "User logs in to Salesforce": 3571,
+    "User creates Multiple opportunity with a specific product and quantity": 29080,
+    "User processes an opportunity to the sales team and fills required documents": 11339
   },
-  "passedFeatures": 1,
-  "passedSteps": 31
+  "passedFeatures": 0,
+  "passedSteps": 32
 }
