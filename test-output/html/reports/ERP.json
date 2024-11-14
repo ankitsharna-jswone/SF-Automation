@@ -1,23 +1,22 @@
 {
-  "warningSteps": 0,
+  "warningSteps": 1,
   "totalFeatures": 1,
   "failedFeatures": 1,
-  "passedScenarios": 6,
-  "totalSteps": 34,
+  "passedScenarios": 5,
+  "totalSteps": 48,
   "failedScenarios": 1,
-  "skippedSteps": 1,
-  "failedSteps": 1,
-  "totalScenarios": 7,
+  "skippedSteps": 13,
+  "failedSteps": 0,
+  "totalScenarios": 6,
   "infoSteps": 0,
   "scenarioDurations": {
-    "User navigates to a specific account from the homepage": 20520,
-    "Sales user logs out": 42839,
-    "User Handover the Opportunity to the Category Team": 8101,
-    "Setting up enviroment for the the project": 2737,
-    "User logs in to Salesforce": 3571,
-    "User creates Multiple opportunity with a specific product and quantity": 29080,
-    "User processes an opportunity to the sales team and fills required documents": 11339
+    "User navigates to a specific account from the homepage": 2934,
+    "User creates an opportunity with a specific product and quantity": 8492,
+    "Setting up enviroment for the the project": 4199,
+    "User logs in to Salesforce": 4332,
+    "Fetching Credit Program Data and Storing it for Validation": 66,
+    "User processes an opportunity to the sales team and fills required documents": 29133
   },
   "passedFeatures": 0,
-  "passedSteps": 32
+  "passedSteps": 34
 }
