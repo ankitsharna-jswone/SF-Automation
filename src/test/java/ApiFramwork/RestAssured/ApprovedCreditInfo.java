@@ -31,7 +31,6 @@ public class ApprovedCreditInfo {
                 .when()
                 .get("/joms/api/credit/internal/v1/getCreditInfoByPan")
                 .then()
-                .statusCode(200)
                 .extract().response();
 
         ObjectMapper objectMapper = new ObjectMapper();

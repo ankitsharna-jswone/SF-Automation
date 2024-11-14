@@ -42,6 +42,7 @@ public class testScript {
 
     OpportunityPage opportunityPage;
     ApprovedCreditPrograms approvedCreditPrograms;
+    OpportunityCreditPage opportunityCreditPage;
     @BeforeTest
     public void setup(){
 
@@ -59,7 +60,7 @@ public class testScript {
         driver.manage().window().maximize();
         AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,10);
         PageFactory.initElements(factory,this);
-        driver.get("https://jswoneplatforms--prdreplica.sandbox.lightning.force.com/lightning/r/Account/001Hz00000ni1zqIAA/view");
+        driver.get("https://jswoneplatforms--prdreplica.sandbox.lightning.force.com/lightning/r/Opportunity/006Hz00000Umx51IAB/view");
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         actions = new Actions(driver);
@@ -72,6 +73,7 @@ public class testScript {
         awaitingPage = new PricingAwaitingPage(driver);
         opportunityPage = new OpportunityPage(driver);
         approvedCreditPrograms = new ApprovedCreditPrograms();
+        opportunityCreditPage = new OpportunityCreditPage();
 
     }
 
@@ -91,20 +93,34 @@ public class testScript {
     @Test(priority = 2)
     public void setp(){
 
-            accountPage.ApprovedCreditProgramButton();
-            String credit = "BNPL - Seller-Back";
-            System.out.println(" Aviable amount : " +approvedCreditPrograms.AvailableAmount(credit));
-        System.out.println(" Blocked amount : " +approvedCreditPrograms.BlockedAmount(credit));
-        System.out.println(" Credit amount : " +approvedCreditPrograms.CreditDueDays(credit));
-        System.out.println(" Sanctioned amount : " +approvedCreditPrograms.SanctionedAmount(credit));
-        System.out.println(" Usable amount : " +approvedCreditPrograms.UsableAmount(credit));
-        System.out.println(" Utilised amount : " +approvedCreditPrograms.UtilisedAmount(credit));
-        System.out.println(" CreditLimitBlock amount : " +approvedCreditPrograms.CreditLimitBlock(credit));
-        System.out.println(" CreditExpiry amount : " +approvedCreditPrograms.CreditExpiryDate(credit));
-        System.out.println(" Peanl amount : " +approvedCreditPrograms.PenalRate(credit));
-        System.out.println(" Due Days amount : " +approvedCreditPrograms.CreditDueDays(credit));
+        System.out.println(opportunityCreditPage.CreditAmount() + " Credit Amount");
+        System.out.println(opportunityCreditPage.ApprovedCreditDays() + " Approved Credit days");
+        System.out.printf(opportunityCreditPage.CreditAvialable() + " Credit Available");
+        System.out.printf(opportunityCreditPage.CreditDays() + " Credit days");
+        System.out.printf(opportunityCreditPage.CreditProgramName() + " Credit Program ");
+        System.out.printf(opportunityCreditPage.CreditRequired() + " Credit Requiredd");
+        System.out.printf(opportunityCreditPage.CreditUtilised() + " Credit utilised");
+        System.out.printf(opportunityCreditPage.BlockedLimiit() + " Blocked Available");
+        System.out.printf(opportunityCreditPage.CreditProgramPan() + " Program Credit");
+        System.out.printf(opportunityCreditPage.CreditAvialable() + " Credit Available");
 
-        approvedCreditPrograms.CreditDetialsJSON(credit);
+
+
+
+//            accountPage.ApprovedCreditProgramButton();
+//            String credit = "BNPL - Seller-Back";
+//            System.out.println(" Aviable amount : " +approvedCreditPrograms.AvailableAmount(credit));
+//        System.out.println(" Blocked amount : " +approvedCreditPrograms.BlockedAmount(credit));
+//        System.out.println(" Credit amount : " +approvedCreditPrograms.CreditDueDays(credit));
+//        System.out.println(" Sanctioned amount : " +approvedCreditPrograms.SanctionedAmount(credit));
+//        System.out.println(" Usable amount : " +approvedCreditPrograms.UsableAmount(credit));
+//        System.out.println(" Utilised amount : " +approvedCreditPrograms.UtilisedAmount(credit));
+//        System.out.println(" CreditLimitBlock amount : " +approvedCreditPrograms.CreditLimitBlock(credit));
+//        System.out.println(" CreditExpiry amount : " +approvedCreditPrograms.CreditExpiryDate(credit));
+//        System.out.println(" Peanl amount : " +approvedCreditPrograms.PenalRate(credit));
+//        System.out.println(" Due Days amount : " +approvedCreditPrograms.CreditDueDays(credit));
+//
+//        approvedCreditPrograms.CreditDetialsJSON(credit);
 
 
 

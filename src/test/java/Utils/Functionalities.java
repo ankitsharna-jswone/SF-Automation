@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.atomic.AtomicReference;
 
+import static Utils.BrowsserSetup.getDriver;
+
 public class Functionalities {
 
     public static WebDriver driver;
@@ -154,6 +156,18 @@ public class Functionalities {
 
     public static void waitLocatedCss(String path) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(path)));
+    }
+
+    public static void ActionMoveToElement(WebElement element) {
+        Actions actions = new Actions(driver);
+        actions.scrollToElement(element).build().perform();
+        actions.moveToElement(element).build().perform();
+
+    }
+
+    public static void JavaScriptScroll(WebElement element){
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
 
