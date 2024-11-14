@@ -47,7 +47,7 @@ Feature: Zoho regression on Boarding for testing
 
     Examples:
     | Credit Program |
-    |                |
+    | BNPL - Seller-Back |
 
 
 

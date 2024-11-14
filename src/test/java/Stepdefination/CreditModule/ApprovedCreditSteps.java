@@ -28,10 +28,9 @@ public class ApprovedCreditSteps {
     }
     @When("the user fetches the usable limit amount for the credit program {string}")
     public void the_user_fetches_the_usable_limit_amount_for_the_credit_program(String string) {
-
-
-        Assert.notNull(approvedCreditPrograms.UsableAmount(string),"Passed");
         System.out.println(approvedCreditPrograms.UsableAmount(string) + " : Utilised Amount");
+        Assert.notNull(approvedCreditPrograms.UsableAmount(string),"Passed");
+
     }
     @When("the user fetches the sanctioned amount for the credit program {string}")
     public void the_user_fetches_the_sanctioned_amount_for_the_credit_program(String string) {
