@@ -1,1 +1,13 @@
-{"PenalRate":"10","UsableAmount":"99,99,99,900","CreditExpiryDate":"1/1/2026, 08:27 pm","CreditLimitBlock":"false","SanctionedAmount":"1,00,00,00,000","AvailableAmount":"99,99,99,900","UsableLimit":"99,99,99,900","CreditDueDays":"10","BlockedAmount":"0","CreditLimitBlockReason":"","UtilisedAmount":"100"}
+{
+  "PenalRate": "10",
+  "UsableAmount": "99,99,99,900",
+  "CreditExpiryDate": "1/1/2026, 08:27 pm",
+  "CreditLimitBlock": "false",
+  "SanctionedAmount": "1,00,00,00,000",
+  "AvailableAmount": "99,99,99,900",
+  "UsableLimit": "99,99,99,900",
+  "CreditDueDays": "10",
+  "BlockedAmount": "0",
+  "CreditLimitBlockReason": "",
+  "UtilisedAmount": "100"
+}

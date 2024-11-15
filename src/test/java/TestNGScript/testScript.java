@@ -93,16 +93,16 @@ public class testScript {
     @Test(priority = 2)
     public void setp(){
 
-//        System.out.println(opportunityCreditPage.CreditAmount() + " Credit Amount");
-//        System.out.println(opportunityCreditPage.ApprovedCreditDays() + " Approved Credit days");
-//        System.out.printf(opportunityCreditPage.CreditAvialable() + " Credit Available");
-//        System.out.printf(opportunityCreditPage.CreditDays() + " Credit days");
-//        System.out.printf(opportunityCreditPage.CreditProgramName() + " Credit Program ");
-//        System.out.printf(opportunityCreditPage.CreditRequired() + " Credit Requiredd");
-//        System.out.printf(opportunityCreditPage.CreditUtilised() + " Credit utilised");
-//        System.out.printf(opportunityCreditPage.BlockedLimiit() + " Blocked Available");
-//        System.out.printf(opportunityCreditPage.CreditProgramPan() + " Program Credit");
-//        System.out.printf(opportunityCreditPage.CreditAvialable() + " Credit Available");
+        System.out.println(opportunityCreditPage.CreditAmount() + " Credit Amount");
+        System.out.println(opportunityCreditPage.ApprovedCreditDays() + " Approved Credit days");
+        System.out.printf(opportunityCreditPage.CreditAvialable() + " Credit Available");
+        System.out.printf(opportunityCreditPage.CreditDays() + " Credit days");
+        System.out.printf(opportunityCreditPage.CreditProgramName() + " Credit Program ");
+        System.out.printf(opportunityCreditPage.CreditRequired() + " Credit Requiredd");
+        System.out.printf(opportunityCreditPage.CreditUtilised() + " Credit utilised");
+        System.out.printf(opportunityCreditPage.BlockedLimiit() + " Blocked Available");
+        System.out.printf(opportunityCreditPage.CreditProgramPan() + " Program Credit");
+        System.out.printf(opportunityCreditPage.CreditAvialable() + " Credit Available");
 
 
 

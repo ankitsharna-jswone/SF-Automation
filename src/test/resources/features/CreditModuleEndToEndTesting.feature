@@ -1,4 +1,4 @@
-@newCredit
+@newCreditTest
 Feature: Zoho regression on Boarding for testing
 
   Scenario Outline: Setting up enviroment for the the project
@@ -44,7 +44,6 @@ Feature: Zoho regression on Boarding for testing
     When the user fetches the credit limit block for the credit program "<Credit Program>"
     When the user fetches the credit limit block reason for the credit program "<Credit Program>"
     Then the user stores the credit details in a JSON file for future validation "<Credit Program>"
-
     Examples:
     | Credit Program |
     | BNPL - Seller-Back |
@@ -79,6 +78,43 @@ Feature: Zoho regression on Boarding for testing
     And the user edits the special message to "<Special Message>"
     Examples:
       | Delivery Type | Days | Special Message        | Program           | Advance | Address           | Credit Days |
-      | Self pickup   | 2    | Urgent delivery needed | BNPL-Ankit-Credit | 30      | NEAR BAJAJ AGENCY | 5           |
+      | Self pickup   | 2    | Urgent delivery needed | BNPL - Seller-Back  | 30      | NEAR BAJAJ AGENCY | 5           |
+
+
+
+  Scenario Outline: User sends the file to pricing to the category team
+    When the user selects the category price as "<CPrice>"
+    And the user edits the cost price to "<Price>"
+    And the user searches for the source seller "<Seller>"
+    And the user selects the source seller "<Seller>"
+    And the user Selects the source seller type "<SourceSeller>"
+    And the user saves the opportunity
+    When Sales team clicks on the price awaiting section
+    And the user selected the category user "<Category>"
+    And the user saves the category
+    And the user verifies the customer-accepted price
+    And the user saves the opportunity
+    Examples:
+      | CPrice | Price | Seller | SourceSeller| Category |
+      | 120    | 100    | Vee |    Marketplace        | Category Test user |
+
+  Scenario Outline: User selects the credit program on the Credit program on Opportunity page
+    When the user clicks on the process opportunity button
+    And the user selects to edit the opportunity
+    And user sets the customer-accepted price to "<Price>"
+    And the user saves the opportunity
+    Examples:
+      | Price |
+      | 150    |
+
+
+  Scenario Outline: User request PI to Category team
+    When the user verifies the customer-accepted price
+    When the user requests PI to the category team
+    And the user selected the category user "<Category>"
+    And the user saves the category user
+    Examples:
+      | Category |
+      | Category Test user |
 
 

@@ -3,17 +3,18 @@ package Utils;
 import com.google.gson.*;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+import java.io.StringReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import javax.json.Json;
 
 public class JsonUtills {
     @Test
-    public static void getValueFromJson() {
-        String key = "environment"; // Change this to the key you're looking for
-        String filePath = "src/test/resources/DataConfig/credentials.json";
+    public static void getValueFromJson(String path,String key) {
 
         try {
-            String jsonString = new String(Files.readAllBytes(Paths.get(filePath)));
+            String jsonString = new String(Files.readAllBytes(Paths.get(path)));
             JsonElement jsonElement = JsonParser.parseString(jsonString);
             String value = findValue(jsonElement, key);
             if (value != null) {
@@ -49,4 +50,5 @@ public class JsonUtills {
         }
         return null;
     }
+
 }
