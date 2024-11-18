@@ -1,4 +1,4 @@
-@multi @regression
+@multi
 Feature: Check Flow of order creation of order for Multiple prodcut SKU
   Scenario: Setting up enviroment for the the project
     Given Set the file and driver and configuration

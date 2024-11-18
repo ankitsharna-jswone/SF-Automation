@@ -35,7 +35,7 @@ public class AccountPage {
 
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath ("//button[@class ='test-id__inline-edit-trigger slds-shrink-none inline-edit-trigger slds-button slds-button_icon' and @title='Edit Segment']")));
-
+        JavaScriptScroll(xpathELem("//button[@class ='test-id__inline-edit-trigger slds-shrink-none inline-edit-trigger slds-button slds-button_icon' and @title='Edit Segment']"));
         Actions action = new Actions(getDriver());
         action.moveToElement(xpathELem("//button[@class ='test-id__inline-edit-trigger slds-shrink-none inline-edit-trigger slds-button slds-button_icon' and @title='Edit Segment']")).build().perform();
         action.scrollToElement(xpathELem("//button[@class ='test-id__inline-edit-trigger slds-shrink-none inline-edit-trigger slds-button slds-button_icon' and @title='Edit Segment']")).build().perform();

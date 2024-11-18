@@ -3,15 +3,12 @@ package Utils;
 import com.google.gson.*;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-import java.io.StringReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import javax.json.Json;
 
 public class JsonUtills {
     @Test
-    public static void getValueFromJson(String path,String key) {
+    public static Object getValueFromJson(String path, String key) {
 
         try {
             String jsonString = new String(Files.readAllBytes(Paths.get(path)));
@@ -26,6 +23,7 @@ public class JsonUtills {
             e.printStackTrace();
             System.out.println("Error reading JSON");
         }
+        return null;
     }
 
     private static String findValue(JsonElement element, String key) {

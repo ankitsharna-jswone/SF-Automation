@@ -1,4 +1,4 @@
-@newCreditTest
+@newCreditTest @regression
 Feature: Zoho regression on Boarding for testing
 
   Scenario Outline: Setting up enviroment for the the project
@@ -46,7 +46,7 @@ Feature: Zoho regression on Boarding for testing
     Then the user stores the credit details in a JSON file for future validation "<Credit Program>"
     Examples:
     | Credit Program |
-    | BNPL - Seller-Back |
+    | BNPL - Ankit-Credit |
 
 
 
@@ -78,7 +78,7 @@ Feature: Zoho regression on Boarding for testing
     And the user edits the special message to "<Special Message>"
     Examples:
       | Delivery Type | Days | Special Message        | Program           | Advance | Address           | Credit Days |
-      | Self pickup   | 2    | Urgent delivery needed | BNPL - Seller-Back  | 30      | NEAR BAJAJ AGENCY | 5           |
+      | Self pickup   | 2    | Urgent delivery needed | BNPL - Ankit-Credit | 30      | NEAR BAJAJ AGENCY | 5           |
 
 
 
@@ -116,5 +116,41 @@ Feature: Zoho regression on Boarding for testing
     Examples:
       | Category |
       | Category Test user |
+
+
+
+  Scenario: User request PI to Seller team
+    Then the user requests PI to the seller
+    And user saved the opportunity
+    Then The stage of opportunity will be printed
+
+
+  Scenario: Validate Credit Information for the Selected Program
+    When the user should fetch the Credit Amount from the Opportunity page
+    And the user should fetch the Approved Credit Days from the Opportunity page
+    And the user should fetch the Credit Available from the Opportunity page
+    And the user should fetch the Credit Days from the Opportunity page
+    And the user should fetch the Credit Program Name from the Opportunity page
+    And the user should fetch the Credit Required from the Opportunity page
+    And the user should fetch the Credit Utilised from the Opportunity page
+    And the user should fetch the Blocked Limit from the Opportunity page
+    And the user should fetch the Program Credit from the Opportunity page
+    And the user should fetch the Credit Expiry Date from the Opportunity page
+    And the user should fetch the Credit Program Type from the Opportunity page
+    And the user should fetch the Penal Interest from the Opportunity page
+    And the user should fetch the API response for the selected Credit Program
+    Then the Credit Amount from the Opportunity page should match the Credit Amount in the API response
+    And the Approved Credit Days from the Opportunity page should match the Approved Credit Days in the API response
+    And the Credit Available from the Opportunity page should match the Credit Available in the API response
+    And the Credit Days from the Opportunity page should match the Credit Days in the API response
+    And the Credit Program Name from the Opportunity page should match the Credit Program Name in the API response
+    And the Credit Required from the Opportunity page should match the Credit Required in the API response
+    And the Credit Utilised from the Opportunity page should match the Credit Utilised in the API response
+    And the Blocked Limit from the Opportunity page should match the Blocked Limit in the API response
+    And the Program Credit from the Opportunity page should match the Program Credit in the API response
+    And the Credit Expiry Date from the Opportunity page should match the Credit Expiry Date in the API response
+    And the Credit Program Type from the Opportunity page should match the Credit Program Type in the API response
+    And the Penal Interest from the Opportunity page should match the Penal Interest in the API response
+
 
 

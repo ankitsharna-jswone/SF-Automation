@@ -70,7 +70,7 @@ Feature: Create Order in SF using this Script for credit user
     And the user saves the opportunity
     Examples:
       | CPrice | Price | Seller | Category |
-      | 120    | 100    | Test Steel Authority 2 | Category Test user |
+      | 120    | 100    | Vee | Category Test user |
 
 
 #  Scenario Outline: User Selects the credit on the Opportunity page

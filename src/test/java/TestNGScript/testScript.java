@@ -93,34 +93,38 @@ public class testScript {
     @Test(priority = 2)
     public void setp(){
 
-        System.out.println(opportunityCreditPage.CreditAmount() + " Credit Amount");
-        System.out.println(opportunityCreditPage.ApprovedCreditDays() + " Approved Credit days");
-        System.out.printf(opportunityCreditPage.CreditAvialable() + " Credit Available");
-        System.out.printf(opportunityCreditPage.CreditDays() + " Credit days");
-        System.out.printf(opportunityCreditPage.CreditProgramName() + " Credit Program ");
-        System.out.printf(opportunityCreditPage.CreditRequired() + " Credit Requiredd");
-        System.out.printf(opportunityCreditPage.CreditUtilised() + " Credit utilised");
-        System.out.printf(opportunityCreditPage.BlockedLimiit() + " Blocked Available");
-        System.out.printf(opportunityCreditPage.CreditProgramPan() + " Program Credit");
-        System.out.printf(opportunityCreditPage.CreditAvialable() + " Credit Available");
+//        System.out.println(opportunityCreditPage.CreditAmount() + " Credit Amount");
+//        System.out.println(opportunityCreditPage.ApprovedCreditDays() + " Approved Credit days");
+//        System.out.printf(opportunityCreditPage.CreditAvialable() + " Credit Available");
+//        System.out.printf(opportunityCreditPage.CreditDays() + " Credit days");
+//        System.out.printf(opportunityCreditPage.CreditProgramName() + " Credit Program ");
+//        System.out.printf(opportunityCreditPage.CreditRequired() + " Credit Requiredd");
+//        System.out.printf(opportunityCreditPage.CreditUtilised() + " Credit utilised");
+//        System.out.printf(opportunityCreditPage.BlockedLimiit() + " Blocked Available");
+//        System.out.printf(opportunityCreditPage.CreditProgramPan() + " Program Credit");
+//        System.out.printf(opportunityCreditPage.CreditAvialable() + " Credit Available");
+//        opportunityCreditPage.SanctionedLimit();
+//        opportunityCreditPage.CreditExpiryDate();
+//        opportunityCreditPage.CreditProgramType();
+//        opportunityCreditPage.PenalInterest();
 
 
 
 
             accountPage.ApprovedCreditProgramButton();
-            String credit = "BNPL - Seller-Back";
+            String credit = "BNPL - Ankit-Credit";
             System.out.println(" Aviable amount : " +approvedCreditPrograms.AvailableAmount(credit));
-        System.out.println(" Blocked amount : " +approvedCreditPrograms.BlockedAmount(credit));
-        System.out.println(" Credit amount : " +approvedCreditPrograms.CreditDueDays(credit));
-        System.out.println(" Sanctioned amount : " +approvedCreditPrograms.SanctionedAmount(credit));
-        System.out.println(" Usable amount : " +approvedCreditPrograms.UsableAmount(credit));
-        System.out.println(" Utilised amount : " +approvedCreditPrograms.UtilisedAmount(credit));
-        System.out.println(" CreditLimitBlock amount : " +approvedCreditPrograms.CreditLimitBlock(credit));
-        System.out.println(" CreditExpiry amount : " +approvedCreditPrograms.CreditExpiryDate(credit));
-        System.out.println(" Peanl amount : " +approvedCreditPrograms.PenalRate(credit));
-        System.out.println(" Due Days amount : " +approvedCreditPrograms.CreditDueDays(credit));
+//        System.out.println(" Blocked amount : " +approvedCreditPrograms.BlockedAmount(credit));
+//        System.out.println(" Credit amount : " +approvedCreditPrograms.CreditDueDays(credit));
+//        System.out.println(" Sanctioned amount : " +approvedCreditPrograms.SanctionedAmount(credit));
+//        System.out.println(" Usable amount : " +approvedCreditPrograms.UsableAmount(credit));
+//        System.out.println(" Utilised amount : " +approvedCreditPrograms.UtilisedAmount(credit));
+//        System.out.println(" CreditLimitBlock amount : " +approvedCreditPrograms.CreditLimitBlock(credit));
+//        System.out.println(" CreditExpiry amount : " +approvedCreditPrograms.CreditExpiryDate(credit));
+//        System.out.println(" Peanl amount : " +approvedCreditPrograms.PenalRate(credit));
+//        System.out.println(" Due Days amount : " +approvedCreditPrograms.CreditDueDays(credit));
 //
-//        approvedCreditPrograms.CreditDetialsJSON(credit);
+        approvedCreditPrograms.CreditDetialsJSON(credit);
 
 
 

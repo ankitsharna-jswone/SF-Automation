@@ -1,4 +1,4 @@
-@uatconst
+@uatconst @regression
 Feature: Create Order for Construct account on UAT
 
   Scenario Outline: Setting up enviroment for the the project

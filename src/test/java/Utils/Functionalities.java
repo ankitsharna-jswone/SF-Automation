@@ -58,10 +58,12 @@ public class Functionalities {
         boolean elementClickable = false;
         try {
             element.click();
+
             elementClickable = true;
         } catch (Exception e) {
             System.out.println("Normal click failed");
                 try {
+                    JavaScriptScroll(element);
                     JavascriptExecutor executor = (JavascriptExecutor) driver;
                     executor.executeScript("arguments[0].click();", element);
                     elementClickable = true;

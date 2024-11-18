@@ -52,8 +52,8 @@ public class ProcessOpportunity {
 
 
     public void creditRequired(){
-        waitLocatedXpath("//button[@aria-label='Credit requirement']");
-        clickingTool(xpathELem("//button[@aria-label='Credit requirement']"));
+        waitLocatedXpath("//button[@name='Credit_requirement__c']");
+        clickingTool(xpathELem("//button[@name='Credit_requirement__c']"));
     }
 
     public void creditRequiredYes(){
@@ -71,8 +71,8 @@ public class ProcessOpportunity {
     public void selectCreditProgram(String credit){
 //        clickingTool(xpathELem("//span[contains(text(), '"+credit+ "')]"));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@aria-label='Credit Program Type']")));
-        wait.until(ExpectedConditions.presenceOfElementLocated( By.xpath("//div[@aria-label='Credit Program Type']//lightning-base-combobox-item//span[contains(text(), '" + credit + "')]")));
-        clickingTool(xpathELem("//div[@aria-label='Credit Program Type']//lightning-base-combobox-item//span[contains(text(), '" + credit + "')]"));
+        wait.until(ExpectedConditions.presenceOfElementLocated( By.xpath("//span[contains(text(), '" + credit + "')]")));
+        clickingTool(xpathELem("//span[contains(text(), '" + credit + "')]"));
 
     }
 
@@ -229,7 +229,7 @@ public class ProcessOpportunity {
         clickingTool(xpathELem("//button[@name='Source_Seller_Type__c']"));
     }
     public void userSelectSourceSellerType(String SellerType){
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@aria-label='Source Seller Type']")));
+//        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@aria-label='Source Seller Type']")));
         clickingTool(xpathELem("//span [ @lwc-7co8ha3nedg and ./span[@class='slds-truncate' and  @title='" + SellerType +"']  ]"));
     }
 

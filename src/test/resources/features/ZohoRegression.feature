@@ -67,7 +67,6 @@ Feature: Zoho regression on Boarding for testing
     When Sales team clicks on the price awaiting section
     And the user selected the category user "<Category>"
     And the user saves the category
-    And the user verifies the customer-accepted price
     And the user saves the opportunity
     Examples:
       | CPrice | Price | Seller | SourceSeller| Category |

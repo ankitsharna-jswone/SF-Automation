@@ -100,6 +100,7 @@ public class OpportunityPage {
     }
 
     public void TDCsent2Customer(){
+        JavaScriptScroll(xpathELem("//input[@name ='TDC_Sent_to_Customer__c']"));
         JavaScriptClick("//input[@name ='TDC_Sent_to_Customer__c']");
     }
 

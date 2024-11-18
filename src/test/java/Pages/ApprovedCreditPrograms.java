@@ -7,10 +7,9 @@ import org.openqa.selenium.WebElement;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 import static Utils.BrowsserSetup.*;
 import static Utils.Functionalities.*;
@@ -30,6 +29,11 @@ public class ApprovedCreditPrograms {
         }
 
         return CreditProgramsNames;
+    }
+
+    public String CrdeitProgramName (String CreditName){
+        waitLocatedXpath("//span[@slot='title' and text()='" + CreditName +"']");
+        return xpathELem("//span[@slot='title' and text()='" + CreditName +"']").getText();
     }
 
 
@@ -64,6 +68,9 @@ public class ApprovedCreditPrograms {
         waitLocatedXpath("//div[@class='slds-card__header slds-grid' and .//span[@c-approvedcreditprogram_approvedcreditprogram and @class='largeText' and text()='" + CreditName + "']]" +
                 "/following-sibling::div//td[text()='Available']" +
                 "/following-sibling::td[@class ='boldText']//lightning-formatted-number");
+        JavaScriptScroll(xpathELem("//div[@class='slds-card__header slds-grid' and .//span[@c-approvedcreditprogram_approvedcreditprogram and @class='largeText' and text()='" + CreditName + "']]" +
+                "/following-sibling::div//td[text()='Available']" +
+                "/following-sibling::td[@class ='boldText']//lightning-formatted-number"));
         return xpathELem("//div[@class='slds-card__header slds-grid' and .//span[@c-approvedcreditprogram_approvedcreditprogram and @class='largeText' and text()='" + CreditName + "']]" +
                 "/following-sibling::div//td[text()='Available']" +
                 "/following-sibling::td[@class ='boldText']//lightning-formatted-number").getText();
@@ -90,8 +97,23 @@ public class ApprovedCreditPrograms {
     public String CreditExpiryDate(String CreditName){
         waitLocatedXpath("//div[@class='slds-card__header slds-grid' and .//span[@c-approvedcreditprogram_approvedcreditprogram and @class='largeText' and text()='" + CreditName + "']]" +
                 "/following-sibling::div//td[text()='Credit Expires on']/following-sibling::td//lightning-formatted-date-time");
-        return xpathELem("//div[@class='slds-card__header slds-grid' and .//span[@c-approvedcreditprogram_approvedcreditprogram and @class='largeText' and text()='" + CreditName + "']]" +
+        String expiryDateString = xpathELem("//div[@class='slds-card__header slds-grid' and .//span[@c-approvedcreditprogram_approvedcreditprogram and @class='largeText' and text()='" + CreditName + "']]" +
                 "/following-sibling::div//td[text()='Credit Expires on']/following-sibling::td//lightning-formatted-date-time").getText();
+
+
+        SimpleDateFormat inputFormat = new SimpleDateFormat("d/M/yyyy, hh:mm a");
+        SimpleDateFormat outputFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+        try {
+
+            Date date = inputFormat.parse(expiryDateString);
+
+
+            return outputFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public String CreditDueDays(String CreditName){
@@ -124,6 +146,7 @@ public class ApprovedCreditPrograms {
 
     public void CreditDetialsJSON(String creditName){
         Map<String, String> CreditDetials = new HashMap<>();
+        CreditDetials.put("CreditProgramName", CrdeitProgramName(creditName));
         CreditDetials.put("UsableLimit", UsableLimitAmount(creditName));
         CreditDetials.put("SanctionedAmount", SanctionedAmount(creditName));
         CreditDetials.put("UtilisedAmount", UtilisedAmount(creditName));
