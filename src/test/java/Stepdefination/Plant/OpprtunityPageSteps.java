@@ -65,6 +65,11 @@ public class OpprtunityPageSteps {
         opportunityPage.opportunityAdvance(string);
     }
 
+    @Then("user saved the changes in Opportunity page")
+    public void saveTheOpportunityonOpportunityPage(){
+        opportunityPage.saveBUttonOnPage();
+    }
+
 
 
 

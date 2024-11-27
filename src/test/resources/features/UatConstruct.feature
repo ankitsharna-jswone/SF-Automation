@@ -58,10 +58,11 @@ Feature: Create Order for Construct account on UAT
     And the user edits the delivery type to "<Delivery Type>"
     And the user selected the Delivery address "<Address>"
     And the user edits the delivery time to "<Days>" days
+    And Then User filled the advance % "<Advance>"
     And the user edits the special message to "<Special Message>"
     Examples:
-      | Delivery Type | Days | Special Message        | Address |
-      |    Self pickup| 2    | Urgent delivery needed | A-104449 |
+      | Delivery Type | Days | Special Message        | Address | Advance |
+      |    Self pickup| 2    | Urgent delivery needed | A-104449 | 100    |
 
 
   Scenario Outline: Sales team select the seller and gave the cost price

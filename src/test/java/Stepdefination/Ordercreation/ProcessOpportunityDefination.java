@@ -23,6 +23,17 @@ public class ProcessOpportunityDefination {
     public void the_user_is_on_the_opportunity_processing_page() {
         System.out.println("Opportunity processin page");
     }
+
+    @Given("User click on Override prices button as True")
+    public void user_clicks_on_the_override_button_true(){
+        processOpportunity.overrideButton();
+    }
+    @Given("User selects the Reason for override {string}")
+    public void user_selects_reason_for_override(String string ){
+        processOpportunity.reasonForOverride(string);
+
+    }
+
     @When("the user clicks on the process opportunity button")
     public void the_user_clicks_on_the_process_opportunity_button() throws InterruptedException {
         processOpportunity.processOpportunitybutton();
@@ -76,6 +87,8 @@ public class ProcessOpportunityDefination {
     public void the_user_edits_the_special_message_to(String specialmessage) {
         processOpportunity.editSpecialMessage(specialmessage);
     }
+
+
     @When("the user selects the category price as {string}")
     public void the_user_selects_the_category_price_as(String price) {
         processOpportunity.categoryPrice(price);

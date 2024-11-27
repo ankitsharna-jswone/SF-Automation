@@ -52,6 +52,7 @@ Feature: Profile based order creation
     And the user selected the category user "<Category>"
     And the user saves the category
     And the user saves the opportunity
+    And User saves the Opportunity name
     Examples:
       | Category     |
       | Mfg Category |

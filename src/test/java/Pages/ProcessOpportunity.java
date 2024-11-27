@@ -109,6 +109,21 @@ public class ProcessOpportunity {
         xpathELem("//button[@title='Add']").click();
     }
 
+    public void overrideButton(){
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(" //input[@name='Over_ride_prices__c']")));
+        clickingTool(xpathELem("//input[@name='Over_ride_prices__c']"));
+    }
+
+    public void reasonForOverride(String string){
+        waitLocatedXpath("//button[@aria-label='Reason for override']");
+        clickingTool(xpathELem("//button[@aria-label='Reason for override']"));
+        waitLocatedXpath("//span[@title='" + string +"']");
+        clickingTool(xpathELem("//span[@title='" + string +"']"));
+
+    }
+
+
+
     public void processOpportunitybutton(){
         //process opportunity
         waitLocatedXpath("//button[text()='Process Opportunity']");
@@ -153,7 +168,7 @@ public class ProcessOpportunity {
 
     public void editDeliveryTime(String day){
         //Delivery Time
-        xpathELem("//button[@name ='Delivery_timeline__c']").click();
+        clickingTool(xpathELem("//button[@name ='Delivery_timeline__c']"));
         waitLocatedXpath("//lightning-base-combobox-item[@data-value ='3 days']");
         xpathELem("//lightning-base-combobox-item[@data-value ='"+ day + " days']").click();
     }

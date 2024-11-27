@@ -25,9 +25,8 @@ public class HomePage {
     }
 
     public void LoggedUserIconButton() throws InterruptedException {
-        Thread.sleep(2000);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='uiImage' and @data-aura-class='uiImage' and ./img[@title='User']]")));
-        clickingTool(xpathELem("//span[@class='uiImage' and @data-aura-class='uiImage' and ./img[@title='User']]"));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='uiImage' and @data-aura-class='uiImage' and ./img[@alt='User']]")));
+        clickingTool(xpathELem("//span[@class='uiImage' and @data-aura-class='uiImage' and ./img[@alt='User']]"));
     }
 
     public void LogOutButton(){

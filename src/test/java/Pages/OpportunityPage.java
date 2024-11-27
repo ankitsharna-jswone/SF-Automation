@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -40,10 +41,9 @@ public class OpportunityPage {
     }
 
     public void editTDCButton(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,450)", "");
-        waitLocatedXpath("//button[./span[text()='Edit TDC uploaded']]");
 
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[./span[text()='Edit TDC uploaded']]")));
+        JavaScriptScroll(xpathELem("//button[./span[text()='Edit TDC uploaded']]"));
         clickingTool(xpathELem("//button[./span[text()='Edit TDC uploaded']]"));
     }
 
@@ -132,6 +132,11 @@ public class OpportunityPage {
     public void opportunityAdvance(String  string){
         waitLocatedXpath("//input[@name ='Advance__c']");
         xpathELem("//input[@name ='Advance__c']").sendKeys(string);
+    }
+
+    public void saveBUttonOnPage(){
+        waitLocatedXpath("//button[@name='SaveEdit']");
+        clickingTool(xpathELem("//button[@name='SaveEdit']"));
     }
 
     public void selectCreditButton(){

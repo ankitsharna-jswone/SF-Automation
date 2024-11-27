@@ -159,27 +159,21 @@ public void nextButtonPlant() {
 
 public String stageOfOpportunity() throws InterruptedException {
         Thread.sleep(2000);
-    String stageText = null;
-    try {
-        getDriver().navigate().refresh();
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("")));
-        WebElement stageLabel = getDriver().findElement(By.xpath("//dt[.//span[text()='Stage']]/following-sibling::dd//span[@class='test-id__field-value slds-form-element__static slds-grow word-break-ie11']//slot//lightning-formatted-text"));
-        stageText = stageLabel.getText();
-    } catch (UnhandledAlertException e) {
-        handleAlert(getDriver());
-    }
+        return  xpathELem("dt[.//span[text()='Stage']]/following-sibling::dd//span[@class='test-id__field-value slds-form-element__static slds-grow word-break-ie11']//slot//lightning-formatted-text").getText();
 
-    return stageText;
+
+
 }
 
 public static void handleAlert(WebDriver driver) {
     try {
         Alert alert = driver.switchTo().alert();
         System.out.println("Alert text is: " + alert.getText());
-        alert.accept();  // Accept the alert
+        alert.accept();
     } catch (NoAlertPresentException e) {
-        // No alert found
+
     }
 }
 

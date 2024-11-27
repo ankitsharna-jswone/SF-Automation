@@ -146,8 +146,9 @@ public class Functionalities {
 
 
     public static void waitLocatedXpath(String path) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path)));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(path)));
+        JavaScriptScroll(xpathELem(path));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path)));
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(path)));
     }
 

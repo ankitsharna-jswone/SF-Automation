@@ -12,7 +12,7 @@ import static Utils.BrowsserSetup.getDriver;
 public class RequestPiToSellerSteps {
     ProcessOpportunity processOpportunity = new ProcessOpportunity(getDriver());
 
-    @Given("User processed opportunity to send PI to seller")
+    @When("User processed opportunity to send PI to seller")
     public void userProcessedOpportunity(){
         processOpportunity.requestPItoSeller();
     }

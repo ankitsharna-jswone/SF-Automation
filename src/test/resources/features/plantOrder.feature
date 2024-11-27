@@ -1,4 +1,4 @@
-@plant @regression
+@plant
 Feature: Create Plant Supply Order in SF using this Script
 
   Scenario: Setting up enviroment for the the project
@@ -11,8 +11,8 @@ Feature: Create Plant Supply Order in SF using this Script
     And the user enters the password "<Password>"
     And the user clicks on the login button
     Examples:
-      | Username              | Password  | Link                                                           |
-      | v_ankit.sharma@jsw.in | @Ankit123 | https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
+      | Username                | Password  | Link                                                                         |
+      | ankit.sharma@jsw.in.uat | @Ankit123 | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 
 
   Scenario Outline: User navigates to a specific account from the homepage
@@ -22,7 +22,7 @@ Feature: Create Plant Supply Order in SF using this Script
     And the user clicks on the search result for "<Account>" accounts
     And the user opens the account "<Account>"
     Examples:
-      | Account                       |
+      | Account           |
       | OBEROI REALTY LTD |
 
 
@@ -56,8 +56,8 @@ Feature: Create Plant Supply Order in SF using this Script
     And the user saves the opportunity
 
     Examples:
-      | Delivery Type | Days | Special Message        | SourceSeller | Seller | Cost | Address  |
-      | Self pickup   | 2    | Urgent delivery needed | Marketplace         | tuka   | 100  |A-110198|
+      | Delivery Type | Days | Special Message        | SourceSeller | Seller            | Cost | Address  |
+      | Self pickup   | 2    | Urgent delivery needed | Marketplace  | tuka rajat seller | 100  | A-104507 |
 
   Scenario Outline: User sends the file to pricing to the category team
     When Sales team clicks on the price awaiting section
@@ -65,22 +65,22 @@ Feature: Create Plant Supply Order in SF using this Script
     And the user saves the category
     And the user saves the opportunity
     Examples:
-      | Category |
-     |Category Test user|
+      | Category     |
+      | Mfg Category |
 
 
   Scenario Outline: User updates the customer-accepted price after receiving pricing from the category
     Given the user clicks on the process opportunity button for pricing
+    And User click on Override prices button as True
+    And User selects the Reason for override "<OverrideReason>"
     When the user selects the category price as "<CPrice>"
     When user sets the customer-accepted price to "<Price>"
     And the user saves the opportunity for pricing
     And the user verifies the customer-accepted price
     And the user saves the opportunity for pricing
-    Then the check stage of the opportunity is "<Stage>"
-    Then Print the stage of the Opportunity
     Examples:
-      | Price | Stage                      | CPrice |
-      | 120   | Awaiting Customer Approval | 110    |
+      | Price| CPrice | OverrideReason      |
+      | 120   |   110    | Price not available |
 
 
   Scenario: User accepted all SKU's
@@ -91,8 +91,8 @@ Feature: Create Plant Supply Order in SF using this Script
     Given User click edit button to edit for TDC upload
     And User checked the TDC uploaded
     And User checked PO Uploaded
-    When user saved the opportunity
-    Then Print the stage of the Opportunity
+    Then user saved the changes in Opportunity page
+
 
 
   Scenario Outline: User mark the Supply Check for the order
@@ -103,18 +103,16 @@ Feature: Create Plant Supply Order in SF using this Script
     When Check the feasibility of the order
     When Choose yes for the feasibility
     And Then User filled the advance % "<Percentage>"
-    Then user saved the opportunity
-    Then Print the stage of the Opportunity
+    Then user saved the changes in Opportunity page
     Examples:
       | Percentage |
       | 40         |
 
-#  Scenario: User request PI to Seller team
-#    Given User processed opportunity to send PI to seller
-#    When the user saves the opportunity
-#    Then the user requests PI to the seller
-#    And the user saves the final order
-#    Then Print the stage of the Opportunity
+  Scenario: User request PI to Seller team
+    When the user clicks on the process opportunity button
+    When the user saves the opportunity
+    Then the user requests PI to the seller
+    And the user saves the final order
 #
 #  Scenario Outline: User updates the seller PI and sends it to the seller
 #    Given the user navigates to the file page
