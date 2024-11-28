@@ -1,8 +1,13 @@
 @prof
 
 Feature: Profile based order creation
-  Scenario: Setting up enviroment for the the project
-    Given Set the file and driver and configuration
+  Scenario Outline: Setting up enviroment for the the project
+    Given Set the browser and driver for the automation "<Browser>"
+    And User passes driver to the other pages and files
+    Examples:
+    |Browser|
+    |chrome|
+
 
   Scenario Outline: User logs in to Salesforce
     Given the user navigates to the Salesforce login page "<Link>"
@@ -75,7 +80,7 @@ Feature: Profile based order creation
     And the user clicks on the login button
     Examples:
     | Username | Password |
-    |category123@gmail.com|Category@123|
+    |mfgcategory@yopmail.com|Category@123|
 #
 #
   Scenario Outline: Category user updates the Price and seller for the Opportunity
@@ -87,7 +92,6 @@ Feature: Profile based order creation
     And the user selects the category price as "<Price>"
     And the user edits the cost price to "<Cost>"
     And the user saves the opportunity
-#    And the user verifies the customer-accepted price
     And the user saves the opportunity
   Examples:
     | Cost  | Seller     | Price |

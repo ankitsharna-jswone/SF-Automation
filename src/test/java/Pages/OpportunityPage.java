@@ -100,8 +100,8 @@ public class OpportunityPage {
     }
 
     public void TDCsent2Customer(){
-        JavaScriptScroll(xpathELem("//input[@name ='TDC_Sent_to_Customer__c']"));
-        JavaScriptClick("//input[@name ='TDC_Sent_to_Customer__c']");
+        waitForPresence("//input[@name ='TDC_Sent_to_Customer__c']");
+        clickingTool(xpathELem("//input[@name ='TDC_Sent_to_Customer__c']"));
     }
 
     public void TDCsent2Plant(){

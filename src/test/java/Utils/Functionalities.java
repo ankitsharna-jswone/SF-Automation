@@ -146,10 +146,13 @@ public class Functionalities {
 
 
     public static void waitLocatedXpath(String path) {
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(path)));
-        JavaScriptScroll(xpathELem(path));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path)));
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(path)));
+    }
+
+    public static void waitForPresence(String path){
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(path)));
+        JavaScriptScroll(xpathELem(path));
     }
 
     public static void waitLocatedXpaths(String path) {
@@ -169,7 +172,7 @@ public class Functionalities {
     }
 
     public static void JavaScriptScroll(WebElement element){
-        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) getDriver();
         javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 

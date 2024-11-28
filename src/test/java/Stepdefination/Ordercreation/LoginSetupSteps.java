@@ -94,12 +94,15 @@ public class LoginSetupSteps {
 
 
 
-    @Given("Set the file and driver and configuration")
-    public void setup(){
-
-        setDriver("chrome");
+    @Given("Set the browser and driver for the automation {string}")
+    public void setupBrowser(String browser) {
+        setDriver(browser);
         driver = getDriver();
 
+    }
+
+    @Given("User passes driver to the other pages and files")
+    public void setupFileandPages(){
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 

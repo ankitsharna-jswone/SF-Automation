@@ -30,7 +30,7 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
      |Product                   |Quantity| UOM     | Thickness | Width | Length |Diameter|
      |MS HR Coil 2062:2011 E250A| 10     |Primary  | 10        | 1250  |        |        |
      |MS HR Sheet 2062:2011 E250A| 15    |Secondary|    15     |  1500 |  1500   |        |
-     |JSL Stainless Steel CRAP JT 2B PVC Finish Sheets | 500 | | 12 | 1250 |4000| |
+     |JSL Stainless Steel CRAP JT 2B PVC Finish Sheets| 500 | | 12 | 1250 |4000| |
     Then the user saves the opportunity
 
 
@@ -51,7 +51,7 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
       |Product                    | Seller |
       |MS HR Coil 2062:2011 E250  | Vee |
       |MS HR Sheet 2062:2011 E250A| Test Steel Authority 2|
-      |JSL Stainless Steel CRAP JT 2B PVC Finish Sheets | Giriraj shinha |
+      |JSL Stainless Steel CRAP JT 2B PVC Finish Sheets| Giriraj shinha |
 
     And  Sales team give the cost price to the category
       |Product                    | cost |

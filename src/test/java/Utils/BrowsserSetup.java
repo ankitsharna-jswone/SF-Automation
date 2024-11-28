@@ -3,6 +3,8 @@ package Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,14 +19,42 @@ public class BrowsserSetup {
         return driverThreadLocal.get();
     }
 
-    public static void setDriver(String browser) {
-        if(browser.equals("chrome")){
-            Map<String, Object> prefs = new HashMap<String, Object>();
-            prefs.put("profile.default_content_setting_values.notifications", 2);
-            ChromeOptions options = new ChromeOptions();
-            options.setExperimentalOption("prefs", prefs);
-            driverThreadLocal.set(new ChromeDriver(options));
+        public static void setDriver(String option) {
+            if (option.equalsIgnoreCase("chrome")) {
+                setChromeDriver();
+            } else if (option.equalsIgnoreCase("firefox")) {
+                setFirefoxDriver();
+            } else if (option.equalsIgnoreCase("headless")) {
+                setHeadlessDriver();
+            } else {
+                throw new IllegalArgumentException("Invalid browser or option: " + option);
+            }
         }
+
+    private static void setFirefoxDriver() {
+        // Firefox-specific options
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        driverThreadLocal.set(new FirefoxDriver(firefoxOptions));
+    }
+
+    private static void setHeadlessDriver() {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--disable-gpu");
+        chromeOptions.addArguments("--window-size=1920x1080");
+        driverThreadLocal.set(new ChromeDriver(chromeOptions));
+
+
+    }
+
+    private static void setChromeDriver() {
+        // Chrome-specific options
+        Map<String, Object> prefs = new HashMap<>();
+        prefs.put("profile.default_content_setting_values.notifications", 2);
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setExperimentalOption("prefs", prefs);
+
+        driverThreadLocal.set(new ChromeDriver(chromeOptions));
     }
 
     public static void quitDriver() {
@@ -37,4 +67,6 @@ public class BrowsserSetup {
 
 
 }
+
+
 

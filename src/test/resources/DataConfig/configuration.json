@@ -4,7 +4,6 @@
     "uat" : "https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home",
     "prod" : "https://jswoneplatforms.my.salesforce.com/"
   },
-
   "account": {
     "credit": "RAHUL KIRANA STORE",
     "const": "CHAKRESH INDUSTRIES",
@@ -14,5 +13,6 @@
   "Cement": "JSW Ordinary Portland Cement 53",
   "TMT": "JSW Neosteel Fe500D TMT Rebar - 12",
   "Coil" : "MS HR Coil 2062:2011 E250A",
-  "Sheet" : "MS HR Sheet 2062:2011 E250A"
+  "Sheet" : "MS HR Sheet 2062:2011 E250A",
+  "Browser": "chrome"
 }

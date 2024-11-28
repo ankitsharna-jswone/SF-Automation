@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
                 "html:test-output/html/HTMLreport.html",
                 "Listner.CustomCucumberListener"
         },
-        tags = "@pricing"
+        tags = "@plant"
 
 )
 @RunWith(Cucumber.class)

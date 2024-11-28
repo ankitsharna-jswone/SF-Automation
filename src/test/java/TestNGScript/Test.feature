@@ -2,21 +2,18 @@
 Feature: Zoho regression on Boarding for testing
 
   Scenario Outline: Setting up enviroment for the the project
-    Given Set the file and driver and configuration
+    Given Set the browser and driver for the automation  "<Browser>"
     Given the user navigates to the Salesforce login page "<Link>"
     Examples:
-      | Link                                                          |
-      | https://jswoneplatforms--prdreplica.sandbox.lightning.force.com/lightning/r/Opportunity/006Hz00000Uzx6uIAB/view |
-
+      |Browser| Link                                                          |
+      | chrome | https://jswoneplatforms--prdreplica.sandbox.lightning.force.com/lightning/r/Opportunity/006Hz00000Uzx6uIAB/view |
   Scenario Outline: User logs in to Salesforce
     When the user enters the username "<Username>"
     And the user enters the password "<Password>"
     And the user clicks on the login button
     Examples:
-      | Username            | Password |
-      |v_ankit.sharma@jsw.in| @Ankit123|
-
-
+      | Username              | Password  |
+      | v_ankit.sharma@jsw.in | @Ankit123 |
 
 
   Scenario Outline: User processes an opportunity to the sales team and fills required documents
@@ -32,8 +29,8 @@ Feature: Zoho regression on Boarding for testing
     And the user edits the delivery time to "<Days>" days
     And the user edits the special message to "<Special Message>"
     Examples:
-      | Delivery Type | Days | Special Message        | Program         | Advance | Address | Credit Days |
-      | Self pickup   | 2    | Urgent delivery needed | BNPL-Ankit-Credit|   30  |NEAR BAJAJ AGENCY|  5    |
+      | Delivery Type | Days | Special Message        | Program           | Advance | Address           | Credit Days |
+      | Self pickup   | 2    | Urgent delivery needed | BNPL-Ankit-Credit | 30      | NEAR BAJAJ AGENCY | 5           |
 
   Scenario Outline: User sends the file to pricing to the category team
     When the user selects the category price as "<CPrice>"
@@ -48,5 +45,5 @@ Feature: Zoho regression on Boarding for testing
     And the user verifies the customer-accepted price
     And the user saves the opportunity
     Examples:
-      | CPrice | Price | Seller | SourceSeller|
-      | 120    | 100    | Vee |    JOPL        |
+      | CPrice | Price | Seller | SourceSeller |
+      | 120    | 100   | Vee    | JOPL         |

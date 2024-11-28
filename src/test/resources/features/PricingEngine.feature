@@ -1,8 +1,12 @@
 @pricing @regression
 Feature: Profile based order creation
 
-  Scenario: Setting up enviroment for the the project
-    Given Set the file and driver and configuration
+  Scenario Outline: Setting up enviroment for the the project
+    Given Set the browser and driver for the automation "<Browser>"
+    And User passes driver to the other pages and files
+    Examples:
+      |Browser|
+      | headless |
 
   Scenario Outline: User logs in to Salesforce
     Given the user navigates to the Salesforce login page "<Link>"
@@ -61,3 +65,18 @@ Feature: Profile based order creation
   Scenario: Sales user logs out
     Given user clicks on account button
     And User clicks on log out button
+
+
+  Scenario Outline: Category team logs inside of the system
+
+    When the user enters the username "<Username>"
+    And the user enters the password "<Password>"
+    And the user clicks on the login button
+    Examples:
+      | Username | Password |
+      |mfgcategory@yopmail.com|Category@123|
+
+
+  Scenario: Category user updates the Price and seller for the Opportunity
+    Given Category team Searches the opportunity
+    And User opens the Opportunity page
