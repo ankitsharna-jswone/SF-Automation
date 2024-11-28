@@ -3,10 +3,10 @@ name: Run Cucumber Automation Tests
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   test:
@@ -45,6 +45,6 @@ jobs:
         with:
           name: test-reports
           path: |
-            ./target/cucumber-reports.html          # Cucumber HTML report
-            ./target/ExtentReports/*.html            # ExtentReports generated HTML
+            ./target/cucumber-reports.html         
+            ./target/ExtentReports/*.html            
             ./test-output/html/HTMLreport.html
