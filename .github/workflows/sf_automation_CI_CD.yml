@@ -18,6 +18,8 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '22'
+          distribution: 'zulu'  # You can change this to 'adoptopenjdk' or another distribution if you prefer
+
 
       # 2. Check out the code
       - name: Checkout code
