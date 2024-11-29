@@ -1,4 +1,4 @@
-name: Run Cucumber Tests and Deploy to GitHub Pages
+name: Run Cucumber Tests and Deploy Reports
 
 on:
   push:
@@ -13,20 +13,49 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Set up JDK 22
       - name: Set up JDK 22
         uses: actions/setup-java@v3
         with:
           java-version: '22'
 
+      # 2. Check out the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 3. Install Maven dependencies
       - name: Install Dependencies
         run: mvn install
 
+      # 4. Run Cucumber Tests and Generate Reports
       - name: Run Cucumber Tests
-        run: mvn test -Dtags="@plant"
+        run: mvn test -Dtags="@plant"  # Adjust this for your tags
 
-      - name: Deploy Reports to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4  # Reliable deployment action
+      # 5. Upload test results as artifacts (optional)
+      - name: Upload Cucumber Test Reports as Artifacts
+        uses: actions/upload-artifact@v3
         with:
-          branch: gh-pages
-          folder: ./target
-          token: ${{ secrets.GITHUB_TOKEN }}
+          name: cucumber-reports
+          path: target/cucumber-reports/
+
+      # 6. Deploy Reports to GitHub Pages (using GitHub Pages deployment)
+      - name: Deploy Reports to GitHub Pages
+        run: |
+          # Configure git
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+          # Checkout the gh-pages branch, create it if it doesn't exist
+          git checkout gh-pages || git checkout --orphan gh-pages
+          
+          # Clean the existing files and copy over the new reports
+          rm -rf ./*
+          cp -r target/cucumber-reports/* ./
+          
+          # Commit and push the changes to the gh-pages branch
+          git add .
+          git commit -m "Deploy Cucumber reports to GitHub Pages"
+          git push origin gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
