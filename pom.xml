@@ -158,6 +158,11 @@
                     <threadCount>4</threadCount>
                     <includes>
                         <include>src/test/java/Runner/Runner.java</include> <!-- Make sure this is the correct path for your test runner class -->
+                        <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+                        <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+                        <jsonFiles>
+                            <param>**/*.json</param>
+                        </jsonFiles>
                     </includes>
                 </configuration>
             </plugin>
