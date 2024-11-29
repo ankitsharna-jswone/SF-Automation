@@ -33,32 +33,32 @@ jobs:
       - name: Run Cucumber Tests
         run: mvn test -Dtags="@plant"  # Adjust this for your tags
 
-      - name: Generate Cucumber Report
-        run: mvn net.masterthought:maven-cucumber-reporting:generate
-
-      # 5. Upload test results as artifacts (optional)
-      - name: Upload Cucumber Test Reports as Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: cucumber-reports
-          path: target/cucumber-reports/
-
-      # 6. Deploy Reports to GitHub Pages (using GitHub Pages deployment)
-      - name: Deploy Reports to GitHub Pages
-        run: |
-          
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          
-          
-          git checkout gh-pages || git checkout --orphan gh-pages
-          
-          rm -rf ./*
-          cp -r target/cucumber-reports/* ./
-          
-          git add .
-          git commit -m "Deploy Cucumber reports to GitHub Pages"
-          git push origin gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+#      - name: Generate Cucumber Report
+#        run: mvn net.masterthought:maven-cucumber-reporting:generate
+#
+#      # 5. Upload test results as artifacts (optional)
+#      - name: Upload Cucumber Test Reports as Artifacts
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: cucumber-reports
+#          path: target/cucumber-reports/
+#
+#      # 6. Deploy Reports to GitHub Pages (using GitHub Pages deployment)
+#      - name: Deploy Reports to GitHub Pages
+#        run: |
+#
+#          git config --global user.name "GitHub Actions"
+#          git config --global user.email "actions@github.com"
+#
+#
+#          git checkout gh-pages || git checkout --orphan gh-pages
+#
+#          rm -rf ./*
+#          cp -r target/cucumber-reports/* ./
+#          c
+#          git add .
+#          git commit -m "Deploy Cucumber reports to GitHub Pages"
+#          git push origin gh-pages
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#
