@@ -64,6 +64,24 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>io.cucumber</groupId>-->
+<!--                <artifactId>cucumber-maven-plugin</artifactId>-->
+<!--                <version>7.20.0</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>test</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <plugin>-->
+<!--                                <name>json</name>-->
+<!--                                <file>target/cucumber-reports/cucumber.json</file> &lt;!&ndash; Path to JSON report &ndash;&gt;-->
+<!--                            </plugin>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -122,6 +140,19 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>de.saumya.mojo</groupId>
+            <artifactId>cucumber-maven-plugin</artifactId>
+            <version>1.1.8</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-plugin -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-plugin</artifactId>
+            <version>7.20.1</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>

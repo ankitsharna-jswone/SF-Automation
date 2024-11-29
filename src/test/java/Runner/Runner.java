@@ -10,11 +10,11 @@ import org.junit.runner.RunWith;
         glue = {"Stepdefination","AppHoocks"},
         plugin = {"html:target/cucumber-reports.html",
                 "rerun:target/rerun.txt",
-                "pretty",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-                "html:test-output/html/HTMLreport.html",
-                "Listner.CustomCucumberListener"
+                "pretty"
+//                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+//                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+//                "html:test-output/html/HTMLreport.html",
+//                "Listner.CustomCucumberListener"
         },
         tags = "@plant"
 
