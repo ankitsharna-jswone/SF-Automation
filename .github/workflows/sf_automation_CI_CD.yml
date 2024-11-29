@@ -33,6 +33,9 @@ jobs:
       - name: Run Cucumber Tests
         run: mvn test -Dtags="@plant"  # Adjust this for your tags
 
+      - name: Generate Cucumber Report
+        run: mvn net.masterthought:maven-cucumber-reporting:generate
+
       # 5. Upload test results as artifacts (optional)
       - name: Upload Cucumber Test Reports as Artifacts
         uses: actions/upload-artifact@v3
@@ -43,18 +46,16 @@ jobs:
       # 6. Deploy Reports to GitHub Pages (using GitHub Pages deployment)
       - name: Deploy Reports to GitHub Pages
         run: |
-          # Configure git
+          
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           
-          # Checkout the gh-pages branch, create it if it doesn't exist
+          
           git checkout gh-pages || git checkout --orphan gh-pages
           
-          # Clean the existing files and copy over the new reports
           rm -rf ./*
           cp -r target/cucumber-reports/* ./
           
-          # Commit and push the changes to the gh-pages branch
           git add .
           git commit -m "Deploy Cucumber reports to GitHub Pages"
           git push origin gh-pages
