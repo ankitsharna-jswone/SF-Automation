@@ -44,14 +44,11 @@
                     <useUnlimitedThreads>true</useUnlimitedThreads>
                     <includes>
                         <include>**/Runner.java</include>
-                        <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
-                        <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
-                        <jsonFiles>
-                            <param>**/*.json</param>
-                        </jsonFiles>
                     </includes>
                     <systemPropertyVariables>
                         <cucumber.junit-platform.naming-strategy>long</cucumber.junit-platform.naming-strategy>
+                        <cucumber.outputDirectory>${project.build.directory}/cucumber-report-html</cucumber.outputDirectory>
+                        <cucumber.jsonOutput>${project.build.directory}/cucumber.json</cucumber.jsonOutput>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
