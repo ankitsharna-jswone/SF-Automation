@@ -45,13 +45,17 @@
                     <includes>
                         <include>**/Runner.java</include>
                     </includes>
+                    <reportsDirectory>${project.build.directory}/cucumber-reports</reportsDirectory>
                     <systemPropertyVariables>
                         <cucumber.junit-platform.naming-strategy>long</cucumber.junit-platform.naming-strategy>
                         <cucumber.outputDirectory>${project.build.directory}/cucumber-report-html</cucumber.outputDirectory>
                         <cucumber.jsonOutput>${project.build.directory}/cucumber.json</cucumber.jsonOutput>
+                        <cucumber.options>--plugin json:${project.build.directory}/cucumber.json</cucumber.options>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -74,6 +78,9 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
+
+                            <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
+                            <projectName>My Cucumber Project</projectName>
                             <projectName>Cucumber HTML Reports</projectName>
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <inputDirectory>${project.build.directory}</inputDirectory>
