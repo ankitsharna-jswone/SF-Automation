@@ -24,11 +24,23 @@ jobs:
           java-version: '21'
           distribution: 'zulu'
 
+
+
       - name: Checkout code
         uses: actions/checkout@v3
+
 
       - name: Install Dependencies
         run: mvn install
 
+
       - name: Run Cucumber Tests
         run: mvn test -Dtags="@plant" -X
+
+      - name: Upload Cucumber Test Reports as Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: cucumber-reports
+          path: test-output/cucumber-reports/
+
+
