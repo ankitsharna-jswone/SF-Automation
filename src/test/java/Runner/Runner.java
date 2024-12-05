@@ -13,10 +13,10 @@ import org.junit.runner.RunWith;
                 "pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-                "html:test-output/html/HTMLreport.html"
-//                "Listner.CustomCucumberListener"
+                "html:test-output/html/HTMLreport.html",
+                "Listner.CustomCucumberListener"
         },
-        tags = "@pricing"
+        tags = "@uatconst"
 
 )
 @RunWith(Cucumber.class)

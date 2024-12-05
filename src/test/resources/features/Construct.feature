@@ -1,20 +1,21 @@
-@const
-Feature: Check Flow of order creation of order for Multiple prodcut SKU
+@uatconst @regression
+Feature: Create Order for Construct account on UAT
 
   Scenario Outline: Setting up enviroment for the the project
-    Given Set the file and driver and configuration
-    Given the user navigates to the Salesforce login page "<Link>"
+    Given Set the browser and driver for the automation "<Browser>"
+    And User passes driver to the other pages and files
     Examples:
-    | Link                                                          |
-    | https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
+      |Browser|
+      | chrome |
 
   Scenario Outline: User logs in to Salesforce
+    Given the user navigates to the Salesforce login page "<Link>"
     When the user enters the username "<Username>"
     And the user enters the password "<Password>"
     And the user clicks on the login button
     Examples:
-      | Username            | Password |
-      |v_ankit.sharma@jsw.in| @Ankit123|
+      | Username                         | Password     | Link                                                                         |
+      | ankit.sharma@jsw.in.uat  | @Ankit123 | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 
 
   Scenario Outline: Sales team Went to the User account and to the site
@@ -24,19 +25,31 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     And they moved to the site tab
     Then they should be on the "<Site>" site page
     Examples:
-     | Account             | Site |
-     | CHAKRESH INDUSTRIES | Global city |
+      | Account             | Site |
+      | TURBO ENERGY PRIVATE LIMITED | Gujarat International |
 
-
+  @tmt
   Scenario Outline: Sales team creates a cement opportunity on a site
     Given they creates an opportunity
-    And they select the cement option
-    And they choose the cement brand "<Brand>"
-    When they specify the cement type as "<Type>" with quantity "<Quantity>"
+    And they select the TMT option
+    And they select the subgrate type of TMT "<Subgrage>"
+    And User selects the "<Width>" of TMT and with the "<Quantity>"
     And they save the cement opportunity
-     Examples:
-    | Brand | Type | Quantity |
-    |  JSW  |  OPC-53 |  100  |
+    Examples:
+      | Quantity | Subgrage| Quantity| Width |
+      |  100  | FE_500D| 10          | 12    |
+
+
+#    @cement
+#  Scenario Outline: Sales team creates a cement opportunity on a site
+#    Given they creates an opportunity
+#    And they select the cement option
+#    And they choose the cement brand "<Brand>"
+#    When they specify the cement type as "<Type>" with quantity "<Quantity>"
+#    And they save the cement opportunity
+#    Examples:
+#      | Brand | Type | Quantity |
+#      |  JSW  |  OPC-53 |  100  |
 
 
   Scenario Outline: User processes the opportunities and set the delivery process
@@ -46,10 +59,11 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     And the user edits the delivery type to "<Delivery Type>"
     And the user selected the Delivery address "<Address>"
     And the user edits the delivery time to "<Days>" days
+    And Then User filled the advance % "<Advance>"
     And the user edits the special message to "<Special Message>"
     Examples:
-      | Delivery Type | Days | Special Message        | Address |
-      |    Self pickup| 2    | Urgent delivery needed | A-109299 |
+      | Delivery Type | Days | Special Message        | Address | Advance |
+      |    Self pickup| 2    | Urgent delivery needed | A-104477 | 100    |
 
 
   Scenario Outline: Sales team select the seller and gave the cost price
@@ -60,12 +74,12 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     When the user selects the category price as "<CPrice>"
     And the user saves the opportunity
     And the opportunity is processed to the Category team for pricing
-    And the user selected the category user "<Category>"
+    And the user performs the category user test with Category team "<Category>"
     And the user saves the category
     And the user saves the opportunity
     Examples:
-       | Price  | Seller     | CPrice | SourceSeller| Category |
-       | 100    | Vee        |150   | Marketplace          | Category Test user |
+      | Price  | Seller     | CPrice | SourceSeller| Category |
+      | 100    | Vee        |150   | Marketplace | Mfg Category |
 
 
 
@@ -84,17 +98,18 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     When the user clicks on the process opportunity button
     When the user saves the opportunity
     When the user requests PI to the category team
-    And the user selected the category user "<Category>"
+    And the user performs the category user test with Category team "<Category>"
     And the user saves the category user
     Examples:
       | Category |
-      | Category Test user |
+      |  Mfg Category |
+
 
   Scenario: User request PI to Seller team
-      Given User processed opportunity to send PI to seller
-      When the user saves the opportunity
-      Then the user requests PI to the seller
-      And user saved the opportunity
+    Given User processed opportunity to send PI to seller
+    When the user saves the opportunity
+    Then the user requests PI to the seller
+    And user saved the opportunity
 
   Scenario: User updates the seller PI and sends it to the seller
     Given the user navigates to the file page

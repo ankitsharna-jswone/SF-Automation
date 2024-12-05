@@ -74,7 +74,7 @@ Feature: Profile based order creation
 #    And the user clicks on the login button
 #    Examples:
 #      | Username | Password |
-#      |mfgcategory@yopmail.com|Category@123|
+      |mfgcategory@yopmail.com|Category@123|
 #
 #
 #  Scenario: Category user updates the Price and seller for the Opportunity
