@@ -19,108 +19,7 @@
         <maven.compiler.target>18</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <compilerArgs>
-                        <arg>--add-opens</arg>
-                        <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-                    </compilerArgs>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M1</version>
-                <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <parallel>classes</parallel>
-                    <threadCount>4</threadCount>
-                    <perCoreThreadCount>true</perCoreThreadCount>
-                    <useUnlimitedThreads>true</useUnlimitedThreads>
-                    <includes>
-                        <include>**/Runner.java</include>
-                    </includes>
-                    <reportsDirectory>${project.build.directory}/cucumber-reports</reportsDirectory>
-                    <systemPropertyVariables>
-                        <cucumber.junit-platform.naming-strategy>long</cucumber.junit-platform.naming-strategy>
-                        <cucumber.outputDirectory>${project.build.directory}/cucumber-report-html</cucumber.outputDirectory>
-                        <cucumber.jsonOutput>${project.build.directory}/cucumber.json</cucumber.jsonOutput>
-                        <cucumber.options>--plugin json:${project.build.directory}/cucumber.json</cucumber.options>
-                    </systemPropertyVariables>
-                </configuration>
-            </plugin>
 
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-                <configuration>
-                    <source>18</source>
-                    <target>18</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>net.masterthought</groupId>
-                <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.4.0</version>
-                <executions>
-                    <execution>
-                        <id>execution</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-
-                            <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
-                            <projectName>My Cucumber Project</projectName>
-                            <projectName>Cucumber HTML Reports</projectName>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <inputDirectory>${project.build.directory}</inputDirectory>
-                            <jsonFiles> <!-- supports wildcard or name pattern -->
-                                <param>**/*.json</param>
-                            </jsonFiles>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.1.2</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>integration-test</goal>
-                            <goal>verify</goal>
-                        </goals>
-                        <configuration>
-                            <parallel>methods</parallel>
-                            <threadCount>4</threadCount>
-                            <perCoreThreadCount>true</perCoreThreadCount>
-                            <useUnlimitedThreads>true</useUnlimitedThreads>
-                            <includes>
-                                <include>**/Runner.java</include>
-                            </includes>
-                            <testFailureIgnore>true</testFailureIgnore>
-                            <systemPropertyVariables>
-                                <cucumber.junit-platform.naming-strategy>long</cucumber.junit-platform.naming-strategy>
-                            </systemPropertyVariables>
-                        </configuration>
-
-                    </execution>
-                </executions>
-            </plugin>
-
-
-        </plugins>
-    </build>
 
     <dependencies>
         <dependency>
@@ -162,12 +61,14 @@
 
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>7.20.1</version>
             <scope>test</scope>
         </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.json/json -->
         <dependency>
@@ -204,12 +105,15 @@
             <artifactId>selenium-java</artifactId>
             <version>4.18.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.9.0</version>
             <scope>test</scope>
         </dependency>
+
+
 
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -335,7 +239,127 @@
             <version>2.18.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-bom -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-bom</artifactId>
+            <version>7.20.1</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+
+
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>18</source>
+                    <target>18</target>
+                    <compilerArgs>
+                        <arg>--add-opens</arg>
+                        <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <parallel>classes</parallel>
+                    <threadCount>4</threadCount>
+                    <perCoreThreadCount>true</perCoreThreadCount>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
+                    <includes>
+                        <include>**/Runner.java</include>
+                    </includes>
+                    <reportsDirectory>${project.build.directory}/cucumber-reports</reportsDirectory>
+                    <systemPropertyVariables>
+                        <cucumber.junit-platform.naming-strategy>long</cucumber.junit-platform.naming-strategy>
+                        <cucumber.outputDirectory>${project.build.directory}/cucumber-report-html</cucumber.outputDirectory>
+                        <cucumber.jsonOutput>${project.build.directory}/cucumber.json</cucumber.jsonOutput>
+                        <cucumber.options>--plugin json:${project.build.directory}/cucumber.json</cucumber.options>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+
+
+
+
+<!--            <plugin>-->
+<!--                <groupId>net.masterthought</groupId>-->
+<!--                <artifactId>maven-cucumber-reporting</artifactId>-->
+<!--                <version>5.8.4</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>execution</id>-->
+<!--                        <phase>verify</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>generate</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            &lt;!&ndash; Make sure to specify a valid output directory &ndash;&gt;-->
+<!--                            <inputDirectory>${project.build.directory}</inputDirectory> &lt;!&ndash; Typically, this points to target &ndash;&gt;-->
+<!--                            <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory> &lt;!&ndash; Output location for the report &ndash;&gt;-->
+<!--                            <projectName>Cucumber HTML Reports</projectName>-->
+
+<!--                            &lt;!&ndash; Specify JSON files to include in the report generation &ndash;&gt;-->
+<!--                            <jsonFiles>-->
+<!--                                &lt;!&ndash; Points to cucumber.json file inside the target directory &ndash;&gt;-->
+<!--                                <fileSet>-->
+<!--                                    <directory>${project.build.directory}</directory>-->
+<!--                                    <includes>-->
+<!--                                        <include>**/cucumber.json</include> &lt;!&ndash; Include only the cucumber.json files &ndash;&gt;-->
+<!--                                    </includes>-->
+<!--                                </fileSet>-->
+<!--                            </jsonFiles>-->
+
+<!--                            &lt;!&ndash; Additional configuration for the report generation &ndash;&gt;-->
+<!--                            <buildNumber>1.0.0</buildNumber> &lt;!&ndash; Optional: To specify the version number of the build &ndash;&gt;-->
+<!--                            <projectDescription>Cucumber HTML report generated from the test results</projectDescription> &lt;!&ndash; Optional: Add project description &ndash;&gt;-->
+<!--                            <outputName>cucumber-report</outputName> &lt;!&ndash; Optional: Specify the name of the output HTML report &ndash;&gt;-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+
+
+            <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                        <configuration>
+                            <parallel>methods</parallel>
+                            <threadCount>4</threadCount>
+                            <perCoreThreadCount>true</perCoreThreadCount>
+                            <useUnlimitedThreads>true</useUnlimitedThreads>
+                            <includes>
+                                <include>**/Runner.java</include>
+                            </includes>
+                            <testFailureIgnore>true</testFailureIgnore>
+                            <systemPropertyVariables>
+                                <cucumber.junit-platform.naming-strategy>long</cucumber.junit-platform.naming-strategy>
+                            </systemPropertyVariables>
+                        </configuration>
+
+                    </execution>
+                </executions>
+            </plugin>
+
+
+        </plugins>
+    </build>
 
 </project>

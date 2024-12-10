@@ -1,0 +1,27 @@
+{
+  "warningSteps": 0,
+  "totalFeatures": 1,
+  "failedFeatures": 1,
+  "passedScenarios": 10,
+  "totalSteps": 70,
+  "failedScenarios": 1,
+  "skippedSteps": 5,
+  "failedSteps": 1,
+  "totalScenarios": 11,
+  "infoSteps": 0,
+  "scenarioDurations": {
+    "User processes the opportunities and set the delivery process": 13684,
+    "Sales team confirms the customer accepted price": 14219,
+    "Setting up enviroment for the the project": 2596,
+    "User request PI to Category team": 17061,
+    "User logs in to Salesforce": 12763,
+    "Sales team creates a cement opportunity on a site": 11691,
+    "User request PI to Seller team": 31789,
+    "User creates an order, captures the subtotal, and order number": 25954,
+    "Sales team Went to the User account and to the site": 11399,
+    "User updates the seller PI and sends it to the seller": 6589,
+    "Sales team select the seller and gave the cost price": 10159
+  },
+  "passedFeatures": 0,
+  "passedSteps": 64
+}
