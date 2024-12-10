@@ -144,32 +144,32 @@ public class ApprovedCreditPrograms {
                 "/following-sibling::div//td[text()='Credit Limit Block Reason']/following-sibling::td").getText();
     }
 
-    public void CreditDetialsJSON(String creditName){
-        Map<String, String> CreditDetials = new HashMap<>();
-        CreditDetials.put("CreditProgramName", CrdeitProgramName(creditName));
-        CreditDetials.put("UsableLimit", UsableLimitAmount(creditName));
-        CreditDetials.put("SanctionedAmount", SanctionedAmount(creditName));
-        CreditDetials.put("UtilisedAmount", UtilisedAmount(creditName));
-        CreditDetials.put("AvailableAmount", AvailableAmount(creditName));
-        CreditDetials.put("BlockedAmount", BlockedAmount(creditName));
-        CreditDetials.put("UsableAmount", UsableAmount(creditName));
-        CreditDetials.put("CreditExpiryDate", CreditExpiryDate(creditName));
-        CreditDetials.put("CreditDueDays", CreditDueDays(creditName));
-        CreditDetials.put("PenalRate", PenalRate(creditName));
-        CreditDetials.put("CreditLimitBlock", CreditLimitBlock(creditName));
-        CreditDetials.put("CreditLimitBlockReason", CreditLimitBlockReason(creditName));
-
-        Gson gson = new Gson();
-        String json = gson.toJson(CreditDetials);
-
-        String filePath = "src/test/resources/ApiResponse/ApprovedCreditProgram.json";
-        try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(json);
-            System.out.println("JSON file created: " + filePath);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    public void CreditDetialsJSON(String creditName){
+//        Map<String, String> CreditDetials = new HashMap<>();
+//        CreditDetials.put("CreditProgramName", CrdeitProgramName(creditName));
+//        CreditDetials.put("UsableLimit", UsableLimitAmount(creditName));
+//        CreditDetials.put("SanctionedAmount", SanctionedAmount(creditName));
+//        CreditDetials.put("UtilisedAmount", UtilisedAmount(creditName));
+//        CreditDetials.put("AvailableAmount", AvailableAmount(creditName));
+//        CreditDetials.put("BlockedAmount", BlockedAmount(creditName));
+//        CreditDetials.put("UsableAmount", UsableAmount(creditName));
+//        CreditDetials.put("CreditExpiryDate", CreditExpiryDate(creditName));
+//        CreditDetials.put("CreditDueDays", CreditDueDays(creditName));
+//        CreditDetials.put("PenalRate", PenalRate(creditName));
+//        CreditDetials.put("CreditLimitBlock", CreditLimitBlock(creditName));
+//        CreditDetials.put("CreditLimitBlockReason", CreditLimitBlockReason(creditName));
+//
+//        Gson gson = new Gson();
+//        String json = gson.toJson(CreditDetials);
+//
+//        String filePath = "src/test/resources/ApiResponse/ApprovedCreditProgram.json";
+//        try (FileWriter writer = new FileWriter(filePath)) {
+//            writer.write(json);
+//            System.out.println("JSON file created: " + filePath);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 
 }
