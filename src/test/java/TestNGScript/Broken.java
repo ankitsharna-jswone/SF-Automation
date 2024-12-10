@@ -28,6 +28,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import static Utils.BrowsserSetup.getDriver;
+import static Utils.BrowsserSetup.setDriver;
 import static Utils.Functionalities.*;
 
 public class Broken {
@@ -64,15 +66,8 @@ public class Broken {
 
         test = extent.createTest("Broken Links Test");
 
-        Map<String, Object> prefs = new HashMap<>();
-        prefs.put("profile.default_content_setting_values.notifications", 2);
-        ChromeOptions options = new ChromeOptions();
-        options.setExperimentalOption("prefs", prefs);
-        options.setAcceptInsecureCerts(true);
-
-        driver = new ChromeDriver(options);
-        setConsoleReader(driver);
-        driver.manage().window().maximize();
+        setDriver("chrome");
+        driver = getDriver();
         AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver, 10);
         PageFactory.initElements(factory, this);
         Functionalities functionalities = new Functionalities(driver);

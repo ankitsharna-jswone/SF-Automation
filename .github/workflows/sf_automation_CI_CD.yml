@@ -8,6 +8,13 @@ on:
     branches:
       - master
 
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Branch or commit to run the workflow on'
+        required: true
+        default: 'master'
+
 jobs:
   test:
     runs-on: ubuntu-latest

@@ -1,4 +1,4 @@
-@plant
+@plant @regression
 Feature: Create Plant Supply Order in SF using this Script
 
   Scenario Outline: Setting up enviroment for the the project

@@ -2,11 +2,12 @@
 Feature: Zoho regression on Boarding for testing
 
   Scenario Outline: Setting up enviroment for the the project
-    Given Set the file and driver and configuration
+    Given Set the browser and driver for the automation "<Browser>"
+    And User passes driver to the other pages and files
     Given the user navigates to the Salesforce login page "<Link>"
     Examples:
-      | Link                                                          |
-      | https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
+      | Link                                                          |Browser|
+      | https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ | chrome |
 
   Scenario Outline: User logs in to Salesforce
     When the user enters the username "<Username>"

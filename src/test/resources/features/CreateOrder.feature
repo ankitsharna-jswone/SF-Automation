@@ -6,7 +6,7 @@ Feature: Create Order in SF using this Script
     And User passes driver to the other pages and files
     Examples:
       |Browser|
-      | chrome |
+      | headless |
 
   Scenario Outline: User logs in to Salesforce
     Given the user navigates to the Salesforce login page "<Link>"
@@ -15,7 +15,7 @@ Feature: Create Order in SF using this Script
     And the user clicks on the login button
     Examples:
       | Username                         | Password     | Link                                                                         |
-      | salestestuseruat@yopmail.com.uat | Salesuser123 | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
+      | ankit.sharma@jsw.in.uat  | @Ankit123  | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 
  @smoke
   Scenario Outline: User navigates to a specific account from the homepage

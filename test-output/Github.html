@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run GitHub Action</title>
+</head>
+<body>
+<button id="trigger-action">Run GitHub Action</button>
+
+<script>
+    document.getElementById('trigger-action').addEventListener('click', function() {
+        fetch('https://api.github.com/repos/ankitsharna-jswone/SF-Automation/actions/workflows/sf_automation_CI_CD.yml/dispatches', {
+            method: 'POST',
+            headers: {
+                'Authorization': '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',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                ref: 'main'
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Workflow triggered:', data);
+        })
+        .catch(error => {
+            console.error('Error triggering workflow:', error);
+        });
+    });
+</script>
+</body>
+</html>

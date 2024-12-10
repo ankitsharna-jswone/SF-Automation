@@ -50,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Dec 4, 2024 12:12:28 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 5, 2024 12:40:35 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -77,9 +77,9 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@uatconst</a></li>
 					<li><a href='#'>@regression</a></li>
-					<li><a href='#'>@tmt</a></li>
+					<li><a href='#'>@newCreditTest</a></li>
+					<li><a href='#'>@smoke</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -159,14 +159,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='1%'>
-                    <span class='strong'>1</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='3%'>
+                    <span class='strong'>3</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='30%'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='21%'>
                     21</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='67%'>
-                    46</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='75%'>
+                    75</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -189,8 +189,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Create Order for Construct account on UAT</span>
-						<span class='test-time'>Dec 4, 2024 12:12:30 PM</span>
+						<span class='test-name'>Zoho regression on Boarding for testing</span>
+						<span class='test-time'>Dec 5, 2024 12:40:37 PM</span>
 						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -203,12 +203,12 @@
 
 <div class='scenario outline node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 00.145</span>
+	<span class='duration right label'>00 00 00.161</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Setting up enviroment for the the project</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Link</td></tr><tr><td>https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Link</td></tr><tr><td>https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/</td></tr></table></div>
 	
 	
 	<ul class='steps'>
@@ -216,8 +216,8 @@
 			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Setting up enviroment for the the project</div>
 
 				<div class='category-list'>
+						<span class='category label'>@newCreditTest</span>
 						<span class='category label'>@regression</span>
-						<span class='category label'>@uatconst</span>
 				</div>
 
 			<ul class='gc steps'>
@@ -227,7 +227,7 @@
 							<div class="node-step">Step undefined</div>
 				</li>
 				<li test-id='5' class='gc given Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.LoginSteps.userNavigatesToSalesforceLoginPage(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given the user navigates to the Salesforce login page "https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home"</h6>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.LoginSteps.userNavigatesToSalesforceLoginPage(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given the user navigates to the Salesforce login page "https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/"</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
@@ -237,12 +237,12 @@
 </div>
 <div class='scenario outline node' test-id='7' status='fail'>
 
-	<span class='duration right label'>00 00 00.053</span>
+	<span class='duration right label'>00 00 00.089</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: User logs in to Salesforce</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Username</td><td>Password</td></tr><tr><td>ankit.sharma@jsw.in.uat</td><td>@Ankit123</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Username</td><td>Password</td></tr><tr><td>v_ankit.sharma@jsw.in</td><td>@Ankit123</td></tr></table></div>
 	
 	
 	<ul class='steps'>
@@ -250,18 +250,18 @@
 			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>User logs in to Salesforce</div>
 
 				<div class='category-list'>
+						<span class='category label'>@newCreditTest</span>
 						<span class='category label'>@regression</span>
-						<span class='category label'>@uatconst</span>
 				</div>
 
 			<ul class='gc steps'>
 				<li test-id='9' class='gc when Fail' status='Fail'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.LoginSteps.userEntersUsername(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user enters the username "ankit.sharma@jsw.in.uat"</h6>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.LoginSteps.userEntersUsername(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user enters the username "v_ankit.sharma@jsw.in"</h6>
 
 							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 				</li>
 				<li test-id='10' class='gc and Skip' status='Skip'>
@@ -287,54 +287,50 @@
 </div>
 <div class='scenario outline node' test-id='13' status='fail'>
 
-	<span class='duration right label'>00 00 00.020</span>
+	<span class='duration right label'>00 00 00.032</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Sales team Went to the User account and to the site</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: User navigates to a specific account from the homepage</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Account</td><td>Site</td></tr><tr><td>TURBO ENERGY PRIVATE LIMITED</td><td>Gujarat International</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Account</td></tr><tr><td>RAHUL KIRANA STORE</td></tr></table></div>
 	
 	
 	<ul class='steps'>
 		<li test-id='14' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Sales team Went to the User account and to the site</div>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>User navigates to a specific account from the homepage</div>
 
 				<div class='category-list'>
+						<span class='category label'>@newCreditTest</span>
+						<span class='category label'>@smoke</span>
 						<span class='category label'>@regression</span>
-						<span class='category label'>@uatconst</span>
 				</div>
 
 			<ul class='gc steps'>
 				<li test-id='15' class='gc given Fail' status='Fail'>
-					<h6 class="step-name" title="Stepdefination.Construct.reachSiteSteps.navigateToHomePage()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given the user is on the home page</h6>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HomePageNavigationSteps.userOpensSearchTab()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given the user opens the search tab</h6>
 
 							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.HomePage.openSearchTab(HomePage.java:17)
-	at Stepdefination.Construct.reachSiteSteps.navigateToHomePage(reachSiteSteps.java:16)
-	at ✽.the user is on the home page(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:21)
+	at Stepdefination.Ordercreation.HomePageNavigationSteps.userOpensSearchTab(HomePageNavigationSteps.java:17)
+	at ✽.the user opens the search tab(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:22)
 </textarea>
 				</li>
 				<li test-id='16' class='gc when Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Construct.reachSiteSteps.searchForItem(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When they search for account "TURBO ENERGY PRIVATE LIMITED"</h6>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HomePageNavigationSteps.userSearchesForItem(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user searches for the item "RAHUL KIRANA STORE"</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='17' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Construct.reachSiteSteps.clickOnAccount(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And they click on the account for "TURBO ENERGY PRIVATE LIMITED"</h6>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HomePageNavigationSteps.userClicksOnSearchResultForAccounts(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user clicks on the search result for "RAHUL KIRANA STORE" accounts</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='18' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Construct.reachSiteSteps.openSite()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And they moved to the site tab</h6>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HomePageNavigationSteps.userOpensAccount(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user opens the account "RAHUL KIRANA STORE"</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='19' class='gc then Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Construct.reachSiteSteps.verifySitePage(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then they should be on the "Gujarat International" site page</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='20' class='gc * Fail' status='Fail'>
+				<li test-id='19' class='gc * Fail' status='Fail'>
 					<h6 class="step-name" title="AFTER"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</h6>
 
 							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
@@ -345,58 +341,106 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario outline node' test-id='21' status='fail'>
+<div class='scenario outline node' test-id='20' status='fail'>
 
-	<span class='duration right label'>00 00 00.027</span>
+	<span class='duration right label'>00 00 00.074</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Sales team creates a cement opportunity on a site</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Fetching Credit Program Data and Storing it for Validation</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Quantity</td><td>Subgrage</td><td>Quantity</td><td>Width</td></tr><tr><td>100</td><td>FE_500D</td><td>10</td><td>12</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Credit Program</td></tr><tr><td>BNPL - Ankit-Credit</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='22' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Sales team creates a cement opportunity on a site</div>
+		<li test-id='21' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Fetching Credit Program Data and Storing it for Validation</div>
 
 				<div class='category-list'>
+						<span class='category label'>@newCreditTest</span>
 						<span class='category label'>@regression</span>
-						<span class='category label'>@tmt</span>
-						<span class='category label'>@uatconst</span>
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='23' class='gc given Fail' status='Fail'>
-					<h6 class="step-name" title="Stepdefination.Construct.createOpportunitySteps.quickOpportunityCreation()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given they creates an opportunity</h6>
+				<li test-id='22' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_is_on_the_account_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user is on the account page</h6>
+
+				</li>
+				<li test-id='23' class='gc when Fail' status='Fail'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_goes_to_the_approved_credit_program_tab()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user goes to the Approved Credit Program tab</h6>
 
 							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
 	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
-	at Pages.SitePage.quickOpportunity(SitePage.java:20)
-	at Stepdefination.Construct.createOpportunitySteps.quickOpportunityCreation(createOpportunitySteps.java:15)
-	at ✽.they creates an opportunity(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:32)
+	at Pages.AccountPage.ApprovedCreditProgramButton(AccountPage.java:246)
+	at Stepdefination.CreditModule.ApprovedCreditSteps.the_user_goes_to_the_approved_credit_program_tab(ApprovedCreditSteps.java:19)
+	at ✽.the user goes to the Approved Credit Program tab(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:33)
 </textarea>
 				</li>
-				<li test-id='24' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Construct.createOpportunitySteps.selectTMToption()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And they select the TMT option</h6>
+				<li test-id='24' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_credit_program_names()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the credit program names</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='25' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Construct.createOpportunitySteps.selectSubgrate(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And they select the subgrate type of TMT "FE_500D"</h6>
+				<li test-id='25' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_usable_limit_amount_for_the_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the usable limit amount for the credit program "BNPL - Ankit-Credit"</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='26' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Construct.createOpportunitySteps.userSelectsTheWidthforDiameter(java.lang.String,java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User selects the "12" of TMT and with the "100"</h6>
+				<li test-id='26' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_sanctioned_amount_for_the_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the sanctioned amount for the credit program "BNPL - Ankit-Credit"</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='27' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Construct.createOpportunitySteps.saveCementOpportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And they save the cement opportunity</h6>
+				<li test-id='27' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_utilised_amount_for_the_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the utilised amount for the credit program "BNPL - Ankit-Credit"</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='28' class='gc * Fail' status='Fail'>
+				<li test-id='28' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_available_amount_for_the_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the available amount for the credit program "BNPL - Ankit-Credit"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='29' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_blocked_amount_for_the_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the blocked amount for the credit program "BNPL - Ankit-Credit"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='30' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_usable_amount_for_the_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the usable amount for the credit program "BNPL - Ankit-Credit"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='31' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_credit_expiry_date_for_the_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the credit expiry date for the credit program "BNPL - Ankit-Credit"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='32' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_credit_due_days_for_the_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the credit due days for the credit program "BNPL - Ankit-Credit"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='33' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_penal_rate_for_the_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the penal rate for the credit program "BNPL - Ankit-Credit"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='34' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_credit_limit_block_for_the_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the credit limit block for the credit program "BNPL - Ankit-Credit"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='35' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_fetches_the_credit_limit_block_reason_for_the_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user fetches the credit limit block reason for the credit program "BNPL - Ankit-Credit"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='36' class='gc then Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.CreditModule.ApprovedCreditSteps.the_user_stores_the_credit_details_in_a_json_file_for_future_validation(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user stores the credit details in a JSON file for future validation "BNPL - Ankit-Credit"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='37' class='gc * Fail' status='Fail'>
 					<h6 class="step-name" title="AFTER"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</h6>
 
 							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
@@ -407,157 +451,66 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario outline node' test-id='29' status='fail'>
+<div class='scenario outline node' test-id='38' status='fail'>
 
-	<span class='duration right label'>00 00 00.022</span>
+	<span class='duration right label'>00 00 00.020</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: User processes the opportunities and set the delivery process</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: User creates an opportunity with a specific product and quantity</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Delivery Type</td><td>Days</td><td>Special Message</td><td>Address</td><td>Advance</td></tr><tr><td>Self pickup</td><td>2</td><td>Urgent delivery needed</td><td>A-104477</td><td>100</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Product</td><td>Quantity</td></tr><tr><td>JSW Ordinary Portland Cement 53</td><td>10</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='30' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>User processes the opportunities and set the delivery process</div>
+		<li test-id='39' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>User creates an opportunity with a specific product and quantity</div>
 
 				<div class='category-list'>
+						<span class='category label'>@newCreditTest</span>
 						<span class='category label'>@regression</span>
-						<span class='category label'>@uatconst</span>
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='31' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_is_on_the_opportunity_processing_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user is on the opportunity processing page</h6>
+				<li test-id='40' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_is_on_the_account_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user is on the account page</h6>
 
 				</li>
-				<li test-id='32' class='gc when Fail' status='Fail'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_clicks_on_the_process_opportunity_button()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user clicks on the process opportunity button</h6>
+				<li test-id='41' class='gc when Fail' status='Fail'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_creates_a_quick_opportunity()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user creates a quick opportunity</h6>
 
 							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
 	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
-	at Pages.ProcessOpportunity.processOpportunitybutton(ProcessOpportunity.java:129)
-	at Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_clicks_on_the_process_opportunity_button(ProcessOpportunityDefination.java:39)
-	at ✽.the user clicks on the process opportunity button(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:56)
+	at Pages.AccountPage.quickOpportunity(AccountPage.java:58)
+	at Stepdefination.Ordercreation.HrCoilDefination.the_user_creates_a_quick_opportunity(HrCoilDefination.java:29)
+	at ✽.the user creates a quick opportunity(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:56)
 </textarea>
 				</li>
-				<li test-id='33' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_selects_to_edit_the_opportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user selects to edit the opportunity</h6>
+				<li test-id='42' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_adds_a_new_opportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user adds a new opportunity</h6>
 
 							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='34' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_edits_the_delivery_type_to(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user edits the delivery type to "Self pickup"</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='35' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_chose_address(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user selected the Delivery address "A-104477"</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='36' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_edits_the_delivery_time_to_days(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user edits the delivery time to "2" days</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='37' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Plant.OpprtunityPageSteps.fillAdvanceAtOpportunity(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Then User filled the advance % "100"</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='38' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_edits_the_special_message_to(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user edits the special message to "Urgent delivery needed"</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='39' class='gc * Fail' status='Fail'>
-					<h6 class="step-name" title="AFTER"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</h6>
-
-							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
-	at AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(ApplicationsHoocks.java:43)
-</textarea>
-				</li>
-			</ul>
-		</li>
-	</ul>
-</div>
-<div class='scenario outline node' test-id='40' status='fail'>
-
-	<span class='duration right label'>00 00 00.015</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Sales team select the seller and gave the cost price</div>
-	</div>
-	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Price</td><td>Seller</td><td>CPrice</td><td>SourceSeller</td><td>Category</td></tr><tr><td>100</td><td>Vee</td><td>150</td><td>Marketplace</td><td>Mfg Category</td></tr></table></div>
-	
-	
-	<ul class='steps'>
-		<li test-id='41' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Sales team select the seller and gave the cost price</div>
-
-				<div class='category-list'>
-						<span class='category label'>@regression</span>
-						<span class='category label'>@uatconst</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='42' class='gc when Fail' status='Fail'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_searches_for_the_source_seller(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user searches for the source seller "Vee"</h6>
-
-							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
-	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
-	at Pages.ProcessOpportunity.searchSouceSeller(ProcessOpportunity.java:234)
-	at Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_searches_for_the_source_seller(ProcessOpportunityDefination.java:105)
-	at ✽.the user searches for the source seller "Vee"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:69)
-</textarea>
 				</li>
 				<li test-id='43' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_selects_the_source_seller(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user selects the source seller "Vee"</h6>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_searches_for_the_product(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user searches for the product "JSW Ordinary Portland Cement 53"</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='44' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_selects_the_source_seller_type(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user Selects the source seller type "Marketplace"</h6>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_selects_the_product(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user selects the product "JSW Ordinary Portland Cement 53"</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='45' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_edits_the_cost_price_to(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user edits the cost price to "100"</h6>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_sets_the_quantity_to(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user sets the quantity to "10"</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='46' class='gc when Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_selects_the_category_price_as(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user selects the category price as "150"</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='47' class='gc and Skip' status='Skip'>
+				<li test-id='46' class='gc and Skip' status='Skip'>
 					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_saves_the_opportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user saves the opportunity</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='48' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_opportunity_is_processed_to_the_sales_team_and_required_documents_are_filled_successfully()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the opportunity is processed to the Category team for pricing</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='49' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.SalesToCategoryPricingSteps.the_user_performs_the_category_user_test(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user performs the category user test with Category team "Mfg Category"</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='50' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.SalesToCategoryPricingSteps.the_user_saves_the_category()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user saves the category</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='51' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_saves_the_opportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user saves the opportunity</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='52' class='gc * Fail' status='Fail'>
+				<li test-id='47' class='gc * Fail' status='Fail'>
 					<h6 class="step-name" title="AFTER"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</h6>
 
 							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
@@ -568,57 +521,86 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario outline node' test-id='53' status='fail'>
+<div class='scenario outline node' test-id='48' status='fail'>
 
-	<span class='duration right label'>00 00 00.008</span>
+	<span class='duration right label'>00 00 00.016</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Sales team confirms the customer accepted price</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: User processes an opportunity to the sales team and fills required documents</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Price</td></tr><tr><td>160</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Delivery Type</td><td>Days</td><td>Special Message</td><td>Program</td><td>Advance</td><td>Address</td><td>Credit Days</td></tr><tr><td>Self pickup</td><td>2</td><td>Urgent delivery needed</td><td>BNPL - Ankit-Credit</td><td>30</td><td>NEAR BAJAJ AGENCY</td><td>5</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='54' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Sales team confirms the customer accepted price</div>
+		<li test-id='49' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>User processes an opportunity to the sales team and fills required documents</div>
 
 				<div class='category-list'>
+						<span class='category label'>@newCreditTest</span>
 						<span class='category label'>@regression</span>
-						<span class='category label'>@uatconst</span>
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='55' class='gc when Fail' status='Fail'>
+				<li test-id='50' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_is_on_the_opportunity_processing_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user is on the opportunity processing page</h6>
+
+				</li>
+				<li test-id='51' class='gc when Fail' status='Fail'>
 					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_clicks_on_the_process_opportunity_button()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user clicks on the process opportunity button</h6>
 
 							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
 	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
 	at Pages.ProcessOpportunity.processOpportunitybutton(ProcessOpportunity.java:129)
 	at Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_clicks_on_the_process_opportunity_button(ProcessOpportunityDefination.java:39)
-	at ✽.the user clicks on the process opportunity button(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:86)
+	at ✽.the user clicks on the process opportunity button(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:69)
 </textarea>
 				</li>
-				<li test-id='56' class='gc when Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.CustomerPricingSteps.user_sets_the_customer_accepted_price_to(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When user sets the customer-accepted price to "160"</h6>
+				<li test-id='52' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_selects_to_edit_the_opportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user selects to edit the opportunity</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='53' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_edits_the_delivery_type_to(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user edits the delivery type to "Self pickup"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='54' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_chose_address(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user selected the Delivery address "NEAR BAJAJ AGENCY"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='55' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.user_selects_credit_required_yes()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user selectes the credit required as YES</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='56' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.user_choose_credit_program(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And User selects the credit "BNPL - Ankit-Credit" for the user</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='57' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_saves_the_opportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user saves the opportunity</h6>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.user_selects_credit_days(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user Selects the "5" for the program</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='58' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.CustomerPricingSteps.the_user_verifies_the_customer_accepted_price()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user verifies the customer-accepted price</h6>
+					<h6 class="step-name" title="Stepdefination.Plant.OpprtunityPageSteps.fillAdvanceAtOpportunity(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Then User filled the advance % "30"</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='59' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.savefor_sales()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user saves the opportunity for sales team</h6>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_edits_the_delivery_time_to_days(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user edits the delivery time to "2" days</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='60' class='gc * Fail' status='Fail'>
+				<li test-id='60' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_edits_the_special_message_to(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user edits the special message to "Urgent delivery needed"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='61' class='gc * Fail' status='Fail'>
 					<h6 class="step-name" title="AFTER"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</h6>
 
 							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
@@ -629,57 +611,143 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario outline node' test-id='61' status='fail'>
+<div class='scenario outline node' test-id='62' status='fail'>
 
-	<span class='duration right label'>00 00 00.010</span>
+	<span class='duration right label'>00 00 00.016</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: User request PI to Category team</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: User sends the file to pricing to the category team</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Category</td></tr><tr><td>Mfg Category</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>CPrice</td><td>Price</td><td>Seller</td><td>SourceSeller</td><td>Category</td></tr><tr><td>120</td><td>100</td><td>Vee</td><td>Marketplace</td><td>Category Test user</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='62' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>User request PI to Category team</div>
+		<li test-id='63' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>User sends the file to pricing to the category team</div>
 
 				<div class='category-list'>
+						<span class='category label'>@newCreditTest</span>
 						<span class='category label'>@regression</span>
-						<span class='category label'>@uatconst</span>
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='63' class='gc when Fail' status='Fail'>
+				<li test-id='64' class='gc when Fail' status='Fail'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_selects_the_category_price_as(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user selects the category price as "120"</h6>
+
+							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
+	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
+	at Pages.ProcessOpportunity.categoryPrice(ProcessOpportunity.java:184)
+	at Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_selects_the_category_price_as(ProcessOpportunityDefination.java:94)
+	at ✽.the user selects the category price as "120"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:86)
+</textarea>
+				</li>
+				<li test-id='65' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_edits_the_cost_price_to(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user edits the cost price to "100"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='66' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_searches_for_the_source_seller(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user searches for the source seller "Vee"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='67' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_selects_the_source_seller(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user selects the source seller "Vee"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='68' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_selects_the_source_seller_type(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user Selects the source seller type "Marketplace"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='69' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_saves_the_opportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user saves the opportunity</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='70' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.SalesToCategoryPricingSteps.the_user_clicks_on_the_price_awaiting_section()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When Sales team clicks on the price awaiting section</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='71' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.RequestPiToCategorySteps.the_user_selected_the(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user selected the category user "Category Test user"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='72' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.SalesToCategoryPricingSteps.the_user_saves_the_category()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user saves the category</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='73' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.CustomerPricingSteps.the_user_verifies_the_customer_accepted_price()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user verifies the customer-accepted price</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='74' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_saves_the_opportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user saves the opportunity</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='75' class='gc * Fail' status='Fail'>
+					<h6 class="step-name" title="AFTER"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</h6>
+
+							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
+	at AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(ApplicationsHoocks.java:43)
+</textarea>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='76' status='fail'>
+
+	<span class='duration right label'>00 00 00.016</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: User selects the credit program on the Credit program on Opportunity page</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Price</td></tr><tr><td>150</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='77' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>User selects the credit program on the Credit program on Opportunity page</div>
+
+				<div class='category-list'>
+						<span class='category label'>@newCreditTest</span>
+						<span class='category label'>@regression</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='78' class='gc when Fail' status='Fail'>
 					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_clicks_on_the_process_opportunity_button()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user clicks on the process opportunity button</h6>
 
 							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
 	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
 	at Pages.ProcessOpportunity.processOpportunitybutton(ProcessOpportunity.java:129)
 	at Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_clicks_on_the_process_opportunity_button(ProcessOpportunityDefination.java:39)
-	at ✽.the user clicks on the process opportunity button(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:97)
+	at ✽.the user clicks on the process opportunity button(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:102)
 </textarea>
 				</li>
-				<li test-id='64' class='gc when Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_saves_the_opportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user saves the opportunity</h6>
+				<li test-id='79' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_selects_to_edit_the_opportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user selects to edit the opportunity</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='65' class='gc when Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.RequestPiToCategorySteps.the_user_requests_pi_to_the_category_team()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user requests PI to the category team</h6>
+				<li test-id='80' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.CustomerPricingSteps.user_sets_the_customer_accepted_price_to(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user sets the customer-accepted price to "150"</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='66' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.SalesToCategoryPricingSteps.the_user_performs_the_category_user_test(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user performs the category user test with Category team "Mfg Category"</h6>
+				<li test-id='81' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_saves_the_opportunity()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user saves the opportunity</h6>
 
 							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='67' class='gc and Skip' status='Skip'>
-					<h6 class="step-name" title="Stepdefination.Ordercreation.RequestPiToCategorySteps.the_user_saves_the_category_user()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user saves the category user</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='68' class='gc * Fail' status='Fail'>
+				<li test-id='82' class='gc * Fail' status='Fail'>
 					<h6 class="step-name" title="AFTER"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</h6>
 
 							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
@@ -690,50 +758,99 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='69' status='fail'>
+<div class='scenario outline node' test-id='83' status='fail'>
 
-	<span class='duration right label'>00 00 00.005</span>
+	<span class='duration right label'>00 00 00.017</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: User request PI to Category team</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Category</td></tr><tr><td>Category Test user</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='84' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>User request PI to Category team</div>
+
+				<div class='category-list'>
+						<span class='category label'>@newCreditTest</span>
+						<span class='category label'>@regression</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='85' class='gc when Fail' status='Fail'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.CustomerPricingSteps.the_user_verifies_the_customer_accepted_price()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user verifies the customer-accepted price</h6>
+
+							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
+	at Pages.ProcessOpportunity.verifyPriceCustomer(ProcessOpportunity.java:288)
+	at Stepdefination.Ordercreation.CustomerPricingSteps.the_user_verifies_the_customer_accepted_price(CustomerPricingSteps.java:32)
+	at ✽.the user verifies the customer-accepted price(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:112)
+</textarea>
+				</li>
+				<li test-id='86' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.RequestPiToCategorySteps.the_user_requests_pi_to_the_category_team()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user requests PI to the category team</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='87' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.RequestPiToCategorySteps.the_user_selected_the(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user selected the category user "Category Test user"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='88' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="Stepdefination.Ordercreation.RequestPiToCategorySteps.the_user_saves_the_category_user()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user saves the category user</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='89' class='gc * Fail' status='Fail'>
+					<h6 class="step-name" title="AFTER"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</h6>
+
+							<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
+	at AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(ApplicationsHoocks.java:43)
+</textarea>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='90' status='fail'>
+
+	<span class='duration right label'>00 00 01.025</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User request PI to Seller team</div>
 	</div>
 	
 	
 		<div class='category-list'>
+				<span class='category label'>@newCreditTest</span>
 				<span class='category label'>@regression</span>
-				<span class='category label'>@uatconst</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='70' class='node given Fail' status='Fail'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.RequestPiToSellerSteps.userProcessedOpportunity())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given User processed opportunity to send PI to seller</div>
+		<li test-id='91' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(Stepdefination.Ordercreation.RequestPiToSellerSteps.userRequestedSellerToPI())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then the user requests PI to the seller</div>
 
 
 					<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
 	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
 	at Pages.ProcessOpportunity.requestPItoSeller(ProcessOpportunity.java:324)
-	at Stepdefination.Ordercreation.RequestPiToSellerSteps.userProcessedOpportunity(RequestPiToSellerSteps.java:17)
-	at ✽.User processed opportunity to send PI to seller(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:108)
+	at Stepdefination.Ordercreation.RequestPiToSellerSteps.userRequestedSellerToPI(RequestPiToSellerSteps.java:30)
+	at ✽.the user requests PI to the seller(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:123)
 </textarea>
 		</li>
-		<li test-id='71' class='node when Skip' status='Skip'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.HrCoilDefination.the_user_saves_the_opportunity())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user saves the opportunity</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='72' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.RequestPiToSellerSteps.userRequestedSellerToPI())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user requests PI to the seller</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='73' class='node and Skip' status='Skip'>
+		<li test-id='92' class='node and Skip' status='Skip'>
 			<div class="step-name" title="(Stepdefination.Plant.OpprtunityPageSteps.saveTheOpportunitypage())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user saved the opportunity</div>
 
 
 					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='74' class='node * Fail' status='Fail'>
+		<li test-id='93' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.Ordercreation.SalesToCategoryPricingSteps.stagePrinting())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then The stage of opportunity will be printed</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='94' class='node * Fail' status='Fail'>
 			<div class="step-name" title="(AFTER)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</div>
 
 
@@ -743,119 +860,176 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='75' status='fail'>
+<div class='scenario node' test-id='95' status='fail'>
 
-	<span class='duration right label'>00 00 00.006</span>
+	<span class='duration right label'>00 00 00.105</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User updates the seller PI and sends it to the seller</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validate Credit Information for the Selected Program</div>
 	</div>
 	
 	
 		<div class='category-list'>
+				<span class='category label'>@newCreditTest</span>
 				<span class='category label'>@regression</span>
-				<span class='category label'>@uatconst</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='76' class='node given Fail' status='Fail'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.ChooseSellerPIsteps.userNavigatesToFilePage())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given the user navigates to the file page</div>
+		<li test-id='96' class='node when Fail' status='Fail'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_amount_from_the_opportunity_page())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user should fetch the Credit Amount from the Opportunity page</div>
 
 
-					<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
-	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
-	at Pages.AccountPage.filePage(AccountPage.java:89)
-	at Stepdefination.Ordercreation.ChooseSellerPIsteps.userNavigatesToFilePage(ChooseSellerPIsteps.java:13)
-	at ✽.the user navigates to the file page(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:114)
+					<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "Utils.Functionalities.driver" is null
+	at Utils.Functionalities.xpathELem(Functionalities.java:140)
+	at Pages.OpportunityCreditPage.CreditAmount(OpportunityCreditPage.java:63)
+	at Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_amount_from_the_opportunity_page(OpportunityCreditSteps.java:36)
+	at ✽.the user should fetch the Credit Amount from the Opportunity page(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:129)
 </textarea>
 		</li>
-		<li test-id='77' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.ChooseSellerPIsteps.userChoosesSellerPI())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user chooses the seller PI</div>
+		<li test-id='97' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_approved_credit_days_from_the_opportunity_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the Approved Credit Days from the Opportunity page</div>
 
 
 					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='78' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.ChooseSellerPIsteps.userSetsSellerPI())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user sets the seller PI</div>
+		<li test-id='98' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_available_from_the_opportunity_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the Credit Available from the Opportunity page</div>
 
 
 					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='79' class='node * Fail' status='Fail'>
-			<div class="step-name" title="(AFTER)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</div>
-
-
-					<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
-	at AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(ApplicationsHoocks.java:43)
-</textarea>
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='80' status='fail'>
-
-	<span class='duration right label'>00 00 00.017</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User creates an order, captures the subtotal, and order number</div>
-	</div>
-	
-	
-		<div class='category-list'>
-				<span class='category label'>@regression</span>
-				<span class='category label'>@uatconst</span>
-		</div>
-	
-	<ul class='steps'>
-		<li test-id='81' class='node given Fail' status='Fail'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.CreateOrderPageSteps.userIsOnAccountPage())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given the user is on the account page for order creation</div>
-
-
-					<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.navigate()" because the return value of "Utils.BrowsserSetup.getDriver()" is null
-	at Stepdefination.Ordercreation.CreateOrderPageSteps.userIsOnAccountPage(CreateOrderPageSteps.java:27)
-	at ✽.the user is on the account page for order creation(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:120)
-</textarea>
-		</li>
-		<li test-id='82' class='node when Skip' status='Skip'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.CreateOrderPageSteps.userClicksOnCreateOrderButton())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user clicks on the create order button</div>
+		<li test-id='99' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_days_from_the_opportunity_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the Credit Days from the Opportunity page</div>
 
 
 					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='83' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.CreateOrderPageSteps.userCapturesSubtotalForOrder())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user captures the subtotal for the order</div>
+		<li test-id='100' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_program_name_from_the_opportunity_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the Credit Program Name from the Opportunity page</div>
 
 
 					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='84' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.CreateOrderPageSteps.userPrintsSubtotal())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user prints the subtotal and indicates it as the total value for the order</div>
+		<li test-id='101' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_required_from_the_opportunity_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the Credit Required from the Opportunity page</div>
 
 
 					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='85' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.CreateOrderPageSteps.userClicksOnCreateOrderButtonForCoils())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user clicks on the button to create an order for coils</div>
+		<li test-id='102' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_utilised_from_the_opportunity_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the Credit Utilised from the Opportunity page</div>
 
 
 					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='86' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.CreateOrderPageSteps.userCapturesOrderNumber())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user captures the order number</div>
+		<li test-id='103' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_blocked_limit_from_the_opportunity_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the Blocked Limit from the Opportunity page</div>
 
 
 					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='87' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.CreateOrderPageSteps.userPrintsOrderNumber())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user prints the order number</div>
+		<li test-id='104' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_program_credit_from_the_opportunity_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the Program Credit from the Opportunity page</div>
 
 
 					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='88' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(Stepdefination.Ordercreation.CreateOrderPageSteps.reportTime())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the date and time of the report is given</div>
+		<li test-id='105' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_expiry_date_from_the_opportunity_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the Credit Expiry Date from the Opportunity page</div>
 
 
 					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='89' class='node * Fail' status='Fail'>
+		<li test-id='106' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_program_type_from_the_opportunity_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the Credit Program Type from the Opportunity page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='107' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_penal_interest_from_the_opportunity_page())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the Penal Interest from the Opportunity page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='108' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_api_response_for_the_selected_credit_program())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user should fetch the API response for the selected Credit Program</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='109' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_amount_from_the_opportunity_page_should_match_the_credit_amount_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the Credit Amount from the Opportunity page should match the Credit Amount in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='110' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_approved_credit_days_from_the_opportunity_page_should_match_the_approved_credit_days_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the Approved Credit Days from the Opportunity page should match the Approved Credit Days in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='111' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_available_from_the_opportunity_page_should_match_the_credit_available_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the Credit Available from the Opportunity page should match the Credit Available in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='112' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_days_from_the_opportunity_page_should_match_the_credit_days_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the Credit Days from the Opportunity page should match the Credit Days in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='113' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_program_name_from_the_opportunity_page_should_match_the_credit_program_name_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the Credit Program Name from the Opportunity page should match the Credit Program Name in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='114' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_required_from_the_opportunity_page_should_match_the_credit_required_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the Credit Required from the Opportunity page should match the Credit Required in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='115' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_utilised_from_the_opportunity_page_should_match_the_credit_utilised_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the Credit Utilised from the Opportunity page should match the Credit Utilised in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='116' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_blocked_limit_from_the_opportunity_page_should_match_the_blocked_limit_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the Blocked Limit from the Opportunity page should match the Blocked Limit in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='117' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_program_credit_from_the_opportunity_page_should_match_the_program_credit_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the Program Credit from the Opportunity page should match the Program Credit in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='118' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_expiry_date_from_the_opportunity_page_should_match_the_credit_expiry_date_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the Credit Expiry Date from the Opportunity page should match the Credit Expiry Date in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='119' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_program_type_from_the_opportunity_page_should_match_the_credit_program_type_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the Credit Program Type from the Opportunity page should match the Credit Program Type in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='120' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(Stepdefination.CreditModule.OpportunityCreditSteps.the_penal_interest_from_the_opportunity_page_should_match_the_penal_interest_in_the_api_response())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the Penal Interest from the Opportunity page should match the Penal Interest in the API response</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='121' class='node * Fail' status='Fail'>
 			<div class="step-name" title="(AFTER)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</div>
 
 
@@ -909,89 +1083,6 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@uatconst</span>
-						<span class='category-status right'>
-						<span class='label fail'>11</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 11</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='3'>Setting up enviroment for the the project</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='8'>User logs in to Salesforce</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='14'>Sales team Went to the User account and to the site</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='22'>Sales team creates a cement opportunity on a site</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='30'>User processes the opportunities and set the delivery process</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='41'>Sales team select the seller and gave the cost price</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='54'>Sales team confirms the customer accepted price</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='62'>User request PI to Category team</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='69'>User request PI to Seller team</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='75'>User updates the seller PI and sends it to the seller</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='80'>User creates an order, captures the subtotal, and order number</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
 						<span class='category-name'>@regression</span>
 						<span class='category-status right'>
 						<span class='label fail'>11</span>
@@ -1014,58 +1105,58 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
+										<td>Dec 5, 2024 12:40:37 PM</td>
 										<td class='linked' test-id='3'>Setting up enviroment for the the project</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
 										<td class='linked' test-id='8'>User logs in to Salesforce</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='14'>Sales team Went to the User account and to the site</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='14'>User navigates to a specific account from the homepage</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='22'>Sales team creates a cement opportunity on a site</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='21'>Fetching Credit Program Data and Storing it for Validation</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='30'>User processes the opportunities and set the delivery process</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='39'>User creates an opportunity with a specific product and quantity</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='41'>Sales team select the seller and gave the cost price</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='49'>User processes an opportunity to the sales team and fills required documents</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='54'>Sales team confirms the customer accepted price</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='63'>User sends the file to pricing to the category team</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='62'>User request PI to Category team</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='77'>User selects the credit program on the Credit program on Opportunity page</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='69'>User request PI to Seller team</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='84'>User request PI to Category team</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='75'>User updates the seller PI and sends it to the seller</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='90'>User request PI to Seller team</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='80'>User creates an order, captures the subtotal, and order number</td>
+										<td>Dec 5, 2024 12:40:39 PM</td>
+										<td class='linked' test-id='95'>Validate Credit Information for the Selected Program</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
@@ -1075,7 +1166,90 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@tmt</span>
+						<span class='category-name'>@newCreditTest</span>
+						<span class='category-status right'>
+						<span class='label fail'>11</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 11</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 5, 2024 12:40:37 PM</td>
+										<td class='linked' test-id='3'>Setting up enviroment for the the project</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='8'>User logs in to Salesforce</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='14'>User navigates to a specific account from the homepage</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='21'>Fetching Credit Program Data and Storing it for Validation</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='39'>User creates an opportunity with a specific product and quantity</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='49'>User processes an opportunity to the sales team and fills required documents</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='63'>User sends the file to pricing to the category team</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='77'>User selects the credit program on the Credit program on Opportunity page</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='84'>User request PI to Category team</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='90'>User request PI to Seller team</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:39 PM</td>
+										<td class='linked' test-id='95'>Validate Credit Information for the Selected Program</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@smoke</span>
 						<span class='category-status right'>
 						<span class='label fail'>1</span>
 						</span>
@@ -1097,8 +1271,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='22'>Sales team creates a cement opportunity on a site</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='14'>User navigates to a specific account from the homepage</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
@@ -1150,222 +1324,222 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='9'>When the user enters the username "ankit.sharma@jsw.in.uat"</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='9'>When the user enters the username "v_ankit.sharma@jsw.in"</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
 										<td class='linked' test-id='12'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='15'>Given the user is on the home page</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='15'>Given the user opens the search tab</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='20'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='19'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='23'>Given they creates an opportunity</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='23'>When the user goes to the Approved Credit Program tab</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='28'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='37'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='32'>When the user clicks on the process opportunity button</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='41'>When the user creates a quick opportunity</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='39'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='47'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='42'>When the user searches for the source seller "Vee"</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='51'>When the user clicks on the process opportunity button</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='52'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='61'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='55'>When the user clicks on the process opportunity button</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='64'>When the user selects the category price as "120"</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='60'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='75'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='63'>When the user clicks on the process opportunity button</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='78'>When the user clicks on the process opportunity button</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='68'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='82'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='70'>Given User processed opportunity to send PI to seller</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='85'>When the user verifies the customer-accepted price</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='74'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
-	at Pages.LoginPage.usernameSF(LoginPage.java:17)
-	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='76'>Given the user navigates to the file page</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
-	at Pages.LoginPage.usernameSF(LoginPage.java:17)
-	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='79'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
-	at Pages.LoginPage.usernameSF(LoginPage.java:17)
-	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
-										<td class='linked' test-id='81'>Given the user is on the account page for order creation</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
-	at Pages.LoginPage.usernameSF(LoginPage.java:17)
-	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Dec 4, 2024 12:12:30 PM</td>
+										<td>Dec 5, 2024 12:40:38 PM</td>
 										<td class='linked' test-id='89'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:38 PM</td>
+										<td class='linked' test-id='91'>Then the user requests PI to the seller</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+	at Pages.LoginPage.usernameSF(LoginPage.java:17)
+	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:39 PM</td>
+										<td class='linked' test-id='94'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+	at Pages.LoginPage.usernameSF(LoginPage.java:17)
+	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:39 PM</td>
+										<td class='linked' test-id='96'>When the user should fetch the Credit Amount from the Opportunity page</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+	at Pages.LoginPage.usernameSF(LoginPage.java:17)
+	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 5, 2024 12:40:40 PM</td>
+										<td class='linked' test-id='121'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+	at Pages.LoginPage.usernameSF(LoginPage.java:17)
+	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
 										</td>
 									</tr>
@@ -1403,25 +1577,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>68</div>
+					<div class='panel-lead'>99</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 4, 2024 12:12:28 PM</div>
+					<div class='panel-lead'>Dec 5, 2024 12:40:35 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 4, 2024 12:12:30 PM</div>
+			 		<div class='panel-lead'>Dec 5, 2024 12:40:40 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 02.010</div>
+					<div class='panel-lead'>00 00 04.226</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -1461,15 +1635,6 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@uatconst</td>
-							<td>0</td>
-							<td>11</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
 							<td>@regression</td>
 							<td>0</td>
 							<td>11</td>
@@ -1479,7 +1644,16 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@tmt</td>
+							<td>@newCreditTest</td>
+							<td>0</td>
+							<td>11</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@smoke</td>
 							<td>0</td>
 							<td>1</td>
 							<td>0</td>
@@ -1513,20 +1687,20 @@
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 68,
-				passGrandChild: 1,
+				grandChildCount: 99,
+				passGrandChild: 3,
 				failGrandChild: 21,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 46,
+				skipGrandChild: 75,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Create Order for Construct account on UAT":0.713
+			        "Zoho regression on Boarding for testing":2.118
 			};
 		</script>
 		

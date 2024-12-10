@@ -1,14 +1,1 @@
-{
-  "PenalRate": "40",
-  "UsableAmount": "99,99,93,701.5",
-  "CreditExpiryDate": "20/07/2027",
-  "CreditLimitBlock": "false",
-  "SanctionedAmount": "1,00,00,00,000",
-  "AvailableAmount": "1,00,00,00,000",
-  "UsableLimit": "99,99,93,701.5",
-  "CreditProgramName": "BNPL - Ankit-Credit",
-  "CreditDueDays": "40",
-  "BlockedAmount": "6,298.5",
-  "CreditLimitBlockReason": "",
-  "UtilisedAmount": "0"
-}
+{"PenalRate":"10","UsableAmount":"43,61,620","CreditExpiryDate":"12/08/2025","CreditLimitBlock":"false","SanctionedAmount":"50,00,000","AvailableAmount":"50,00,000","UsableLimit":"43,61,620","CreditProgramName":"BNPL - JODL-BNPL","CreditDueDays":"10","BlockedAmount":"6,38,380","CreditLimitBlockReason":"","UtilisedAmount":"0"}

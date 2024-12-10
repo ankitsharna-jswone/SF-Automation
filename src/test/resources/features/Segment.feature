@@ -1,8 +1,12 @@
 @seg @regression
 Feature: Create Order in SF using this Script
 
-  Scenario: Setting up enviroment for the the project
-    Given Set the file and driver and configuration
+  Scenario Outline: Setting up enviroment for the the project
+    Given Set the browser and driver for the automation "<Browser>"
+    And User passes driver to the other pages and files
+    Examples:
+      |Browser|
+      | chrome |
 
 
   Scenario Outline: User logs in to Salesforce

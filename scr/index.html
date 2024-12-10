@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Build 1</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 04, 2024 12:12:28</span></a>
+<a href="#"><span class="badge badge-primary">Dec 05, 2024 12:40:35</span></a>
 </li>
 </ul>
 </div>
@@ -71,13 +71,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 04, 2024 12:12:28</h3>
+<h3>Dec 05, 2024 12:40:35</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 04, 2024 12:12:30</h3>
+<h3>Dec 05, 2024 12:40:40</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -148,10 +148,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='1%'><b>1</b> steps passed</small></div>
+<div><small data-tooltip='3%'><b>3</b> steps passed</small></div>
 <div>
-<small data-tooltip='30%'><b>21</b> steps failed,
-<b>46</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='21%'><b>21</b> steps failed,
+<b>75</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -167,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"Create Order for Construct account on UAT":0.713
+"Zoho regression on Boarding for testing":2.118
 };
 </script>
 <div class="row">
@@ -177,14 +177,6 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@uatconst</td>
-<td>0</td>
-<td>11</td>
-<td>0</td>
-<td>0</td>
-<td>0%</td>
-</tr>
-<tr>
 <td>@regression</td>
 <td>0</td>
 <td>11</td>
@@ -193,7 +185,15 @@ var timeline = {
 <td>0%</td>
 </tr>
 <tr>
-<td>@tmt</td>
+<td>@newCreditTest</td>
+<td>0</td>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@smoke</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -242,10 +242,10 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 1,
+passGrandChild: 3,
 failGrandChild: 21,
 warningGrandChild: 0,
-skipGrandChild: 46,
+skipGrandChild: 75,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -267,7 +267,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@uatconst</a><a class="dropdown-item" href="#">@regression</a><a class="dropdown-item" href="#">@tmt</a>
+<a class="dropdown-item" href="#">@regression</a><a class="dropdown-item" href="#">@newCreditTest</a><a class="dropdown-item" href="#">@smoke</a>
 </ul>
 </li>
 </ul>
@@ -278,9 +278,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Create Order for Construct account on UAT</p>
+            <p class="name">Zoho regression on Boarding for testing</p>
             <p class="text-sm">
-              <span>12:12:30 PM</span> / <span>30:00:713</span>
+              <span>12:40:37 PM</span> / <span>30:02:118</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -288,10 +288,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Create Order for Construct account on UAT</h5>
-<span class='badge badge-success'>12.04.2024 12:12:30</span>
-<span class='badge badge-danger'>12.04.2024 12:12:30</span>
-<span class='badge badge-default'>30:00:713</span>
+<h5 class="test-status text-fail">Zoho regression on Boarding for testing</h5>
+<span class='badge badge-success'>12.05.2024 12:40:37</span>
+<span class='badge badge-danger'>12.05.2024 12:40:40</span>
+<span class='badge badge-default'>30:02:118</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -318,7 +318,7 @@ eventsCount: 5,
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>Given the user navigates to the Salesforce login page "https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home"</span>
+                    <span>Given the user navigates to the Salesforce login page "https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/"</span>
       <div>Step skipped
       </div>
                   </div>
@@ -341,12 +341,12 @@ eventsCount: 5,
               </div>
               <div class="card-body mt-3 ">
                   <div class="step fail-bg">
-                    <span>When the user enters the username "ankit.sharma@jsw.in.uat"</span>
+                    <span>When the user enters the username "v_ankit.sharma@jsw.in"</span>
       <div>
         <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.LoginPage.usernameSF(LoginPage.java:17)
 	at Stepdefination.Ordercreation.LoginSteps.userEntersUsername(LoginSteps.java:23)
-	at ✽.the user enters the username "ankit.sharma@jsw.in.uat"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:12)
+	at ✽.the user enters the username "v_ankit.sharma@jsw.in"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:12)
 </textarea>
       
       </div>
@@ -377,45 +377,40 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="13"><span class="badge log fail-bg mr-2">Fail</span>Sales team Went to the User account and to the site</div>
+        <div class="node" id="13"><span class="badge log fail-bg mr-2">Fail</span>User navigates to a specific account from the homepage</div>
       </div>
     </div>
         <div class="scenario_outline ">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="14"><span class="badge log fail-bg mr-2">Fail</span>Sales team Went to the User account and to the site</div>
+                  <div class="node" id="14"><span class="badge log fail-bg mr-2">Fail</span>User navigates to a specific account from the homepage</div>
                 </div>
               </div>
               <div class="card-body mt-3 ">
                   <div class="step fail-bg">
-                    <span>Given the user is on the home page</span>
+                    <span>Given the user opens the search tab</span>
       <div>
         <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 	at Pages.HomePage.openSearchTab(HomePage.java:17)
-	at Stepdefination.Construct.reachSiteSteps.navigateToHomePage(reachSiteSteps.java:16)
-	at ✽.the user is on the home page(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:21)
+	at Stepdefination.Ordercreation.HomePageNavigationSteps.userOpensSearchTab(HomePageNavigationSteps.java:17)
+	at ✽.the user opens the search tab(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:22)
 </textarea>
       
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>When they search for account "TURBO ENERGY PRIVATE LIMITED"</span>
+                    <span>When the user searches for the item "RAHUL KIRANA STORE"</span>
       <div>Step skipped
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And they click on the account for "TURBO ENERGY PRIVATE LIMITED"</span>
+                    <span>And the user clicks on the search result for "RAHUL KIRANA STORE" accounts</span>
       <div>Step skipped
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And they moved to the site tab</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>Then they should be on the "Gujarat International" site page</span>
+                    <span>And the user opens the account "RAHUL KIRANA STORE"</span>
       <div>Step skipped
       </div>
                   </div>
@@ -435,46 +430,96 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="21"><span class="badge log fail-bg mr-2">Fail</span>Sales team creates a cement opportunity on a site</div>
+        <div class="node" id="20"><span class="badge log fail-bg mr-2">Fail</span>Fetching Credit Program Data and Storing it for Validation</div>
       </div>
     </div>
         <div class="scenario_outline ">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="22"><span class="badge log fail-bg mr-2">Fail</span>Sales team creates a cement opportunity on a site</div>
+                  <div class="node" id="21"><span class="badge log fail-bg mr-2">Fail</span>Fetching Credit Program Data and Storing it for Validation</div>
                 </div>
               </div>
               <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given the user is on the account page</span>
+      <div>
+      </div>
+                  </div>
                   <div class="step fail-bg">
-                    <span>Given they creates an opportunity</span>
+                    <span>When the user goes to the Approved Credit Program tab</span>
       <div>
         <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
 	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
-	at Pages.SitePage.quickOpportunity(SitePage.java:20)
-	at Stepdefination.Construct.createOpportunitySteps.quickOpportunityCreation(createOpportunitySteps.java:15)
-	at ✽.they creates an opportunity(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:32)
+	at Pages.AccountPage.ApprovedCreditProgramButton(AccountPage.java:246)
+	at Stepdefination.CreditModule.ApprovedCreditSteps.the_user_goes_to_the_approved_credit_program_tab(ApprovedCreditSteps.java:19)
+	at ✽.the user goes to the Approved Credit Program tab(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:33)
 </textarea>
       
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And they select the TMT option</span>
+                    <span>When the user fetches the credit program names</span>
       <div>Step skipped
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And they select the subgrate type of TMT "FE_500D"</span>
+                    <span>When the user fetches the usable limit amount for the credit program "BNPL - Ankit-Credit"</span>
       <div>Step skipped
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And User selects the "12" of TMT and with the "100"</span>
+                    <span>When the user fetches the sanctioned amount for the credit program "BNPL - Ankit-Credit"</span>
       <div>Step skipped
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And they save the cement opportunity</span>
+                    <span>When the user fetches the utilised amount for the credit program "BNPL - Ankit-Credit"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When the user fetches the available amount for the credit program "BNPL - Ankit-Credit"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When the user fetches the blocked amount for the credit program "BNPL - Ankit-Credit"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When the user fetches the usable amount for the credit program "BNPL - Ankit-Credit"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When the user fetches the credit expiry date for the credit program "BNPL - Ankit-Credit"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When the user fetches the credit due days for the credit program "BNPL - Ankit-Credit"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When the user fetches the penal rate for the credit program "BNPL - Ankit-Credit"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When the user fetches the credit limit block for the credit program "BNPL - Ankit-Credit"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When the user fetches the credit limit block reason for the credit program "BNPL - Ankit-Credit"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then the user stores the credit details in a JSON file for future validation "BNPL - Ankit-Credit"</span>
       <div>Step skipped
       </div>
                   </div>
@@ -494,14 +539,83 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="29"><span class="badge log fail-bg mr-2">Fail</span>User processes the opportunities and set the delivery process</div>
+        <div class="node" id="38"><span class="badge log fail-bg mr-2">Fail</span>User creates an opportunity with a specific product and quantity</div>
       </div>
     </div>
         <div class="scenario_outline ">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="30"><span class="badge log fail-bg mr-2">Fail</span>User processes the opportunities and set the delivery process</div>
+                  <div class="node" id="39"><span class="badge log fail-bg mr-2">Fail</span>User creates an opportunity with a specific product and quantity</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given the user is on the account page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When the user creates a quick opportunity</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
+	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
+	at Pages.AccountPage.quickOpportunity(AccountPage.java:58)
+	at Stepdefination.Ordercreation.HrCoilDefination.the_user_creates_a_quick_opportunity(HrCoilDefination.java:29)
+	at ✽.the user creates a quick opportunity(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:56)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user adds a new opportunity</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user searches for the product "JSW Ordinary Portland Cement 53"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user selects the product "JSW Ordinary Portland Cement 53"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user sets the quantity to "10"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user saves the opportunity</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
+	at AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(ApplicationsHoocks.java:43)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="48"><span class="badge log fail-bg mr-2">Fail</span>User processes an opportunity to the sales team and fills required documents</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="49"><span class="badge log fail-bg mr-2">Fail</span>User processes an opportunity to the sales team and fills required documents</div>
                 </div>
               </div>
               <div class="card-body mt-3 ">
@@ -517,7 +631,7 @@ eventsCount: 5,
 	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
 	at Pages.ProcessOpportunity.processOpportunitybutton(ProcessOpportunity.java:129)
 	at Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_clicks_on_the_process_opportunity_button(ProcessOpportunityDefination.java:39)
-	at ✽.the user clicks on the process opportunity button(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:56)
+	at ✽.the user clicks on the process opportunity button(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:69)
 </textarea>
       
       </div>
@@ -533,17 +647,32 @@ eventsCount: 5,
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And the user selected the Delivery address "A-104477"</span>
+                    <span>And the user selected the Delivery address "NEAR BAJAJ AGENCY"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user selectes the credit required as YES</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User selects the credit "BNPL - Ankit-Credit" for the user</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user Selects the "5" for the program</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Then User filled the advance % "30"</span>
       <div>Step skipped
       </div>
                   </div>
                   <div class="step skip-bg">
                     <span>And the user edits the delivery time to "2" days</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>And Then User filled the advance % "100"</span>
       <div>Step skipped
       </div>
                   </div>
@@ -568,27 +697,37 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="40"><span class="badge log fail-bg mr-2">Fail</span>Sales team select the seller and gave the cost price</div>
+        <div class="node" id="62"><span class="badge log fail-bg mr-2">Fail</span>User sends the file to pricing to the category team</div>
       </div>
     </div>
         <div class="scenario_outline ">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="41"><span class="badge log fail-bg mr-2">Fail</span>Sales team select the seller and gave the cost price</div>
+                  <div class="node" id="63"><span class="badge log fail-bg mr-2">Fail</span>User sends the file to pricing to the category team</div>
                 </div>
               </div>
               <div class="card-body mt-3 ">
                   <div class="step fail-bg">
-                    <span>When the user searches for the source seller "Vee"</span>
+                    <span>When the user selects the category price as "120"</span>
       <div>
         <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
 	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
-	at Pages.ProcessOpportunity.searchSouceSeller(ProcessOpportunity.java:234)
-	at Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_searches_for_the_source_seller(ProcessOpportunityDefination.java:105)
-	at ✽.the user searches for the source seller "Vee"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:69)
+	at Pages.ProcessOpportunity.categoryPrice(ProcessOpportunity.java:184)
+	at Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_selects_the_category_price_as(ProcessOpportunityDefination.java:94)
+	at ✽.the user selects the category price as "120"(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:86)
 </textarea>
       
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user edits the cost price to "100"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user searches for the source seller "Vee"</span>
+      <div>Step skipped
       </div>
                   </div>
                   <div class="step skip-bg">
@@ -602,27 +741,17 @@ eventsCount: 5,
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And the user edits the cost price to "100"</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>When the user selects the category price as "150"</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
                     <span>And the user saves the opportunity</span>
       <div>Step skipped
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And the opportunity is processed to the Category team for pricing</span>
+                    <span>When Sales team clicks on the price awaiting section</span>
       <div>Step skipped
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And the user performs the category user test with Category team "Mfg Category"</span>
+                    <span>And the user selected the category user "Category Test user"</span>
       <div>Step skipped
       </div>
                   </div>
@@ -632,66 +761,12 @@ eventsCount: 5,
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And the user saves the opportunity</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step fail-bg">
-                    <span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
-	at AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(ApplicationsHoocks.java:43)
-</textarea>
-      
-      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="53"><span class="badge log fail-bg mr-2">Fail</span>Sales team confirms the customer accepted price</div>
-      </div>
-    </div>
-        <div class="scenario_outline ">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="54"><span class="badge log fail-bg mr-2">Fail</span>Sales team confirms the customer accepted price</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 ">
-                  <div class="step fail-bg">
-                    <span>When the user clicks on the process opportunity button</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
-	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
-	at Pages.ProcessOpportunity.processOpportunitybutton(ProcessOpportunity.java:129)
-	at Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_clicks_on_the_process_opportunity_button(ProcessOpportunityDefination.java:39)
-	at ✽.the user clicks on the process opportunity button(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:86)
-</textarea>
-      
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>When user sets the customer-accepted price to "160"</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>And the user saves the opportunity</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
                     <span>And the user verifies the customer-accepted price</span>
       <div>Step skipped
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And the user saves the opportunity for sales team</span>
+                    <span>And the user saves the opportunity</span>
       <div>Step skipped
       </div>
                   </div>
@@ -711,14 +786,14 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="61"><span class="badge log fail-bg mr-2">Fail</span>User request PI to Category team</div>
+        <div class="node" id="76"><span class="badge log fail-bg mr-2">Fail</span>User selects the credit program on the Credit program on Opportunity page</div>
       </div>
     </div>
         <div class="scenario_outline ">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="62"><span class="badge log fail-bg mr-2">Fail</span>User request PI to Category team</div>
+                  <div class="node" id="77"><span class="badge log fail-bg mr-2">Fail</span>User selects the credit program on the Credit program on Opportunity page</div>
                 </div>
               </div>
               <div class="card-body mt-3 ">
@@ -729,14 +804,62 @@ eventsCount: 5,
 	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
 	at Pages.ProcessOpportunity.processOpportunitybutton(ProcessOpportunity.java:129)
 	at Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_clicks_on_the_process_opportunity_button(ProcessOpportunityDefination.java:39)
-	at ✽.the user clicks on the process opportunity button(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:97)
+	at ✽.the user clicks on the process opportunity button(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:102)
 </textarea>
       
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>When the user saves the opportunity</span>
+                    <span>And the user selects to edit the opportunity</span>
       <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And user sets the customer-accepted price to "150"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user saves the opportunity</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
+	at AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(ApplicationsHoocks.java:43)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="83"><span class="badge log fail-bg mr-2">Fail</span>User request PI to Category team</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="84"><span class="badge log fail-bg mr-2">Fail</span>User request PI to Category team</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>When the user verifies the customer-accepted price</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
+	at Pages.ProcessOpportunity.verifyPriceCustomer(ProcessOpportunity.java:288)
+	at Stepdefination.Ordercreation.CustomerPricingSteps.the_user_verifies_the_customer_accepted_price(CustomerPricingSteps.java:32)
+	at ✽.the user verifies the customer-accepted price(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:112)
+</textarea>
+      
       </div>
                   </div>
                   <div class="step skip-bg">
@@ -745,7 +868,7 @@ eventsCount: 5,
       </div>
                   </div>
                   <div class="step skip-bg">
-                    <span>And the user performs the category user test with Category team "Mfg Category"</span>
+                    <span>And the user selected the category user "Category Test user"</span>
       <div>Step skipped
       </div>
                   </div>
@@ -770,31 +893,21 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="69"><span class="badge log fail-bg mr-2">Fail</span>User request PI to Seller team</div>
+        <div class="node" id="90"><span class="badge log fail-bg mr-2">Fail</span>User request PI to Seller team</div>
       </div>
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step fail-bg" title="Stepdefination.Ordercreation.RequestPiToSellerSteps.userProcessedOpportunity()">
-                <span>Given User processed opportunity to send PI to seller</span>
+              <div class="step fail-bg" title="Stepdefination.Ordercreation.RequestPiToSellerSteps.userRequestedSellerToPI()">
+                <span>Then the user requests PI to the seller</span>
       <div>
         <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
 	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
 	at Pages.ProcessOpportunity.requestPItoSeller(ProcessOpportunity.java:324)
-	at Stepdefination.Ordercreation.RequestPiToSellerSteps.userProcessedOpportunity(RequestPiToSellerSteps.java:17)
-	at ✽.User processed opportunity to send PI to seller(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:108)
+	at Stepdefination.Ordercreation.RequestPiToSellerSteps.userRequestedSellerToPI(RequestPiToSellerSteps.java:30)
+	at ✽.the user requests PI to the seller(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:123)
 </textarea>
       
-      </div>
-              </div>
-              <div class="step skip-bg" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_saves_the_opportunity()">
-                <span>When the user saves the opportunity</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="Stepdefination.Ordercreation.RequestPiToSellerSteps.userRequestedSellerToPI()">
-                <span>Then the user requests PI to the seller</span>
-      <div>Step skipped
       </div>
               </div>
               <div class="step skip-bg" title="Stepdefination.Plant.OpprtunityPageSteps.saveTheOpportunitypage()">
@@ -802,45 +915,8 @@ eventsCount: 5,
       <div>Step skipped
       </div>
               </div>
-              <div class="step fail-bg" title="AFTER">
-                <span>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "this.driver" is null
-	at AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(ApplicationsHoocks.java:43)
-</textarea>
-      
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="75"><span class="badge log fail-bg mr-2">Fail</span>User updates the seller PI and sends it to the seller</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step fail-bg" title="Stepdefination.Ordercreation.ChooseSellerPIsteps.userNavigatesToFilePage()">
-                <span>Given the user navigates to the file page</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "Utils.Functionalities.wait" is null
-	at Utils.Functionalities.waitLocatedXpath(Functionalities.java:149)
-	at Pages.AccountPage.filePage(AccountPage.java:89)
-	at Stepdefination.Ordercreation.ChooseSellerPIsteps.userNavigatesToFilePage(ChooseSellerPIsteps.java:13)
-	at ✽.the user navigates to the file page(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:114)
-</textarea>
-      
-      </div>
-              </div>
-              <div class="step skip-bg" title="Stepdefination.Ordercreation.ChooseSellerPIsteps.userChoosesSellerPI()">
-                <span>And the user chooses the seller PI</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="Stepdefination.Ordercreation.ChooseSellerPIsteps.userSetsSellerPI()">
-                <span>And the user sets the seller PI</span>
+              <div class="step skip-bg" title="Stepdefination.Ordercreation.SalesToCategoryPricingSteps.stagePrinting()">
+                <span>Then The stage of opportunity will be printed</span>
       <div>Step skipped
       </div>
               </div>
@@ -859,53 +935,140 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="80"><span class="badge log fail-bg mr-2">Fail</span>User creates an order, captures the subtotal, and order number</div>
+        <div class="node" id="95"><span class="badge log fail-bg mr-2">Fail</span>Validate Credit Information for the Selected Program</div>
       </div>
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step fail-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userIsOnAccountPage()">
-                <span>Given the user is on the account page for order creation</span>
+              <div class="step fail-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_amount_from_the_opportunity_page()">
+                <span>When the user should fetch the Credit Amount from the Opportunity page</span>
       <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.navigate()" because the return value of "Utils.BrowsserSetup.getDriver()" is null
-	at Stepdefination.Ordercreation.CreateOrderPageSteps.userIsOnAccountPage(CreateOrderPageSteps.java:27)
-	at ✽.the user is on the account page for order creation(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/UatConstruct.feature:120)
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "Utils.Functionalities.driver" is null
+	at Utils.Functionalities.xpathELem(Functionalities.java:140)
+	at Pages.OpportunityCreditPage.CreditAmount(OpportunityCreditPage.java:63)
+	at Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_amount_from_the_opportunity_page(OpportunityCreditSteps.java:36)
+	at ✽.the user should fetch the Credit Amount from the Opportunity page(file:///C:/Users/V_Ankit.Sharma/Downloads/erp-flow-checker-QA-3-cash_and_carry_portal/SF_Op53_43/src/test/resources/features/CreditModuleEndToEndTesting.feature:129)
 </textarea>
       
       </div>
               </div>
-              <div class="step skip-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userClicksOnCreateOrderButton()">
-                <span>When the user clicks on the create order button</span>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_approved_credit_days_from_the_opportunity_page()">
+                <span>And the user should fetch the Approved Credit Days from the Opportunity page</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userCapturesSubtotalForOrder()">
-                <span>And the user captures the subtotal for the order</span>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_available_from_the_opportunity_page()">
+                <span>And the user should fetch the Credit Available from the Opportunity page</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userPrintsSubtotal()">
-                <span>Then the user prints the subtotal and indicates it as the total value for the order</span>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_days_from_the_opportunity_page()">
+                <span>And the user should fetch the Credit Days from the Opportunity page</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userClicksOnCreateOrderButtonForCoils()">
-                <span>And the user clicks on the button to create an order for coils</span>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_program_name_from_the_opportunity_page()">
+                <span>And the user should fetch the Credit Program Name from the Opportunity page</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userCapturesOrderNumber()">
-                <span>And the user captures the order number</span>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_required_from_the_opportunity_page()">
+                <span>And the user should fetch the Credit Required from the Opportunity page</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userPrintsOrderNumber()">
-                <span>Then the user prints the order number</span>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_utilised_from_the_opportunity_page()">
+                <span>And the user should fetch the Credit Utilised from the Opportunity page</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.reportTime()">
-                <span>And the date and time of the report is given</span>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_blocked_limit_from_the_opportunity_page()">
+                <span>And the user should fetch the Blocked Limit from the Opportunity page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_program_credit_from_the_opportunity_page()">
+                <span>And the user should fetch the Program Credit from the Opportunity page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_expiry_date_from_the_opportunity_page()">
+                <span>And the user should fetch the Credit Expiry Date from the Opportunity page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_credit_program_type_from_the_opportunity_page()">
+                <span>And the user should fetch the Credit Program Type from the Opportunity page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_penal_interest_from_the_opportunity_page()">
+                <span>And the user should fetch the Penal Interest from the Opportunity page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_user_should_fetch_the_api_response_for_the_selected_credit_program()">
+                <span>And the user should fetch the API response for the selected Credit Program</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_amount_from_the_opportunity_page_should_match_the_credit_amount_in_the_api_response()">
+                <span>Then the Credit Amount from the Opportunity page should match the Credit Amount in the API response</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_approved_credit_days_from_the_opportunity_page_should_match_the_approved_credit_days_in_the_api_response()">
+                <span>And the Approved Credit Days from the Opportunity page should match the Approved Credit Days in the API response</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_available_from_the_opportunity_page_should_match_the_credit_available_in_the_api_response()">
+                <span>And the Credit Available from the Opportunity page should match the Credit Available in the API response</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_days_from_the_opportunity_page_should_match_the_credit_days_in_the_api_response()">
+                <span>And the Credit Days from the Opportunity page should match the Credit Days in the API response</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_program_name_from_the_opportunity_page_should_match_the_credit_program_name_in_the_api_response()">
+                <span>And the Credit Program Name from the Opportunity page should match the Credit Program Name in the API response</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_required_from_the_opportunity_page_should_match_the_credit_required_in_the_api_response()">
+                <span>And the Credit Required from the Opportunity page should match the Credit Required in the API response</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_utilised_from_the_opportunity_page_should_match_the_credit_utilised_in_the_api_response()">
+                <span>And the Credit Utilised from the Opportunity page should match the Credit Utilised in the API response</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_blocked_limit_from_the_opportunity_page_should_match_the_blocked_limit_in_the_api_response()">
+                <span>And the Blocked Limit from the Opportunity page should match the Blocked Limit in the API response</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_program_credit_from_the_opportunity_page_should_match_the_program_credit_in_the_api_response()">
+                <span>And the Program Credit from the Opportunity page should match the Program Credit in the API response</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_expiry_date_from_the_opportunity_page_should_match_the_credit_expiry_date_in_the_api_response()">
+                <span>And the Credit Expiry Date from the Opportunity page should match the Credit Expiry Date in the API response</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_credit_program_type_from_the_opportunity_page_should_match_the_credit_program_type_in_the_api_response()">
+                <span>And the Credit Program Type from the Opportunity page should match the Credit Program Type in the API response</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="Stepdefination.CreditModule.OpportunityCreditSteps.the_penal_interest_from_the_opportunity_page_should_match_the_penal_interest_in_the_api_response()">
+                <span>And the Penal Interest from the Opportunity page should match the Penal Interest in the API response</span>
       <div>Step skipped
       </div>
               </div>
@@ -946,142 +1109,6 @@ eventsCount: 5,
 <span class="meta">
 <span class='badge log badge-danger'>11</span>
 </span>
-<p class="name">@uatconst</p>
-<p class="duration text-sm">11 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@uatconst</h4>
-<span status="fail" class='badge log badge-danger'>11 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='3'>Setting up enviroment for the the project</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Setting up enviroment for the the project</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='8'>User logs in to Salesforce</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User logs in to Salesforce</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='14'>Sales team Went to the User account and to the site</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team Went to the User account and to the site</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='22'>Sales team creates a cement opportunity on a site</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team creates a cement opportunity on a site</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='30'>User processes the opportunities and set the delivery process</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User processes the opportunities and set the delivery process</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='41'>Sales team select the seller and gave the cost price</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team select the seller and gave the cost price</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='54'>Sales team confirms the customer accepted price</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team confirms the customer accepted price</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='62'>User request PI to Category team</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User request PI to Category team</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='69'>User request PI to Seller team</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User request PI to Seller team</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='75'>User updates the seller PI and sends it to the seller</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User updates the seller PI and sends it to the seller</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='80'>User creates an order, captures the subtotal, and order number</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User creates an order, captures the subtotal, and order number</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>11</span>
-</span>
 <p class="name">@regression</p>
 <p class="duration text-sm">11 tests</p>
 </div>
@@ -1101,111 +1128,247 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:37 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='3'>Setting up enviroment for the the project</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Setting up enviroment for the the project</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.Setting up enviroment for the the project</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='8'>User logs in to Salesforce</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User logs in to Salesforce</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User logs in to Salesforce</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='14'>Sales team Went to the User account and to the site</a>
+<a href="#" class="linked" test-id='1' id='14'>User navigates to a specific account from the homepage</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team Went to the User account and to the site</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User navigates to a specific account from the homepage</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='22'>Sales team creates a cement opportunity on a site</a>
+<a href="#" class="linked" test-id='1' id='21'>Fetching Credit Program Data and Storing it for Validation</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team creates a cement opportunity on a site</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.Fetching Credit Program Data and Storing it for Validation</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='30'>User processes the opportunities and set the delivery process</a>
+<a href="#" class="linked" test-id='1' id='39'>User creates an opportunity with a specific product and quantity</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User processes the opportunities and set the delivery process</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User creates an opportunity with a specific product and quantity</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='41'>Sales team select the seller and gave the cost price</a>
+<a href="#" class="linked" test-id='1' id='49'>User processes an opportunity to the sales team and fills required documents</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team select the seller and gave the cost price</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User processes an opportunity to the sales team and fills required documents</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='54'>Sales team confirms the customer accepted price</a>
+<a href="#" class="linked" test-id='1' id='63'>User sends the file to pricing to the category team</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team confirms the customer accepted price</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User sends the file to pricing to the category team</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='62'>User request PI to Category team</a>
+<a href="#" class="linked" test-id='1' id='77'>User selects the credit program on the Credit program on Opportunity page</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User request PI to Category team</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User selects the credit program on the Credit program on Opportunity page</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='69'>User request PI to Seller team</a>
+<a href="#" class="linked" test-id='1' id='84'>User request PI to Category team</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User request PI to Seller team</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User request PI to Category team</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='75'>User updates the seller PI and sends it to the seller</a>
+<a href="#" class="linked" test-id='1' id='90'>User request PI to Seller team</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User updates the seller PI and sends it to the seller</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User request PI to Seller team</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:39 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='80'>User creates an order, captures the subtotal, and order number</a>
+<a href="#" class="linked" test-id='1' id='95'>Validate Credit Information for the Selected Program</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User creates an order, captures the subtotal, and order number</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.Validate Credit Information for the Selected Program</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>11</span>
+</span>
+<p class="name">@newCreditTest</p>
+<p class="duration text-sm">11 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@newCreditTest</h4>
+<span status="fail" class='badge log badge-danger'>11 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Setting up enviroment for the the project</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.Setting up enviroment for the the project</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>User logs in to Salesforce</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.User logs in to Salesforce</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='14'>User navigates to a specific account from the homepage</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.User navigates to a specific account from the homepage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='21'>Fetching Credit Program Data and Storing it for Validation</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.Fetching Credit Program Data and Storing it for Validation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='39'>User creates an opportunity with a specific product and quantity</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.User creates an opportunity with a specific product and quantity</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='49'>User processes an opportunity to the sales team and fills required documents</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.User processes an opportunity to the sales team and fills required documents</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='63'>User sends the file to pricing to the category team</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.User sends the file to pricing to the category team</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='77'>User selects the credit program on the Credit program on Opportunity page</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.User selects the credit program on the Credit program on Opportunity page</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='84'>User request PI to Category team</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.User request PI to Category team</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='90'>User request PI to Seller team</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.User request PI to Seller team</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='95'>Validate Credit Information for the Selected Program</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.Validate Credit Information for the Selected Program</span>
 </div>
 </td>
 </tr>
@@ -1218,12 +1381,12 @@ eventsCount: 5,
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@tmt</p>
+<p class="name">@smoke</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@tmt</h4>
+<h4>@smoke</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -1237,11 +1400,11 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='22'>Sales team creates a cement opportunity on a site</a>
+<a href="#" class="linked" test-id='1' id='14'>User navigates to a specific account from the homepage</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team creates a cement opportunity on a site</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User navigates to a specific account from the homepage</span>
 </div>
 </td>
 </tr>
@@ -1289,201 +1452,201 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='9'>When the user enters the username "ankit.sharma@jsw.in.uat"</a>
+<a href="#" class="linked" test-id='1' id='9'>When the user enters the username "v_ankit.sharma@jsw.in"</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User logs in to Salesforce.When the user enters the username "ankit.sharma@jsw.in.uat"</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User logs in to Salesforce.When the user enters the username "v_ankit.sharma@jsw.in"</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='12'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User logs in to Salesforce.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User logs in to Salesforce.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='15'>Given the user is on the home page</a>
+<a href="#" class="linked" test-id='1' id='15'>Given the user opens the search tab</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team Went to the User account and to the site.Given the user is on the home page</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User navigates to a specific account from the homepage.Given the user opens the search tab</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='20'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
+<a href="#" class="linked" test-id='1' id='19'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team Went to the User account and to the site.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User navigates to a specific account from the homepage.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='23'>Given they creates an opportunity</a>
+<a href="#" class="linked" test-id='1' id='23'>When the user goes to the Approved Credit Program tab</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team creates a cement opportunity on a site.Given they creates an opportunity</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.Fetching Credit Program Data and Storing it for Validation.When the user goes to the Approved Credit Program tab</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='28'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
+<a href="#" class="linked" test-id='1' id='37'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team creates a cement opportunity on a site.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.Fetching Credit Program Data and Storing it for Validation.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='32'>When the user clicks on the process opportunity button</a>
+<a href="#" class="linked" test-id='1' id='41'>When the user creates a quick opportunity</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User processes the opportunities and set the delivery process.When the user clicks on the process opportunity button</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User creates an opportunity with a specific product and quantity.When the user creates a quick opportunity</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='39'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
+<a href="#" class="linked" test-id='1' id='47'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User processes the opportunities and set the delivery process.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User creates an opportunity with a specific product and quantity.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='42'>When the user searches for the source seller "Vee"</a>
+<a href="#" class="linked" test-id='1' id='51'>When the user clicks on the process opportunity button</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team select the seller and gave the cost price.When the user searches for the source seller "Vee"</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User processes an opportunity to the sales team and fills required documents.When the user clicks on the process opportunity button</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='52'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
+<a href="#" class="linked" test-id='1' id='61'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team select the seller and gave the cost price.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User processes an opportunity to the sales team and fills required documents.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='55'>When the user clicks on the process opportunity button</a>
+<a href="#" class="linked" test-id='1' id='64'>When the user selects the category price as "120"</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team confirms the customer accepted price.When the user clicks on the process opportunity button</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User sends the file to pricing to the category team.When the user selects the category price as "120"</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='60'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
+<a href="#" class="linked" test-id='1' id='75'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.Sales team confirms the customer accepted price.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User sends the file to pricing to the category team.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='63'>When the user clicks on the process opportunity button</a>
+<a href="#" class="linked" test-id='1' id='78'>When the user clicks on the process opportunity button</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User request PI to Category team.When the user clicks on the process opportunity button</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User selects the credit program on the Credit program on Opportunity page.When the user clicks on the process opportunity button</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='68'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
+<a href="#" class="linked" test-id='1' id='82'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User request PI to Category team.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User selects the credit program on the Credit program on Opportunity page.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='70'>Given User processed opportunity to send PI to seller</a>
+<a href="#" class="linked" test-id='1' id='85'>When the user verifies the customer-accepted price</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User request PI to Seller team.Given User processed opportunity to send PI to seller</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User request PI to Category team.When the user verifies the customer-accepted price</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='74'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User request PI to Seller team.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='76'>Given the user navigates to the file page</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User updates the seller PI and sends it to the seller.Given the user navigates to the file page</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='79'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User updates the seller PI and sends it to the seller.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='81'>Given the user is on the account page for order creation</a>
-<div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User creates an order, captures the subtotal, and order number.Given the user is on the account page for order creation</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>12:12:30 PM</td>
+<td>12:40:38 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='89'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
 <div class="">
-<span class="badge badge-default">Create Order for Construct account on UAT.User creates an order, captures the subtotal, and order number.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+<span class="badge badge-default">Zoho regression on Boarding for testing.User request PI to Category team.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='91'>Then the user requests PI to the seller</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.User request PI to Seller team.Then the user requests PI to the seller</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='94'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.User request PI to Seller team.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='96'>When the user should fetch the Credit Amount from the Opportunity page</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.Validate Credit Information for the Selected Program.When the user should fetch the Credit Amount from the Opportunity page</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:40:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='121'>AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</a>
+<div class="">
+<span class="badge badge-default">Zoho regression on Boarding for testing.Validate Credit Information for the Selected Program.AppHoocks.ApplicationsHoocks.takeScraenshotOnFailure(io.cucumber.java.Scenario)</span>
 </div>
 </td>
 </tr>
