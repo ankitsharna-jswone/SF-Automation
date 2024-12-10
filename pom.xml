@@ -84,8 +84,8 @@
                             <projectName>Cucumber HTML Reports</projectName>
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <inputDirectory>${project.build.directory}</inputDirectory>
-                            <jsonFiles>
-                                <param>**/cucumber*.json</param>
+                            <jsonFiles> <!-- supports wildcard or name pattern -->
+                                <param>**/*.json</param>
                             </jsonFiles>
                         </configuration>
                     </execution>
