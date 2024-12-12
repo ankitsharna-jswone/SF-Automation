@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import static Utils.BrowsserSetup.getDriver;
 import static Utils.Functionalities.*;
 
 public class HomePage {
@@ -12,8 +13,32 @@ public class HomePage {
     public HomePage(WebDriver driver){
         this.driver = driver;
     }
+    public HomePage(){
+        this.driver = getDriver();
+    }
+
+
+    public void Applauncher(){
+        waitLocatedXpath("//button[@title='App Launcher']");
+        clickingTool(xpathELem("//button[@title='App Launcher']"));
+    }
+
+    public void AppSearchingBox(String search){
+        waitLocatedXpath("//input[@placeholder='Search apps and items...']");
+        xpathELem("//input[@placeholder='Search apps and items...']").sendKeys(search);
+    }
+
+    public void SelectApp(String app){
+
+        waitLocatedXpath("//a[contains(@data-label, '" + app     +"')]");
+        clickingTool(xpathELem("//a[contains(@data-label, '"+ app    +"')]"));
+    }
+
 
     public void openSearchTab(){
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']")));
+        wait.until(ExpectedConditions.stalenessOf(xpathELem("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']")));
+        waitLocatedXpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']");
         WebElement SearchBox = driver.findElement(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']"));
         waitFor(SearchBox);
         JavaElemClick(SearchBox);
@@ -36,13 +61,26 @@ public class HomePage {
 
 
 
-    public void searchItem(String search){
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']")));
-        WebElement SearchBox = driver.findElement(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']"));
-        clickingTool(SearchBox);
-        WebElement SearchTab = driver.findElement(By.xpath("//input[@class='slds-input' and @part='input' and @placeholder='Search...']"));
-        SearchTab.sendKeys(search); //CHAKRESH INDUSTRIES
+    public void searchItem(String search) {
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']")));
+            waitLocatedXpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']");
+            WebElement SearchBox = driver.findElement(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']"));
+            waitFor(SearchBox);
+            JavaElemClick(SearchBox);
 
+
+        } catch (Exception e) {
+
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']")));
+            waitLocatedXpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']");
+            WebElement SearchBox = driver.findElement(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']"));
+            waitFor(SearchBox);
+            JavaElemClick(SearchBox);
+        }
+
+        WebElement SearchTab = driver.findElement(By.xpath("//input[@class='slds-input' and @part='input' and @placeholder='Search...']"));
+        SearchTab.sendKeys(search);
     }
 
     public void searchAccountClick(String search){

@@ -35,13 +35,6 @@
             <version>7.20.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-bom</artifactId>
-            <version>7.20.1</version> <!-- Use the desired BOM version -->
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
@@ -51,17 +44,14 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.20.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
@@ -91,6 +81,14 @@
             <version>5.9.3</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.junit/junit5-engine -->
         <dependency>
@@ -143,23 +141,12 @@
             <version>5.1.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.9.0</version>
-            <scope>test</scope>
-        </dependency>
+
         <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber6-adapter -->
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber6-adapter</artifactId>
             <version>2.1.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>5.0.4</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/me.jvt.cucumber/reporting-plugin -->
@@ -186,12 +173,7 @@
             <artifactId>allure-cucumber7-jvm</artifactId>
             <version>2.20.1</version>
         </dependency>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>24.1.0</version>
-            <scope>compile</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
@@ -206,12 +188,6 @@
             <version>2.10.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.17.1</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -245,19 +221,42 @@
             <artifactId>cucumber-bom</artifactId>
             <version>7.20.1</version>
             <type>pom</type>
-            <scope>import</scope>
+            <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.5.12</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.16</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.13.0</version>
+        </dependency>
+
+
 
 
 
     </dependencies>
 
     <build>
+        <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+        <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.10.1</version>
                 <configuration>
                     <source>18</source>
                     <target>18</target>
@@ -272,14 +271,14 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.2</version>
                 <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <parallel>classes</parallel>
-                    <threadCount>4</threadCount>
-                    <perCoreThreadCount>true</perCoreThreadCount>
-                    <useUnlimitedThreads>true</useUnlimitedThreads>
+<!--                    <parallel>classes</parallel>-->
+<!--                    <threadCount>4</threadCount>-->
+<!--                    <perCoreThreadCount>true</perCoreThreadCount>-->
+<!--                    <useUnlimitedThreads>true</useUnlimitedThreads>-->
                     <includes>
-                        <include>**/Runner.java</include>
+                        <include>**/TestRunner.java</include>
                     </includes>
+
                     <reportsDirectory>${project.build.directory}/cucumber-reports</reportsDirectory>
                     <systemPropertyVariables>
                         <cucumber.junit-platform.naming-strategy>long</cucumber.junit-platform.naming-strategy>
@@ -323,7 +322,7 @@
 
 <!--                            &lt;!&ndash; Additional configuration for the report generation &ndash;&gt;-->
 <!--                            <buildNumber>1.0.0</buildNumber> &lt;!&ndash; Optional: To specify the version number of the build &ndash;&gt;-->
-<!--                            <projectDescription>Cucumber HTML report generated from the test results</projectDescription> &lt;!&ndash; Optional: Add project description &ndash;&gt;-->
+<!--                            <projectDescrimvn -Dtest=TestRunner testption>Cucumber HTML report generated from the test results</projectDescription> &lt;!&ndash; Optional: Add project description &ndash;&gt;-->
 <!--                            <outputName>cucumber-report</outputName> &lt;!&ndash; Optional: Specify the name of the output HTML report &ndash;&gt;-->
 <!--                        </configuration>-->
 <!--                    </execution>-->
@@ -346,7 +345,7 @@
                             <perCoreThreadCount>true</perCoreThreadCount>
                             <useUnlimitedThreads>true</useUnlimitedThreads>
                             <includes>
-                                <include>**/Runner.java</include>
+                                <include>**/TestRunner.java</include>
                             </includes>
                             <testFailureIgnore>true</testFailureIgnore>
                             <systemPropertyVariables>
