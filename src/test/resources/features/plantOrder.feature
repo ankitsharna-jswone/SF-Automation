@@ -18,8 +18,18 @@ Feature: Create Plant Supply Order in SF using this Script
       | ankit.sharma@jsw.in.uat | @Bhuvi176 | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 
 
-  Scenario Outline: User navigates to a specific account from the homepage
+  Scenario Outline: User changes the App According to the Profile
+    Given User clicks on the App section of Salesforce
+    And User searches for the "<App>" for work
+    And User selects the "<App>"
+    Examples:
+      | App |
+      |MFG |
+    #MSME Construct #MFG #Retail
 
+
+  Scenario Outline: User navigates to a specific account from the homepage
+    Given the user is on the home page
     When the user searches for the item "<Account>"
     And the user clicks on the search result for "<Account>" accounts
     And the user opens the account "<Account>"

@@ -1,0 +1,1197 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Sales Force Automation</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Build 1</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Dec 13, 2024 17:45:16</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Dec 13, 2024 17:45:16</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Dec 13, 2024 17:46:52</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>13</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>71</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Create Plant Supply Order in SF using this Script":94.527
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@regression</td>
+<td>13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@plant</td>
+<td>13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>version</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Engineer</td>
+<td>Ankit</td>
+</tr>
+<tr>
+<td>os</td>
+<td>windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 13,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 71,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@regression</a><a class="dropdown-item" href="#">@plant</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Plant Supply Order in SF using this Script</p>
+            <p class="text-sm">
+              <span>5:45:17 PM</span> / <span>00:01:34:527</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Create Plant Supply Order in SF using this Script</h5>
+<span class='badge badge-success'>12.13.2024 5:45:17 PM</span>
+<span class='badge badge-danger'>12.13.2024 5:46:52 PM</span>
+<span class='badge badge-default'>00:01:34:527</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Setting up enviroment for the the project</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Setting up enviroment for the the project</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Set the browser and driver for the automation "headless"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User passes driver to the other pages and files</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="7"><span class="badge log pass-bg mr-2">Pass</span>User logs in to Salesforce</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>User logs in to Salesforce</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user navigates to the Salesforce login page "https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user enters the username "ankit.sharma@jsw.in.uat"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user enters the password "@Bhuvi176"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user clicks on the login button</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>User changes the App According to the Profile</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>User changes the App According to the Profile</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User clicks on the App section of Salesforce</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User searches for the "MFG" for work</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User selects the "MFG"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>User navigates to a specific account from the homepage</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>User navigates to a specific account from the homepage</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is on the home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user searches for the item "OBEROI REALTY LTD"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user clicks on the search result for "OBEROI REALTY LTD" accounts</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user opens the account "OBEROI REALTY LTD"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>User creates an opportunity with a specific product and quantity</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="28"><span class="badge log pass-bg mr-2">Pass</span>User creates an opportunity with a specific product and quantity</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is on the account page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a quick opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user adds a new opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user searches for the product "MS HR Coil 2062:2011 E250A"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user selects the product "MS HR Coil 2062:2011 E250A"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user sets the quantity to "5"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user sets the thickness to "10"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user selects the width as "1500"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user saves the opportunity</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="39"><span class="badge log pass-bg mr-2">Pass</span>User processes an opportunity to the sales team and fills required documents</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="40"><span class="badge log pass-bg mr-2">Pass</span>User processes an opportunity to the sales team and fills required documents</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is on the opportunity processing page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks on the process opportunity button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user selects to edit the opportunity</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user edits the delivery type to "Self pickup"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user selected the Delivery address "A-104507"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user edits the delivery time to "2" days</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user edits the special message to "Urgent delivery needed"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user searches for the source seller "tuka rajat seller"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user selects the source seller "tuka rajat seller"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user Selects the source seller type "Marketplace"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user edits the cost price to "100"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user saves the opportunity</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="54"><span class="badge log pass-bg mr-2">Pass</span>User sends the file to pricing to the category team</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="55"><span class="badge log pass-bg mr-2">Pass</span>User sends the file to pricing to the category team</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When Sales team clicks on the price awaiting section</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user selected the category user "Mfg Category"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user saves the category</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user saves the opportunity</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="61"><span class="badge log pass-bg mr-2">Pass</span>User updates the customer-accepted price after receiving pricing from the category</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="62"><span class="badge log pass-bg mr-2">Pass</span>User updates the customer-accepted price after receiving pricing from the category</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user clicks on the process opportunity button for pricing</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on Override prices button as True</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User selects the Reason for override "Price not available"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user selects the category price as "110"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sets the customer-accepted price to "120"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user saves the opportunity for pricing</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user verifies the customer-accepted price</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user saves the opportunity for pricing</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="72"><span class="badge log pass-bg mr-2">Pass</span>User accepted all SKU's</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.HomePageNavigationSteps.acceptAllSKU()">
+                <span>When user accepted All SKUs</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.HomePageNavigationSteps.acceptSKUproceed()">
+                <span>And user click on proceed button</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="76"><span class="badge log pass-bg mr-2">Pass</span>User check the TDC and completes TDC validations</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Stepdefination.Plant.OpprtunityPageSteps.clickEditbutton()">
+                <span>Given User click edit button to edit for TDC upload</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Plant.OpprtunityPageSteps.checkTheTDCValidation()">
+                <span>And User checked the TDC uploaded</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Plant.OpprtunityPageSteps.checkPOupload()">
+                <span>And User checked PO Uploaded</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Plant.OpprtunityPageSteps.saveTheOpportunityonOpportunityPage()">
+                <span>Then user saved the changes in Opportunity page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="82"><span class="badge log pass-bg mr-2">Pass</span>User mark the Supply Check for the order</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="83"><span class="badge log pass-bg mr-2">Pass</span>User mark the Supply Check for the order</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User click edit button to edit for supply</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User check the TDC sent to customer</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User check the TDC sent to Plant</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User check the TDC validation</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Check the feasibility of the order</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Choose yes for the feasibility</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Then User filled the advance % "40"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user saved the changes in Opportunity page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="93"><span class="badge log pass-bg mr-2">Pass</span>User request PI to Seller team</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.ProcessOpportunityDefination.the_user_clicks_on_the_process_opportunity_button()">
+                <span>When the user clicks on the process opportunity button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.HrCoilDefination.the_user_saves_the_opportunity()">
+                <span>When the user saves the opportunity</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.RequestPiToSellerSteps.userRequestedSellerToPI()">
+                <span>Then the user requests PI to the seller</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.RequestPiToSellerSteps.userSaved()">
+                <span>And the user saves the final order</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="99"><span class="badge log pass-bg mr-2">Pass</span>User creates an order, captures the subtotal, and order number</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userIsOnAccountPage()">
+                <span>Given the user is on the account page for order creation</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userClicksOnCreateOrderButton()">
+                <span>When the user clicks on the create order button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userCapturesSubtotalForOrder()">
+                <span>And the user captures the subtotal for the order</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userPrintsSubtotal()">
+                <span>Then the user prints the subtotal and indicates it as the total value for the order</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userClicksOnCreateOrderButtonForCoils()">
+                <span>And the user clicks on the button to create an order for coils</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userCapturesOrderNumber()">
+                <span>And the user captures the order number</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Stepdefination.Ordercreation.CreateOrderPageSteps.userPrintsOrderNumber()">
+                <span>Then the user prints the order number</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>13</span>
+</span>
+<p class="name">@regression</p>
+<p class="duration text-sm">13 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@regression</h4>
+<span status="pass" class='badge log pass-bg'>13 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Setting up enviroment for the the project</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.Setting up enviroment for the the project</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>User logs in to Salesforce</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User logs in to Salesforce</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>User changes the App According to the Profile</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User changes the App According to the Profile</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='21'>User navigates to a specific account from the homepage</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User navigates to a specific account from the homepage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='28'>User creates an opportunity with a specific product and quantity</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User creates an opportunity with a specific product and quantity</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='40'>User processes an opportunity to the sales team and fills required documents</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User processes an opportunity to the sales team and fills required documents</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='55'>User sends the file to pricing to the category team</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User sends the file to pricing to the category team</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='62'>User updates the customer-accepted price after receiving pricing from the category</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User updates the customer-accepted price after receiving pricing from the category</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='72'>User accepted all SKU's</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User accepted all SKU's</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='76'>User check the TDC and completes TDC validations</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User check the TDC and completes TDC validations</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='83'>User mark the Supply Check for the order</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User mark the Supply Check for the order</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='93'>User request PI to Seller team</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User request PI to Seller team</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='99'>User creates an order, captures the subtotal, and order number</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User creates an order, captures the subtotal, and order number</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>13</span>
+</span>
+<p class="name">@plant</p>
+<p class="duration text-sm">13 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@plant</h4>
+<span status="pass" class='badge log pass-bg'>13 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Setting up enviroment for the the project</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.Setting up enviroment for the the project</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>User logs in to Salesforce</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User logs in to Salesforce</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>User changes the App According to the Profile</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User changes the App According to the Profile</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='21'>User navigates to a specific account from the homepage</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User navigates to a specific account from the homepage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='28'>User creates an opportunity with a specific product and quantity</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User creates an opportunity with a specific product and quantity</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='40'>User processes an opportunity to the sales team and fills required documents</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User processes an opportunity to the sales team and fills required documents</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:45:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='55'>User sends the file to pricing to the category team</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User sends the file to pricing to the category team</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='62'>User updates the customer-accepted price after receiving pricing from the category</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User updates the customer-accepted price after receiving pricing from the category</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='72'>User accepted all SKU's</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User accepted all SKU's</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='76'>User check the TDC and completes TDC validations</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User check the TDC and completes TDC validations</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='83'>User mark the Supply Check for the order</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User mark the Supply Check for the order</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='93'>User request PI to Seller team</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User request PI to Seller team</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:46:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='99'>User creates an order, captures the subtotal, and order number</a>
+<div class="">
+<span class="badge badge-default">Create Plant Supply Order in SF using this Script.User creates an order, captures the subtotal, and order number</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

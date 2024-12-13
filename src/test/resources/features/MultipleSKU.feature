@@ -1,7 +1,11 @@
 @multi
 Feature: Check Flow of order creation of order for Multiple prodcut SKU
-  Scenario: Setting up enviroment for the the project
-    Given Set the file and driver and configuration
+  Scenario Outline: Setting up enviroment for the the project
+    Given Set the browser and driver for the automation "<Browser>"
+    And User passes driver to the other pages and files
+    Examples:
+      |Browser|
+      | chrome |
 
 
   Scenario Outline: User logs in to Salesforce
@@ -12,6 +16,17 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     Examples:
       | Username            | Password | Link                                                          |
       |v_ankit.sharma@jsw.in| @Ankit123|https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
+
+
+
+  Scenario Outline: User changes the App According to the Profile
+    Given User clicks on the App section of Salesforce
+    And User searches for the "<App>" for work
+    And User selects the "<App>"
+    Examples:
+      | App |
+      |MFG |
+    #MSME Construct #MFG #Retail
 
   Scenario Outline: User navigates to a specific account from the homepage
 
