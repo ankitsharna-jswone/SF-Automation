@@ -17,8 +17,7 @@ import org.junit.runner.RunWith;
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "html:test-output/html/HTMLreport.html",
                 "Listner.CustomCucumberListener"
-        },
-        tags = "@plant"
+        }
 
 )
 public class TestRunner  {

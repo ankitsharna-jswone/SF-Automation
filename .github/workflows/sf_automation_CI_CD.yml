@@ -11,9 +11,13 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Branch or commit to run the workflow on'
+        description: 'Tag to run the workflow on'
         required: true
         default: 'master'
+      tags:
+        description: 'Cucumber tag to run tests with'
+        required: false
+        default: '@plant'
 
 jobs:
   test:
@@ -41,7 +45,7 @@ jobs:
 
       # Run Cucumber Tests
       - name: Run Cucumber Tests
-        run: mvn test -Dtags="@plant" -X
+        run: mvn test -Dtags="${{ github.event.inputs.tags || '@plant' }}"
 
       # Ensure reports directory exists
       - name: Ensure Reports Directory Exists
