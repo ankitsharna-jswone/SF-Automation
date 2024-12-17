@@ -141,7 +141,7 @@ public void setSellerPi() {
     WebElement sellerPI = xpathELem("//span[@title='Seller PI']");
     clickingTool(sellerPI);
 
-    waitLocatedXpath("//button[text()='Save']");
+
     WebElement save = xpathELem("//button[text()='Save']");
     clickingTool(save);
 }
@@ -245,8 +245,8 @@ public boolean checkFIle(String file, List<WebElement> list) {
 
             waitLocatedXpath("(//button[text()='More' and @title='More Tabs'])[2]");
             clickingTool(xpathELem("(//button[text()='More' and @title='More Tabs'])[2]"));
-            waitLocatedXpath("//a[ .//text()='Approved Credit Programs']");
-            clickingTool(xpathELem("//a[ .//text()='Approved Credit Programs']"));
+            waitLocatedXpath("//a[.//*[contains(text(), 'Approved credit programs')]]");
+            clickingTool(xpathELem("//a[.//*[contains(text(), 'Approved credit programs')]]"));
 
 
     }

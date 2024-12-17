@@ -15,21 +15,26 @@ Feature: Zoho regression on Boarding for testing
     And the user clicks on the login button
     Examples:
       | Username                         | Password     | Link                                                                         |
-      | v_ankit.sharma@jsw.in |@Ankit123 | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
+      | ankit.sharma@jsw.in.uat  | @Bhuvi176  | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 
 
-
+  Scenario Outline: User changes the App According to the Profile
+    Given User clicks on the App section of Salesforce
+    And User searches for the "<App>" for work
+    And User selects the "<App>"
+    Examples:
+      | App |
+      |MFG |
 
   @smoke
   Scenario Outline: User navigates to a specific account from the homepage
-
     Given the user opens the search tab
     When the user searches for the item "<Account>"
     And the user clicks on the search result for "<Account>" accounts
     And the user opens the account "<Account>"
     Examples:
       | Account            |
-      | RAHUL KIRANA STORE |
+      | VEDANTA LIMITED - TPP |
 
 
   Scenario Outline: Fetching Credit Program Data and Storing it for Validation
@@ -50,7 +55,7 @@ Feature: Zoho regression on Boarding for testing
     Then the user stores the credit details in a JSON file for future validation "<Credit Program>"
     Examples:
     | Credit Program |
-    | BNPL - Ankit-Credit |
+    |BNPL - JODL-BNPL |
 
 
 
@@ -65,7 +70,7 @@ Feature: Zoho regression on Boarding for testing
     And the user saves the opportunity
     Examples:
       | Product                         | Quantity |
-      | JSW Ordinary Portland Cement 53 | 10       |
+      | JSW Ordinary Portland Cement 53 (OPC 53) | 10       |
 
 
   Scenario Outline: User processes an opportunity to the sales team and fills required documents
@@ -82,7 +87,7 @@ Feature: Zoho regression on Boarding for testing
     And the user edits the special message to "<Special Message>"
     Examples:
       | Delivery Type | Days | Special Message        | Program           | Advance | Address           | Credit Days |
-      | Self pickup   | 2    | Urgent delivery needed | BNPL - Ankit-Credit | 30      | NEAR BAJAJ AGENCY | 5           |
+      | Self pickup   | 2    | Urgent delivery needed | BNPL-JODL-BNPL | 30      | A-104725 | 5           |
 
 
 
@@ -100,7 +105,7 @@ Feature: Zoho regression on Boarding for testing
     And the user saves the opportunity
     Examples:
       | CPrice | Price | Seller | SourceSeller| Category |
-      | 120    | 100    | Vee |    Marketplace        | Category Test user |
+      | 120    | 100    | V K Industrial Corporation Ltd  |    JODL        | Mfg Category  |
 
   Scenario Outline: User selects the credit program on the Credit program on Opportunity page
     When the user clicks on the process opportunity button
@@ -113,20 +118,19 @@ Feature: Zoho regression on Boarding for testing
 
 
   Scenario Outline: User request PI to Category team
-    When the user verifies the customer-accepted price
+#    When the user verifies the customer-accepted price
     When the user requests PI to the category team
     And the user selected the category user "<Category>"
     And the user saves the category user
     Examples:
       | Category |
-      | Category Test user |
+      | Mfg Category |
 
 
 
   Scenario: User request PI to Seller team
     Then the user requests PI to the seller
-    And user saved the opportunity
-    Then The stage of opportunity will be printed
+    And the user saves the opportunity
 
 
   Scenario: Validate Credit Information for the Selected Program
@@ -157,4 +161,20 @@ Feature: Zoho regression on Boarding for testing
     And the Penal Interest from the Opportunity page should match the Penal Interest in the API response
 
 
+  Scenario Outline: User updates the seller PI and sends it to the seller
+    Given the user navigates to the file page
+    And the user chooses the seller PI
+    And the user sets the seller PI
+    Then the stage of the opportunity is now "<Stage>"
+    Examples:
+      | Stage            |
+      | Awaiting Payment |
 
+  Scenario: User creates an order, captures the subtotal, and order number
+    Given the user is on the account page for order creation
+    When the user clicks on the create order button
+    And the user captures the subtotal for the order
+    Then the user prints the subtotal and indicates it as the total value for the order
+    And the user clicks on the button to create an order for coils
+    And the user captures the order number
+    Then the user prints the order number

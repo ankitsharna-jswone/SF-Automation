@@ -41,7 +41,7 @@ public class HomePage {
         waitLocatedXpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']");
         WebElement SearchBox = driver.findElement(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']"));
         waitFor(SearchBox);
-        JavaElemClick(SearchBox);
+        clickingTool(SearchBox);
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='search' and @class= 'slds-input' and @placeholder ='Search...' ]")));
     }
 

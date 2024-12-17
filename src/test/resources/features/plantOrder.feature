@@ -6,7 +6,7 @@ Feature: Create Plant Supply Order in SF using this Script
     And User passes driver to the other pages and files
     Examples:
       |Browser|
-      | headless |
+      | chrome |
 
   Scenario Outline: User logs in to Salesforce
     Given the user navigates to the Salesforce login page "<Link>"

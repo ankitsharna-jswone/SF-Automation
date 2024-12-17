@@ -4,29 +4,39 @@ Feature: Zoho regression on Boarding for testing
   Scenario Outline: Setting up enviroment for the the project
     Given Set the browser and driver for the automation "<Browser>"
     And User passes driver to the other pages and files
-    Given the user navigates to the Salesforce login page "<Link>"
     Examples:
-      | Link                                                          |Browser|
-      | https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ | chrome |
+      |Browser|
+      | chrome |
 
   Scenario Outline: User logs in to Salesforce
+    Given the user navigates to the Salesforce login page "<Link>"
     When the user enters the username "<Username>"
     And the user enters the password "<Password>"
     And the user clicks on the login button
     Examples:
-      | Username            | Password |
-      |v_ankit.sharma@jsw.in| @Ankit123|
+      | Username                         | Password     | Link                                                                         |
+      | ankit.sharma@jsw.in.uat  | @Bhuvi176  | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
+
+
+  Scenario Outline: User changes the App According to the Profile
+    Given User clicks on the App section of Salesforce
+    And User searches for the "<App>" for work
+    And User selects the "<App>"
+    Examples:
+      | App |
+      |MFG |
 
   @smoke
   Scenario Outline: User navigates to a specific account from the homepage
-
     Given the user opens the search tab
     When the user searches for the item "<Account>"
     And the user clicks on the search result for "<Account>" accounts
     And the user opens the account "<Account>"
     Examples:
       | Account  |
-      | RAHUL KIRANA STORE |
+      | VEDANTA LIMITED - TPP |
+
+
 
 
   Scenario Outline: User creates an opportunity with a specific product and quantity
@@ -36,10 +46,12 @@ Feature: Zoho regression on Boarding for testing
     And the user searches for the product "<Product>"
     And the user selects the product "<Product>"
     And the user sets the quantity to "<Quantity>"
+    And the user sets the thickness to "<Thickness>"
+    And the user selects the width as "<Width>"
     And the user saves the opportunity
     Examples:
-      | Product      | Quantity |
-      | JSW Ordinary Portland Cement 53 | 10   |
+      | Product      | Quantity | Thickness | Width |
+      |  MS HR Coil 2062:2011 E250A | 10   | 1000 | 1500 |
 
 
   Scenario Outline: User processes an opportunity to the sales team and fills required documents
@@ -56,7 +68,7 @@ Feature: Zoho regression on Boarding for testing
     And the user edits the special message to "<Special Message>"
     Examples:
       | Delivery Type | Days | Special Message        | Program         | Advance | Address | Credit Days |
-      | Self pickup   | 2    | Urgent delivery needed | BNPL-Ankit-Credit|   30  |NEAR BAJAJ AGENCY|  5    |
+      | Self pickup   | 2    | Urgent delivery needed | BNPL - JODL-BNPL |   30  | A-104725|  2    |
 
   Scenario Outline: User sends the file to pricing to the category team
     When the user selects the category price as "<CPrice>"
@@ -71,7 +83,7 @@ Feature: Zoho regression on Boarding for testing
     And the user saves the opportunity
     Examples:
       | CPrice | Price | Seller | SourceSeller| Category |
-      | 120    | 100    | Vee |    Marketplace        | Category Test user |
+      | 120    | 100    | V K Industrial Corporation Ltd |    JODL        | Mfg Category |
 
   Scenario Outline: User selects the credit program on the Credit program on Opportunity page
     When the user clicks on the process opportunity button
@@ -90,7 +102,7 @@ Feature: Zoho regression on Boarding for testing
     And the user saves the category user
     Examples:
     | Category |
-    | Category Test user |
+    | Mfg Category |
 
 
   Scenario: User request PI to Seller team
