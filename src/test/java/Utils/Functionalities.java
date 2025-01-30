@@ -7,6 +7,7 @@ import org.openqa.selenium.devtools.v85.log.Log;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -18,13 +19,16 @@ import static Utils.BrowsserSetup.getDriver;
 
 public class Functionalities {
 
-    public static WebDriver driver;
+    public static WebDriver driver  = getDriver();
     public static WebDriverWait wait;
 
     public Functionalities(WebDriver driver) {
         Functionalities.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
+
+    private static final int DEFAULT_TIMEOUT = 10;
+    private static final int POLLING_INTERVAL = 500;
 
 
     static DevTools devTools;
@@ -35,6 +39,12 @@ public class Functionalities {
         devTools.send(Log.enable());
 
     }
+
+    private static void highlightElement(WebDriver driver, WebElement element) {
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].style.border='3px solid red'", element);
+    }
+
 
     public static void readConsole() {
         devTools.addListener(Log.entryAdded(), LogEntry -> {
@@ -98,8 +108,56 @@ public class Functionalities {
     }
 
 
+    public static WebElement waitForElement( By locator) {
+        WebElement element = null;
+        try {
+
+            element = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT))
+                    .pollingEvery(Duration.ofMillis(POLLING_INTERVAL))
+                    .ignoring(NoSuchElementException.class)
+                    .until(ExpectedConditions.presenceOfElementLocated(locator));
+        } catch (TimeoutException e) {
+            System.out.println("Standard wait failed, trying fallbacks...");
+
+
+            try {
+                element = new FluentWait<>(driver)
+                        .withTimeout(Duration.ofSeconds(DEFAULT_TIMEOUT))
+                        .pollingEvery(Duration.ofMillis(300))
+                        .ignoring(StaleElementReferenceException.class)
+                        .until(d -> {
+                            highlightElement(driver, d.findElement(locator));
+                            return d.findElement(locator);
+                        });
+            } catch (Exception ex1) {
+                System.out.println("Fluent wait failed, trying JS...");
+
+                try {
+                    element = (WebElement) ((JavascriptExecutor) driver)
+                            .executeScript("return document.querySelector(arguments[0]);",
+                                    locator.toString().split(": ")[1]);
+                } catch (Exception ex2) {
+                    System.out.println("JS fallback failed, trying action move...");
+
+
+                    try {
+                        new Actions(driver)
+                                .moveToElement(driver.findElement(locator))
+                                .perform();
+                        element = driver.findElement(locator);
+                    } catch (Exception ex3) {
+                        System.out.println("All fallbacks failed for locator: " + locator);
+                    }
+                }
+            }
+        }
+        return element;
+    }
+
+
+
     public static void MultipleTry(WebElement elem) {
-        int maxAttempts = 3; // Maximum number of times you want to retry
+        int maxAttempts = 3;
 
         int attempt = 1;
         boolean elementClickable = false;
@@ -118,6 +176,15 @@ public class Functionalities {
             }
         }
     }
+
+    private static void sleep(int millis) {
+        try { Thread.sleep(millis); }
+        catch (InterruptedException e) {
+
+        }
+    }
+
+
 
     public static void ActionClass(WebElement element) {
         Actions actions = new Actions(driver);

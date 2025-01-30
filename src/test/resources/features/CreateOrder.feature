@@ -5,8 +5,8 @@ Feature: Create Order in SF using this Script
     Given Set the browser and driver for the automation "<Browser>"
     And User passes driver to the other pages and files
     Examples:
-      |Browser|
-      | headless |
+      | Browser |
+      | chrome  |
 
   Scenario Outline: User logs in to Salesforce
     Given the user navigates to the Salesforce login page "<Link>"
@@ -14,20 +14,20 @@ Feature: Create Order in SF using this Script
     And the user enters the password "<Password>"
     And the user clicks on the login button
     Examples:
-      | Username                         | Password     | Link                                                                         |
-      | ankit.sharma@jsw.in.uat  | @Ankit123  | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
+      | Username                | Password  | Link                                                                         |
+      | ankit.sharma@jsw.in.uat | @Bhuvi176 | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 
- @smoke
+  @smoke
   Scenario Outline: User navigates to a specific account from the homepage
     Given the user opens the search tab
     When the user searches for the item "<Account>"
     And the user clicks on the search result for "<Account>" accounts
     And the user opens the account "<Account>"
     Examples:
-      | Account  |
+      | Account           |
       | OBEROI REALTY LTD |
 
- @smoke
+  @smoke
   Scenario Outline: User creates an opportunity with a specific product and quantity
     Given the user is on the account page
     When the user creates a quick opportunity
@@ -39,8 +39,8 @@ Feature: Create Order in SF using this Script
     And the user selects the width as "<Width>"
     And the user saves the opportunity
     Examples:
-      | Product      | Quantity | Thickness | Width |
-      |  MS HR Coil 2062:2011 E250A | 10   | 1000 | 1500 |
+      | Product                    | Quantity | Thickness | Width |
+      | MS HR Coil 2062:2011 E250A | 10       | 1000      | 1500  |
 
 
   Scenario Outline: User processes an opportunity to the sales team and fills required documents
@@ -59,8 +59,8 @@ Feature: Create Order in SF using this Script
     And the user saves the opportunity
 
     Examples:
-      | Delivery Type | Days | Special Message        | Advance  | Seller     | SourceSeller | Address |
-      |     Self pickup    | 2    | Urgent delivery needed | 5   | Vee  | Marketplace | A-104357 |
+      | Delivery Type | Days | Special Message        | Advance | Seller | SourceSeller | Address  |
+      | Self pickup   | 2    | Urgent delivery needed | 5       | Vee    | Marketplace  | A-104357 |
 
 
   Scenario Outline: User sends the file to pricing to the category team
@@ -69,8 +69,8 @@ Feature: Create Order in SF using this Script
     And the user saves the category
     And the user saves the opportunity
     Examples:
-         | Category |
-         | Mfg Category|
+      | Category     |
+      | Mfg Category |
 
 
   Scenario Outline: User updates the customer-accepted price after receiving pricing from the category
@@ -81,10 +81,8 @@ Feature: Create Order in SF using this Script
 #    And the user verifies the customer-accepted price
 #    And the user saves the opportunity
     Examples:
-     |CPrice| Price |
-     |  100  |   100   |
-
-
+      | CPrice | Price |
+      | 100    | 100   |
 
 
   Scenario Outline: User requests PI to the category team
@@ -101,8 +99,8 @@ Feature: Create Order in SF using this Script
     Then Click on the Opportunity Page
 
     Examples:
-      | Stage            | Category |
-      | Awaiting PI | Mfg Category|
+      | Stage       | Category     |
+      | Awaiting PI | Mfg Category |
 
   Scenario: User request PI to Seller team
     Given User processed opportunity to send PI to seller

@@ -245,7 +245,8 @@ public class ProcessOpportunity {
     }
     public void userSelectSourceSellerType(String SellerType){
 //        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@aria-label='Source Seller Type']")));
-        clickingTool(xpathELem("//span [ @lwc-7co8ha3nedg and ./span[@class='slds-truncate' and  @title='" + SellerType +"']  ]"));
+        clickingTool(xpathELem("//span [ @lwc-7co8ha3nedg and ./span[ text()='" + SellerType +"']  ]"));
+        //span [ @lwc-7co8ha3nedg and ./span[ text()='Marketplace']]
     }
 
     public void selectSourceSeller(String seller){

@@ -81,8 +81,8 @@ public class AccountPage {
 
 
     public void chooseSite(String site) {
-        waitLocatedXpath("//slot[text()='" + site + "']");
-        JavaScriptClick("//slot[text()='" + site + "']");
+        waitLocatedXpath("//span[text()='" + site + "']");
+        JavaScriptClick("//span[text()='" + site + "']");
     }
 
     public void filePage() {

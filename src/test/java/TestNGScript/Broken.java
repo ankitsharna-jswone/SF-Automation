@@ -86,10 +86,10 @@ public class Broken {
         xpathELem("//button[@id='login-via-otp']").click();
 
         waitLocatedXpath("//input[@id='email']");
-        xpathELem("//input[@id='email']").sendKeys("v_ankit.sharma@jsw.in");
+
 
         waitLocatedXpath("//input[@id='password']");
-        xpathELem("//input[@id='password']").sendKeys("@Ankit123");
+
 
         waitLocatedXpath("//button[@id='login-to-continue']");
         xpathELem("//button[@id='login-to-continue']").click();

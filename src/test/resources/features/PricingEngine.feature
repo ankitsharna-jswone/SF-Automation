@@ -6,7 +6,7 @@ Feature: Profile based order creation
     And User passes driver to the other pages and files
     Examples:
       |Browser|
-      | chrome |
+      |  |
 
   Scenario Outline: User logs in to Salesforce
     Given the user navigates to the Salesforce login page "<Link>"
@@ -15,7 +15,7 @@ Feature: Profile based order creation
     And the user clicks on the login button
     Examples:
       | Username                         | Password     | Link                                                                         |
-      | salestestuseruat@yopmail.com.uat | Salesuser123 | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
+      | ankit.sharma@jsw.in.uat  | @Bhuvi176  | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 
   Scenario Outline: User navigates to a specific account from the homepage
     When the user searches for the item "<Account>"
@@ -62,19 +62,19 @@ Feature: Profile based order creation
       | Mfg Category |
 
 
-  Scenario: Sales user logs out
-    Given user clicks on account button
-    And User clicks on log out button
+#  Scenario: Sales user logs out
+#    Given user clicks on account button
+#    And User clicks on log out button
 
 
 #  Scenario Outline: Category team logs inside of the system
-#
+#    Given the user navigates to the Salesforce login page "<Link>"
 #    When the user enters the username "<Username>"
 #    And the user enters the password "<Password>"
 #    And the user clicks on the login button
 #    Examples:
-#      | Username | Password |
-      |mfgcategory@yopmail.com|Category@123|
+#      | Username | Password | Link |
+#      |mfgcategory@yopmail.com|@Winter123|https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 #
 #
 #  Scenario: Category user updates the Price and seller for the Opportunity

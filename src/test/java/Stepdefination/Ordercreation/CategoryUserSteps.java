@@ -14,7 +14,8 @@ public class CategoryUserSteps {
 
     @Given("Category team Searches the opportunity")
     public void searchTheOpportunity(){
-        String opp = String.valueOf(opportunityPage.getOpportunityName());
+//        String opp = String.valueOf(opportunityPage.getOpportunityName());
+        String opp = "OP-OBEROI_REALTY_LTD-0180";
         System.out.println(opp + " Opportunity name");
         homePage.searchItem(opp);
     }

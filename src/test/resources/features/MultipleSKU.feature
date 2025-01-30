@@ -14,9 +14,8 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     And the user enters the password "<Password>"
     And the user clicks on the login button
     Examples:
-      | Username            | Password | Link                                                          |
-      |v_ankit.sharma@jsw.in| @Ankit123|https://jswoneplatforms--prdreplica.sandbox.my.salesforce.com/ |
-
+      | Username                         | Password     | Link                                                                         |
+      | ankit.sharma@jsw.in.uat  | @Bhuvi176  | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 
 
   Scenario Outline: User changes the App According to the Profile
@@ -29,36 +28,37 @@ Feature: Check Flow of order creation of order for Multiple prodcut SKU
     #MSME Construct #MFG #Retail
 
   Scenario Outline: User navigates to a specific account from the homepage
-
-    Given the user opens the search tab
     When the user searches for the item "<Account>"
     And the user clicks on the search result for "<Account>" accounts
     And the user opens the account "<Account>"
     Examples:
-      | Account  |
-      |Test Account B|
+      | Account           |
+      | OBEROI REALTY LTD |
 
   Scenario: User creates Multiple opportunity with a specific product and quantity
     Given the user is on the account page
     When the user creates a quick opportunity
     And Add multiple products in SKU according to given Data
-     |Product                   |Quantity| UOM     | Thickness | Width | Length |Diameter|
-     |MS HR Coil 2062:2011 E250A| 10     |Primary  | 10        | 1250  |        |        |
-     |MS HR Sheet 2062:2011 E250A| 15    |Secondary|    15     |  1500 |  1500   |        |
-     |JSL Stainless Steel CRAP JT 2B PVC Finish Sheets| 500 | | 12 | 1250 |4000| |
+      | Product                     | Quantity | UOM     | Thickness | Width | Length | Diameter |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 2.5       | 1250  |        |          |
+      | MS HR Sheet 2062:2011 E250A | 15       | Primary | 2.5       | 1250  | 1500   |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 2.5       | 1500  |        |          |
+      | MS HR Sheet 2062:2011 E250A | 15       | Primary | 2.5       | 1500  | 1500   |          |
     Then the user saves the opportunity
 
 
-  Scenario Outline: User processes the opportunities and set the delivery process
+  Scenario Outline: User processes an opportunity to the sales team and fills required documents
     Given the user is on the opportunity processing page
     When the user clicks on the process opportunity button
     And the user selects to edit the opportunity
     And the user edits the delivery type to "<Delivery Type>"
+    And the user selected the Delivery address "<Address>"
+    And Then User filled the advance % "<Advance>"
     And the user edits the delivery time to "<Days>" days
     And the user edits the special message to "<Special Message>"
     Examples:
-      | Delivery Type | Days | Special Message        |
-      |    Self pickup| 2    | Urgent delivery needed |
+      | Delivery Type | Days | Special Message        | Advance | Address  |
+      | JOTS          | 2    | Urgent delivery needed | 30      | A-104507 |
 
 
   Scenario Outline: Sales team will select the seller and fill the cost and required fields

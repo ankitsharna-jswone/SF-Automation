@@ -46,7 +46,7 @@ public class HomePage {
     }
 
     public void openOpportunity(String name) {
-        wait.until(ExpectedConditions.visibilityOf(xpathELem("//mark[@class='data-match' and contains(text(),"+ name +")]"))).click();
+        wait.until(ExpectedConditions.visibilityOf(xpathELem("//mark[@class='data-match' and contains(text(),'"+ name +"')]"))).click();
     }
 
     public void LoggedUserIconButton() throws InterruptedException {
@@ -68,6 +68,7 @@ public class HomePage {
             WebElement SearchBox = driver.findElement(By.xpath("//button[@class='slds-button slds-button_neutral search-button slds-truncate' and text()='Search...']"));
             waitFor(SearchBox);
             JavaElemClick(SearchBox);
+
 
 
         } catch (Exception e) {

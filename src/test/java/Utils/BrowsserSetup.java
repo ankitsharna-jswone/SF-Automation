@@ -32,7 +32,6 @@ public class BrowsserSetup {
         }
 
     private static void setFirefoxDriver() {
-        // Firefox-specific options
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         driverThreadLocal.set(new FirefoxDriver(firefoxOptions));
     }
