@@ -6,7 +6,7 @@ Feature: Profile based order creation
     And User passes driver to the other pages and files
     Examples:
       |Browser|
-      |  |
+      | chrome |
 
   Scenario Outline: User logs in to Salesforce
     Given the user navigates to the Salesforce login page "<Link>"
@@ -31,9 +31,11 @@ Feature: Profile based order creation
     And Add multiple products in SKU according to given Data
       | Product                     | Quantity | UOM     | Thickness | Width | Length | Diameter |
       | MS HR Coil 2062:2011 E250A  | 10       | Primary | 2.5       | 1250  |        |          |
-      | MS HR Sheet 2062:2011 E250A | 15       | Primary | 2.5       | 1250  | 1500   |          |
-      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 2.5       | 1500  |        |          |
-      | MS HR Sheet 2062:2011 E250A | 15       | Primary | 2.5       | 1500  | 1500   |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 3.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 4.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 5.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 6.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 7.5       | 1250  |        |          |
     Then the user saves the opportunity
 
 

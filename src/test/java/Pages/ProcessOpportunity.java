@@ -208,10 +208,13 @@ public class ProcessOpportunity {
         //save
 
         waitLocatedXpath("//button[text()='Save' and @title]");
+
         Actions actions = new Actions(driver);
+        waitForElement("//button[text()='Save' and @title]");
         WebElement save = xpathELem("//button[text()='Save' and @title]");
         actions.scrollToElement(save).build().perform();
         clickingTool(save);
+        Thread.sleep(1000);
 
     }
 
@@ -286,6 +289,7 @@ public class ProcessOpportunity {
 
 //        wait.until(ExpectedConditions.stalenessOf(xpathELem("//button[text()='Verify Prices']")));
 //        WebElement verifyPrice = xpathELem("//button[text()='Verify Prices']");1
+        waitForElement("//div[@class='customButtonPosition']//button[text()='Verify Prices']");
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='customButtonPosition']//button[text()='Verify Prices']")));
         clickingTool(xpathELem("//div[@class='customButtonPosition']//button[text()='Verify Prices']"));
         Thread.sleep(1000);

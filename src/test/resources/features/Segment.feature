@@ -1,4 +1,4 @@
-@seg @regression
+@seg
 Feature: Create Order in SF using this Script
 
   Scenario Outline: Setting up enviroment for the the project

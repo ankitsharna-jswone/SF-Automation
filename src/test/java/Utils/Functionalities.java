@@ -108,7 +108,8 @@ public class Functionalities {
     }
 
 
-    public static WebElement waitForElement( By locator) {
+    public static WebElement waitForElement(String path ) {
+        By locator = By.xpath(path);
         WebElement element = null;
         try {
 
@@ -223,8 +224,10 @@ public class Functionalities {
     }
 
     public static void waitLocatedXpaths(String path) {
+
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(path)));
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(path)));
+        JavaScriptScroll(xpathELem(path));
     }
 
     public static void waitLocatedCss(String path) {

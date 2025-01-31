@@ -81,32 +81,33 @@ Feature: Create Order for Construct account on UAT
     And  the user selects the source seller "<Seller>"
     And the user Selects the source seller type "<SourceSeller>"
     And the user edits the cost price to "<Price>"
-    When the user selects the category price as "<CPrice>"
     And the user saves the opportunity
     And the opportunity is processed to the Category team for pricing
     And the user performs the category user test with Category team "<Category>"
     And the user saves the category
     And the user saves the opportunity
     Examples:
-      | Price  | Seller     | CPrice | SourceSeller| Category |
-      | 100    | Vee        |150   | Marketplace | Mfg Category |
+      | Price  | Seller     | SourceSeller| Category |
+      | 100    | Vee           | Marketplace | Mfg Category |
 
 
 
   Scenario Outline: Sales team confirms the customer accepted price
     When the user clicks on the process opportunity button
+    When the user selects the category price as "<CPrice>"
     When user sets the customer-accepted price to "<Price>"
     And the user saves the opportunity
     And the user verifies the customer-accepted price
     And the user saves the opportunity for sales team
     Examples:
-      | Price |
-      | 160  |
+      | Price | CPrice |
+      | 160  |150      |
 
 
   Scenario Outline: User request PI to Category team
     When the user clicks on the process opportunity button
     When the user saves the opportunity
+
     When the user requests PI to the category team
     And the user performs the category user test with Category team "<Category>"
     And the user saves the category user

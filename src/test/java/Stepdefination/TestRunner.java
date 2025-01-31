@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
                 "Listner.CustomCucumberListener"
         }
         ,
-        tags = "@plant"
+        tags = "@regression"
 )
 public class TestRunner  {
 

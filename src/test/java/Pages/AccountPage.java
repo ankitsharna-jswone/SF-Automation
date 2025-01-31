@@ -161,7 +161,7 @@ public String stageOfOpportunity() throws InterruptedException {
         Thread.sleep(2000);
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("")));
-        return  xpathELem("dt[.//span[text()='Stage']]/following-sibling::dd//span[@class='test-id__field-value slds-form-element__static slds-grow word-break-ie11']//slot//lightning-formatted-text").getText();
+        return  xpathELem("//dt[.//span[text()='Stage']]/following-sibling::dd//slot//lightning-formatted-text").getText();
 
 
 
