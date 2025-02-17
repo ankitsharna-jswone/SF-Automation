@@ -60,7 +60,7 @@ public class testScript {
         driver.manage().window().maximize();
         AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,10);
         PageFactory.initElements(factory,this);
-        driver.get("https://jswoneplatforms--prdreplica.sandbox.lightning.force.com/lightning/r/Account/001Hz00000ni1zqIAA/view");
+        driver.get("https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/r/Opportunity/006Ik000003MoMXIA0/view");
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         actions = new Actions(driver);
@@ -81,8 +81,8 @@ public class testScript {
 
     @Test(priority = 1)
     public void login() {
-        String username = "v_ankit.sharma@jsw.in";
-        String password = "@Ankit123";
+        String username = "ankit.sharma@jsw.in.uat ";
+        String password = "@Bhuvi176";
         log.usernameSF(username);
         log.passwordSF(password);
         log.loginSF();
@@ -92,6 +92,13 @@ public class testScript {
 
     @Test(priority = 2)
     public void setp(){
+//        opportunityPage.showMoreActions();
+//        opportunityPage.submitForApprovalAdvanceButton();
+//        opportunityPage.approvalComment("Approve it");
+//        opportunityPage.submitButtonForAdvanceApproval();
+
+        opportunityPage.approvalHistoryBoxButton();
+        System.out.println(opportunityPage.statusOfApproval());
 
 //        System.out.println(opportunityCreditPage.CreditAmount() + " Credit Amount");
 //        System.out.println(opportunityCreditPage.ApprovedCreditDays() + " Approved Credit days");
@@ -110,10 +117,10 @@ public class testScript {
 
 
 
-
-            accountPage.ApprovedCreditProgramButton();
-            String credit = "BNPL - Ankit-Credit";
-            System.out.println(" Aviable amount : " +approvedCreditPrograms.AvailableAmount(credit));
+//
+//            accountPage.ApprovedCreditProgramButton();
+//            String credit = "BNPL - Ankit-Credit";
+//            System.out.println(" Aviable amount : " +approvedCreditPrograms.AvailableAmount(credit));
 //        System.out.println(" Blocked amount : " +approvedCreditPrograms.BlockedAmount(credit));
 //        System.out.println(" Credit amount : " +approvedCreditPrograms.CreditDueDays(credit));
 //        System.out.println(" Sanctioned amount : " +approvedCreditPrograms.SanctionedAmount(credit));
@@ -124,7 +131,7 @@ public class testScript {
 //        System.out.println(" Peanl amount : " +approvedCreditPrograms.PenalRate(credit));
 //        System.out.println(" Due Days amount : " +approvedCreditPrograms.CreditDueDays(credit));
 //
-        approvedCreditPrograms.CreditDetialsJSON(credit);
+//        approvedCreditPrograms.CreditDetialsJSON(credit);
 
 
 

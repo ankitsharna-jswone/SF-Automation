@@ -219,6 +219,7 @@ public class Functionalities {
     }
 
     public static void waitForPresence(String path){
+        JavaScriptScroll(xpathELem(path));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(path)));
         JavaScriptScroll(xpathELem(path));
     }
@@ -242,8 +243,23 @@ public class Functionalities {
     }
 
     public static void JavaScriptScroll(WebElement element){
-        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) getDriver();
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public static void JavaScriptEndScroll(WebElement element){
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+//        javascriptExecutor.executeScript("arguments[0].scrollTop += 250;", element);
+//        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("arguments[0].scrollTop = arguments[0].scrollHeight;", element);
+
+    }
+
+    public static void windowScroll(){
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("scroll(0, 550)");  // Scrolls down by 500px
+
+
     }
 
 

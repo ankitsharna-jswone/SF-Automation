@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
                 "Listner.CustomCucumberListener"
         }
         ,
-        tags = "@regression"
+        tags = "@CF"
 )
 public class TestRunner  {
 

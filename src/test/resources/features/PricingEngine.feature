@@ -15,7 +15,7 @@ Feature: Profile based order creation
     And the user clicks on the login button
     Examples:
       | Username                         | Password     | Link                                                                         |
-      | ankit.sharma@jsw.in.uat  | @Bhuvi176  | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
+      | bhushan.sawant@jsw.in.prod | Pass@123 | https://jswoneplatforms.lightning.force.com/lightning/page/home |
 
   Scenario Outline: User navigates to a specific account from the homepage
     When the user searches for the item "<Account>"
@@ -23,7 +23,7 @@ Feature: Profile based order creation
     And the user opens the account "<Account>"
     Examples:
       | Account           |
-      | OBEROI REALTY LTD |
+      | TEST ACCOUNT B |
 
   Scenario: User creates Multiple opportunity with a specific product and quantity
     Given the user is on the account page
@@ -36,6 +36,25 @@ Feature: Profile based order creation
       | MS HR Coil 2062:2011 E250A  | 10       | Primary | 5.5       | 1250  |        |          |
       | MS HR Coil 2062:2011 E250A  | 10       | Primary | 6.5       | 1250  |        |          |
       | MS HR Coil 2062:2011 E250A  | 10       | Primary | 7.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 8.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 9.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 10.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 11.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 12.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 13.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 14.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 15.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 16.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 17.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 18.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 19.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 20.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 21.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 22.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 23.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 24.5       | 1250  |        |          |
+      | MS HR Coil 2062:2011 E250A  | 10       | Primary | 25.5       | 1250  |        |          |
+
     Then the user saves the opportunity
 
 

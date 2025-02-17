@@ -128,12 +128,12 @@ Feature: Create Order for Construct account on UAT
     And the user sets the seller PI
 
 
-  Scenario: User creates an order, captures the subtotal, and order number
-    Given the user is on the account page for order creation
-    When the user clicks on the create order button
-    And the user captures the subtotal for the order
-    Then the user prints the subtotal and indicates it as the total value for the order
-    And the user clicks on the button to create an order for coils
-    And the user captures the order number
-    Then the user prints the order number
-    And the date and time of the report is given
+#  Scenario: User creates an order, captures the subtotal, and order number
+#    Given the user is on the account page for order creation
+#    When the user clicks on the create order button
+#    And the user captures the subtotal for the order
+#    Then the user prints the subtotal and indicates it as the total value for the order
+#    And the user clicks on the button to create an order for coils
+#    And the user captures the order number
+#    Then the user prints the order number
+#    And the date and time of the report is given

@@ -1,5 +1,6 @@
 package Pages;
 
+import Utils.Functionalities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -178,6 +179,58 @@ public class OpportunityPage {
         clickingTool(xpathELem("(//button[text()='Save'])"));
     }
 
+    public void showMoreActions(){
+        clickingTool(xpathELem("//button[./span[contains(normalize-space(),'Show more actions')]]"));
+    }
+
+    public void submitForApprovalAdvanceButton(){
+        waitForElement("//div[@class='slds-dropdown slds-dropdown_right' and .//runtime_platform_actions-action-renderer]");
+        clickingTool(xpathELem("//a[./span[contains(normalize-space(),'Submit for Approval')]]"));
+    }
+
+    public void approvalComment(String text){
+        xpathELem("//div[@class='commentContainer']//textarea").sendKeys(text);
+    }
+
+    public void submitButtonForAdvanceApproval(){
+        waitLocatedXpath("//button[./span[contains(normalize-space(),'Submit')]]");
+        clickingTool(xpathELem("//button[./span[contains(normalize-space(),'Submit')]]"));
+    }
+
+    public void approvalHistoryBoxButton(){
+        windowScroll();
+        JavaScriptScroll(xpathELem("//article[@aria-label='Approval History']"));
+        waitForPresence("//article[@aria-label='Approval History']");
+        clickingTool(xpathELem("//a[./span[contains(normalize-space(),'Approval History')]]"));
+    }
+
+    public String assginedToUser(){
+        waitLocatedXpath("(//td[@role='gridcell']//a[text()])[1]");
+        return xpathELem("(//td[@role='gridcell']//a[text()])[1]").getText();
+    }
+
+    public String actualApproverUser(){
+        waitLocatedXpath("(//td[@role='gridcell']//a[text()])[2]");
+        return xpathELem("(//td[@role='gridcell']//a[text()])[2]").getText();
+    }
+
+    public String requestedByUser(){
+        waitLocatedXpath("(//td[@role='gridcell']//a[text()])[3]");
+        return xpathELem("(//td[@role='gridcell']//a[text()])[3]").getText();
+    }
+
+    public String statusOfApproval(){
+        waitLocatedXpath("(//td[@role='gridcell' and @class='slds-cell-edit cellContainer slds-cell-marker']//span//span[text()])");
+        return xpathELem("(//td[@role='gridcell' and @class='slds-cell-edit cellContainer slds-cell-marker']//span//span[text()])").getText();
+    }
+
+    public void oppportunityApporvalButton(){
+        clickingTool(xpathELem("//div[@title='Approve' and text()='Approve']"));
+    }
+
+    public void oppportunityRejectButton(){
+        clickingTool(xpathELem("//div[@title='Reject' and text()='Reject']"));
+    }
 
 
 }

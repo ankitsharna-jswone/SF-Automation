@@ -235,7 +235,9 @@ public class ProcessOpportunity {
 
     public void searchSouceSeller(String seller){
         waitLocatedXpath("//label[text()='Source Seller Name']/following-sibling::div//input");
+        clickingTool(xpathELem("//label[text()='Source Seller Name']/following-sibling::div//input"));
         xpathELem("//label[text()='Source Seller Name']/following-sibling::div//input").sendKeys(seller);
+        clickingTool(xpathELem("//label[text()='Source Seller Name']/following-sibling::div//input"));
     }
 
     public void searchSeller(String seller){

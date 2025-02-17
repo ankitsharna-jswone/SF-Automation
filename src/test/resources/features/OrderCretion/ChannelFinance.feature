@@ -1,4 +1,4 @@
-@newCreditTest @regression
+@CF @regression
 Feature: Zoho regression on Boarding for testing
 
   Scenario Outline: Setting up enviroment for the the project
@@ -54,8 +54,8 @@ Feature: Zoho regression on Boarding for testing
     When the user fetches the credit limit block reason for the credit program "<Credit Program>"
     Then the user stores the credit details in a JSON file for future validation "<Credit Program>"
     Examples:
-    | Credit Program |
-    |BNPL - JODL-BNPL |
+      | Credit Program |
+      |Channel finance - Tata Capital |
 
 
 
@@ -87,7 +87,7 @@ Feature: Zoho regression on Boarding for testing
     And the user edits the special message to "<Special Message>"
     Examples:
       | Delivery Type | Days | Special Message        | Program           | Advance | Address           | Credit Days |
-      | Self pickup   | 2    | Urgent delivery needed | BNPL-JODL-BNPL | 30      | A-104725 | 5           |
+      | Self pickup   | 2    | Urgent delivery needed | Channel finance - Tata Capital | 30      | A-104725 | 1           |
 
 
 
