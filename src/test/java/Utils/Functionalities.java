@@ -257,9 +257,7 @@ public class Functionalities {
 
     public static void windowScroll(){
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
-        javascriptExecutor.executeScript("scroll(0, 550)");  // Scrolls down by 500px
-
-
+        javascriptExecutor.executeScript("window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });");
     }
 
 

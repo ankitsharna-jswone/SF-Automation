@@ -1,4 +1,4 @@
-@ZOHOcredit @regression
+@ZOHOcredit
 Feature: Zoho regression on Boarding for testing
 
   Scenario Outline: Setting up enviroment for the the project

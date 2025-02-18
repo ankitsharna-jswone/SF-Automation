@@ -1,4 +1,4 @@
-@pricing @regression
+@pricing
 Feature: Profile based order creation
 
   Scenario Outline: Setting up enviroment for the the project

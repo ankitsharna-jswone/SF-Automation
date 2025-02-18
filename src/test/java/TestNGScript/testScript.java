@@ -5,6 +5,7 @@ import Utils.Functionalities;
 import io.cucumber.java.en_old.Ac;
 import org.apache.poi.sl.draw.geom.GuideIf;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -60,7 +61,7 @@ public class testScript {
         driver.manage().window().maximize();
         AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,10);
         PageFactory.initElements(factory,this);
-        driver.get("https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/r/Opportunity/006Ik000003MoMXIA0/view");
+        driver.get("https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/r/Opportunity/006Ik000003Mom6IAC/view");
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         actions = new Actions(driver);
@@ -91,13 +92,20 @@ public class testScript {
     }
 
     @Test(priority = 2)
-    public void setp(){
-//        opportunityPage.showMoreActions();
-//        opportunityPage.submitForApprovalAdvanceButton();
-//        opportunityPage.approvalComment("Approve it");
-//        opportunityPage.submitButtonForAdvanceApproval();
+    public void setp() throws InterruptedException {
+        opportunityPage.showMoreActions();
+        opportunityPage.submitForApprovalAdvanceButton();
+        opportunityPage.approvalComment("Approve it");
+        opportunityPage.submitButtonForAdvanceApproval();
+
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        for (int i = 0; i < 10; i++) {
+            javascriptExecutor.executeScript("window.scrollBy(0, 500);"); // Scrolls 100 pixels down
+            Thread.sleep(500); // Wait for 500 milliseconds between each scroll
+        }
 
         opportunityPage.approvalHistoryBoxButton();
+
         System.out.println(opportunityPage.statusOfApproval());
 
 //        System.out.println(opportunityCreditPage.CreditAmount() + " Credit Amount");

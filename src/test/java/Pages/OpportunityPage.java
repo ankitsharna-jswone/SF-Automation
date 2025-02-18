@@ -29,6 +29,11 @@ public class OpportunityPage {
         return OpportunityNumber;
     }
 
+    public void detailsPage(){
+        waitLocatedXpath("//a[text()='Details']");
+        clickingTool(xpathELem("//a[text()='Details']"));
+    }
+
     public void acceptAllskus(){
         waitLocatedXpath("//button[text()='Accept all SKUs']");
         clickingTool(xpathELem("//button[text()='Accept all SKUs']"));
@@ -180,7 +185,7 @@ public class OpportunityPage {
     }
 
     public void showMoreActions(){
-        clickingTool(xpathELem("//button[./span[contains(normalize-space(),'Show more actions')]]"));
+        clickingTool(xpathELem("//lightning-button-menu[@data-target-reveals='sfdc:StandardButton.Opportunity.Submit,sfdc:StandardButton.Opportunity.Delete,sfdc:QuickAction.Opportunity.New_SKUR,sfdc:QuickAction.Opportunity.View_GCP_Files,sfdc:QuickAction.Opportunity.Direct_Opportunity,sfdc:QuickAction.Opportunity.Clone_Opportunities_with_SKUs']//button[./span[contains(normalize-space(),'Show more actions')]]"));
     }
 
     public void submitForApprovalAdvanceButton(){
@@ -220,8 +225,8 @@ public class OpportunityPage {
     }
 
     public String statusOfApproval(){
-        waitLocatedXpath("(//td[@role='gridcell' and @class='slds-cell-edit cellContainer slds-cell-marker']//span//span[text()])");
-        return xpathELem("(//td[@role='gridcell' and @class='slds-cell-edit cellContainer slds-cell-marker']//span//span[text()])").getText();
+        waitLocatedXpath("(//td[@role='gridcell']//span//span[text()])[2]");
+        return xpathELem("(//td[@role='gridcell']//span//span[text()])[2]").getText();
     }
 
     public void oppportunityApporvalButton(){

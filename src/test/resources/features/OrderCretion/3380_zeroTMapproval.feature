@@ -1,4 +1,4 @@
-@zeroTM
+@zeroTM @regression
 Feature: Advance Approval Automation Script SF 3453
 
   Scenario Outline: Setting up enviroment for the the project
@@ -59,15 +59,15 @@ Feature: Advance Approval Automation Script SF 3453
     And the user edits the delivery time to "<Days>" days
     And the user edits the special message to "<Special Message>"
     And the user searches for the source seller "<Seller>"
+    And the user selects the source seller "<Seller>"
     And the user Selects the source seller type "<SourceSeller>"
     And Then User filled the advance % "<Advance>"
-    And the user selects the source seller "<Seller>"
     And the user edits the cost price to "<Cost>"
     And the user saves the opportunity
 
     Examples:
-      | Delivery Type | Days | Special Message        | Advance | Seller | SourceSeller | Address  | Cost |
-      | Self pickup   | 2    | Urgent delivery needed | 5       | L&G Steel & Commodities(P) Ltd (JODL)  | JODL  | A-104659 | 100  |
+      | Delivery Type | Days | Special Message        | Advance | Seller | SourceSeller | Address  |Cost|
+      | Self pickup   | 2    | Urgent delivery needed | 5       | Vee    | Marketplace  | A-104725 | 100|
 
 
   Scenario Outline: User sends the file to pricing to the category team

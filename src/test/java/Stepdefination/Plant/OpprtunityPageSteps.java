@@ -10,6 +10,12 @@ import static Utils.BrowsserSetup.getDriver;
 public class OpprtunityPageSteps {
     OpportunityPage opportunityPage = new OpportunityPage(getDriver());
 
+    @Given("User navigates to Details Page")
+    public void user_navigate_to_homepage(){
+        opportunityPage.detailsPage();
+    }
+
+
     @Given("User click edit button to edit for TDC upload")
     public void clickEditbutton(){
         opportunityPage.editTDCButton();

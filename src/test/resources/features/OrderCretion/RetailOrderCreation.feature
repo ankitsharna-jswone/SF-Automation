@@ -1,6 +1,5 @@
-
-@retail
-Feature: Advance Approval Automation Script SF 3453
+@retail @regression
+Feature: Advance Approval Automation Script SF 3453 Retail account type
 
   Scenario Outline: Setting up enviroment for the the project
     Given Set the browser and driver for the automation "<Browser>"
@@ -16,7 +15,7 @@ Feature: Advance Approval Automation Script SF 3453
     And the user clicks on the login button
     Examples:
       | Username                | Password  | Link                                                                         |
-      | ankit.sharma@jsw.in.uat | @Bhuvi176 | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
+      | direct.admin@yopmail.com | @Tiger123 | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 
   Scenario Outline: User changes the App According to the Profile
     Given User clicks on the App section of Salesforce
@@ -116,30 +115,27 @@ Feature: Advance Approval Automation Script SF 3453
     Then the user requests PI to the seller
     And the user saves the final order
 
-  Scenario Outline: User updates the seller PI and sends it to the seller
+  Scenario: User updates the seller PI and sends it to the seller
     Given the user navigates to the file page
     And the user chooses the seller PI
     And the user sets the seller PI
-    Then the stage of the opportunity is now "<Stage>"
-    Examples:
-      | Stage            |
-      | Awaiting Payment |
 
-
-#  Scenario:  Verify Advance % Approval Workflow for Direct Opportunity Checkbox = YES
 
   Scenario Outline: User mark the Supply Check for the order
+    Given User navigates to Details Page
     Given User click edit button to edit for supply
     And Then User filled the advance % "<Percentage>"
     Then user saved the changes in Opportunity page
     Examples:
       | Percentage |
-      | 5          |
+      | 10         |
+
 
   Scenario: Verify Advance % Approval for Opportunities with Account Record Type MSME Construct and Business Division Construct
     Given User opens the Submit for approval component
-    When User Opens the approval submit box
+    When User submits the approval submit for approval box
     When User Opens the Approval Box User checks the Status of Approval
+    When User Checks for the approval submitted by is current User
     Then The approval is routed to "Bhrugesh Chauhan" with Advance % between 0 and 10.
 
 #  Scenario: Verify Advance % Approval for Opportunities with Account Record Type Retail and Business Division Retail

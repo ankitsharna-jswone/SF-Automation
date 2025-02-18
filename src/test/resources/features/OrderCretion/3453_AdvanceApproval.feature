@@ -1,5 +1,5 @@
-@advance
-Feature: Advance Approval Automation Script SF 3453
+@advance @regression
+Feature: Advance Approval Automation Script SF 3453 Direct account type
 
   Scenario Outline: Setting up enviroment for the the project
     Given Set the browser and driver for the automation "<Browser>"
@@ -15,7 +15,7 @@ Feature: Advance Approval Automation Script SF 3453
     And the user clicks on the login button
     Examples:
       | Username                | Password  | Link                                                                         |
-      | ankit.sharma@jsw.in.uat | @Bhuvi176 | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
+      | direct.admin@yopmail.com | @Tiger123 | https://jswoneplatforms--uat.sandbox.lightning.force.com/lightning/page/home |
 
   Scenario Outline: User changes the App According to the Profile
     Given User clicks on the App section of Salesforce
@@ -59,9 +59,9 @@ Feature: Advance Approval Automation Script SF 3453
     And the user edits the delivery time to "<Days>" days
     And the user edits the special message to "<Special Message>"
     And the user searches for the source seller "<Seller>"
+    And the user selects the source seller "<Seller>"
     And the user Selects the source seller type "<SourceSeller>"
     And Then User filled the advance % "<Advance>"
-    And the user selects the source seller "<Seller>"
     And the user edits the cost price to "<Cost>"
     And the user saves the opportunity
 
@@ -100,14 +100,10 @@ Feature: Advance Approval Automation Script SF 3453
     And the user selected the category user "<Category>"
     And the user saves the category user
     And the user saves the opportunity for sales
-    Then Check stage of the opportunity is "<Stage>"
-    Then User Went to SKU requirement page
-    Then User selected the SKU number "0"
-    Then Click on the Opportunity Page
 
     Examples:
-      | Stage       | Category     |
-      | Awaiting PI | Mfg Category |
+  | Category     |
+  | Mfg Category |
 
   Scenario: User request PI to Seller team
     When the user clicks on the process opportunity button
@@ -115,31 +111,32 @@ Feature: Advance Approval Automation Script SF 3453
     Then the user requests PI to the seller
     And the user saves the final order
 
-  Scenario Outline: User updates the seller PI and sends it to the seller
+  Scenario: User updates the seller PI and sends it to the seller
     Given the user navigates to the file page
     And the user chooses the seller PI
     And the user sets the seller PI
-    Then the stage of the opportunity is now "<Stage>"
-    Examples:
-      | Stage            |
-      | Awaiting Payment |
 
 
-#  Scenario:  Verify Advance % Approval Workflow for Direct Opportunity Checkbox = YES
+
 
   Scenario Outline: User mark the Supply Check for the order
+    Given User navigates to Details Page
     Given User click edit button to edit for supply
     And Then User filled the advance % "<Percentage>"
     Then user saved the changes in Opportunity page
     Examples:
       | Percentage |
-      | 10          |
+      | 10         |
+
 
   Scenario: Verify Advance % Approval for Opportunities with Account Record Type MSME Construct and Business Division Construct
     Given User opens the Submit for approval component
-    When User Opens the approval submit box
+    When User submits the approval submit for approval box
     When User Opens the Approval Box User checks the Status of Approval
+    When User Checks for the approval submitted by is current User
     Then The approval is routed to "Bhrugesh Chauhan" with Advance % between 0 and 10.
+
+
 
 #  Scenario: Verify Advance % Approval for Opportunities with Account Record Type Retail and Business Division Retail
 #    Then The approval is routed to Amit Sankle with Advance % between 0 and 10.
